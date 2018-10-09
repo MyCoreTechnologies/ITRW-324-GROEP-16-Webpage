@@ -11,6 +11,7 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { AdvertisementsComponent } from './advertisements/advertisements.component';
 import { RequestComponent } from './request/request.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { LoginComponent } from './login/login.component';
     RecipesComponent,
     AdvertisementsComponent,
     RequestComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
