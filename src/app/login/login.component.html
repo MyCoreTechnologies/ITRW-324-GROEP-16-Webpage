@@ -1,0 +1,11 @@
+<body style=" position: absolute; color:black; background-color:lemonchiffon">
+  <h4>Enter your student number and password</h4>
+<label>Username</label>
+<input type="text"
+class= "form-control"(input)="onUpdateServerName($event)">
+<label>Password</label>
+<input type= "Password"
+class= "form-control"(input)="onUpdateServerName($event)">
+
+<button style="color: white; background-color: darkgray; left: 50%;" class ="btn btn-primary" [disabled]="!allowsNewServer">Login</button>
+</body>
