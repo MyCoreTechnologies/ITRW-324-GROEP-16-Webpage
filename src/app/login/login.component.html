@@ -1,18 +1,11 @@
-
-<span class="border border-dark">
-<body style=" border-style:initial;left: 500px;bottom: 120px; position: absolute; color:black; background-color:whitesmoke; border-color: black" class = "rounded">
-    <img style="width: 300px; height: 130px; left:500px; bottom: 150px" src="../assets/Img/SELIT.png">
-    <div class="image"></div>
- 
-  <h4>Enter your student number and password.</h4>
-  
-<label>Username:</label>
+<body style=" position: absolute; color:black; background-color:lemonchiffon">
+  <h4>Enter your student number and password</h4>
+<label>Username</label>
 <input type="text"
 class= "form-control"(input)="onUpdateServerName($event)">
-<label>Password:</label>
+<label>Password</label>
 <input type= "Password"
 class= "form-control"(input)="onUpdateServerName($event)">
-<h1></h1>
-<button style=" size: 50;  color: white; background-color: darkgray; position:relative; left: 40%; " class ="btn btn-primary" [disabled]="!allowsNewServer">Login</button>
+
+<button style="color: white; background-color: darkgray; left: 50%;" class ="btn btn-primary" [disabled]="!allowsNewServer">Login</button>
 </body>
-</span>

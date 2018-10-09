@@ -11,7 +11,7 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { AdvertisementsComponent } from './advertisements/advertisements.component';
 import { RequestComponent } from './request/request.component';
 import { LoginComponent } from './login/login.component';
-import { DisplayBooksComponent } from './display-books/display-books.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -24,7 +24,7 @@ import { DisplayBooksComponent } from './display-books/display-books.component';
     AdvertisementsComponent,
     RequestComponent,
     LoginComponent,
-    DisplayBooksComponent
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
