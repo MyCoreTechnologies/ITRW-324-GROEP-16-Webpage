@@ -1,13 +1,18 @@
-  <app-header (featureSelected) ="onNavigate($event)"></app-header>
-      <div class = "container" class="image"> >
-                <div class= "row">
-                        <div class="col-md-12" >
-                                       <app-login *ngIf="loadedFeature == 'login'"></app-login>  
-                                        <app-register *ngIf="loadedFeature == 'register'"></app-register>
-                                       
-                        </div>
-                </div>
-      </div>    
+
+ <app-header (featureSelected) ="onNavigate($event)"></app-header>
+ <div class="image">
+                <div class = "container">
+                                <div class= "row">
+                                        
+                                                       <app-login *ngIf="loadedFeature == 'login'"></app-login>  
+                                                       <app-register *ngIf="loadedFeature == 'register'"></app-register>
+                                                       <app-displaybooks *ngIf="loadedFeature == 'add'"></app-displaybooks>
+                                    
+                                </div>
+                      </div>    
+        </div>
+     
+      
 <!-- 
 <div class="contaier">
   <div class="row">
@@ -45,5 +50,6 @@
   </div>
 </div>
 
-<div class="image"> <app-login></app-login></div>  LOGIN 
-<app-display-books></app-display-books> -->
+<
+ -->
+ <!-- <app-displaybooks></app-displaybooks> -->

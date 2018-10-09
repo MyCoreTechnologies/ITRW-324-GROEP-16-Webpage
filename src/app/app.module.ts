@@ -12,6 +12,8 @@ import { AdvertisementsComponent } from './advertisements/advertisements.compone
 import { RequestComponent } from './request/request.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { DisplaybooksComponent } from './displaybooks/displaybooks.component';
+
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { RegisterComponent } from './register/register.component';
     AdvertisementsComponent,
     RequestComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    DisplaybooksComponent
   ],
   imports: [
     BrowserModule,
