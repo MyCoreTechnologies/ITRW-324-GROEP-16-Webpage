@@ -1,0 +1,22 @@
+.image{
+    height:40em; 
+    background-size:cover;
+    background-image: url("../assets/Img/Books.jpg");
+    background-position:50% 50%;
+  }
+  body {
+    position: relative;
+  }
+
+  li{
+    color: aqua;
+  }
+  a{
+    color: aqua;
+}
+nav{
+    border-color: black;
+}
+h4{
+    color: brown;
+}
