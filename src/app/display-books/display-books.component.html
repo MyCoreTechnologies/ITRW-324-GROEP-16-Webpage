@@ -1,21 +1,40 @@
+
 <body>
   <div class="container">
       <div ng-app="todolist" ng-controller="todoCtrl">
-          <strong>Show All Books</strong>
+          <strong>SHOW ALL BOOKS</strong>
           <table class="table">
               <thead>
                   <tr>
                       <th>
-                          Name
+                          Book Name
                       </th>
                       <th>
-                          Surname
+                          Book Edition
                       </th>
                       <th>
-                          Age
+                          ISBN 10 Number
                       </th>
                       <th>
-                          Dogs
+                          ISBN 13 Number
+                      </th>
+                      <th>
+                          Book Price
+                      </th>
+                      <th>
+                          Book Type
+                      </th>
+                      <th>
+                          Date Placed
+                      </th>
+                      <th>
+                          Author Name
+                      </th>
+                      <th>
+                          Subject Code
+                      </th>
+                      <th>
+                          Faculty Name
                       </th>
                   </tr>
               </thead>
@@ -31,15 +50,57 @@
                        name    <!-- {{person.age}} -->
                       </td>
                       <td>
-                          <ul>
-
-                              <li> helloo</li>
-
-
-                            <!-- <li? <li ng-repeat="dog in person.dogs">{{dog.name}} ({{dog.breed}})</li> -->
-                          </ul>
+                         hello
                       </td>
+                      <td>
+                          hello <!-- {{person.name}} -->
+                       </td>
+                       <td>
+                         my   <!-- {{person.surname}} -->
+                       </td>
+                       <td>
+                        name    <!-- {{person.age}} -->
+                       </td>
+                       <td>
+                          hello
+                       </td>
+                       <td>
+                          hello <!-- {{person.name}} -->
+                       </td>
+                       <td>
+                         my   <!-- {{person.surname}} -->
+                       </td>            
                   </tr>
               </tbody>
           </table>
       </div>
+
+
+      <body>
+  
+  
+          <h4 style="left: 500%">Search for your book</h4>
+        <div class="row">
+          <div class="col-xs-12">
+        <form>
+        <div class = "row">
+          <div class="col-sm-5 form-group">
+            <label for="name">Subject Name</label>
+            <input type="text"id="name" class="form-control">
+        
+          </div>
+          <div class="col-sm-2 form-group">
+            <label for= "amount">Price</label>
+            <input type="Number" id="amount" class="form-control">
+          </div>
+        </div>
+        <div class="row">
+         <div class="col-xs-12">
+           <button class="btn btn-success" type="Submit">Search</button>
+        </div>
+        </div>
+        </form>
+          </div>
+        </div>
+        
+        </body> 
