@@ -1,3 +1,45 @@
-<p>
-  display-books works!
-</p>
+<body>
+  <div class="container">
+      <div ng-app="todolist" ng-controller="todoCtrl">
+          <strong>Person</strong>
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th>
+                          Name
+                      </th>
+                      <th>
+                          Surname
+                      </th>
+                      <th>
+                          Age
+                      </th>
+                      <th>
+                          Dogs
+                      </th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr ng-repeat="person in people">
+                      <td>
+                         hello <!-- {{person.name}} -->
+                      </td>
+                      <td>
+                        my   <!-- {{person.surname}} -->
+                      </td>
+                      <td>
+                       name    <!-- {{person.age}} -->
+                      </td>
+                      <td>
+                          <ul>
+
+                              <li> helloo</li>
+
+
+                            <!-- <li? <li ng-repeat="dog in person.dogs">{{dog.name}} ({{dog.breed}})</li> -->
+                          </ul>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
