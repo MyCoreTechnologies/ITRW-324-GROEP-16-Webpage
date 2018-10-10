@@ -16,6 +16,7 @@ import { DisplaybooksComponent } from './displaybooks/displaybooks.component';
 import { AddBookComponent } from './add-book/add-book.component';
 import { ReportstudentComponent } from './reportstudent/reportstudent.component';
 import { DropdownDirective } from './Shared/dropdown.directive';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -35,7 +36,8 @@ import { DropdownDirective } from './Shared/dropdown.directive';
     AddBookComponent,
     ReportstudentComponent,
     DropdownDirective,
-    ReportstudentComponent
+    ReportstudentComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
