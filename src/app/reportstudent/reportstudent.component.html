@@ -1,12 +1,12 @@
-<body style=" position: absolute; color:black; background-color:lemonchiffon; width: 250px">
+<body style=" position: absolute; left:35%; color:black; background-color:lemonchiffon; width: 250px">
   <h4>Report Details</h4>
 <label>Student Number</label>
 <input type="text" style="width: 200px;"
-class= "form-control"(input)="onUpdateServerName($event)">
+class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Student Number">
 
 <label>Reasons for report</label>
 <input type= "text" style="width: 200px"
-class= "form-control"(input)="onUpdateServerName($event)">
+class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Valid Reason">
 
 
 <label>Date of offence</label>
@@ -16,7 +16,7 @@ class= "form-control"(input)="onUpdateServerName($event)">
 
 ,<div class = "row">
   <div class = "col-xs-12">
-    <button style="color: white; background-color: darkgray; left: 50%; width: 250px" class ="btn btn-primary" [disabled]="!allowsNewServer">ADD BOOK</button>
+    <button style="color: white; background-color: darkgray; left: 50%; width: 250px" class ="btn btn-primary" [disabled]="!allowsNewServer">Submit Report</button>
   </div>
 </div>
 
