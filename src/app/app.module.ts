@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DisplaybooksComponent } from './displaybooks/displaybooks.component';
 import { AddBookComponent } from './add-book/add-book.component';
+import { DropdownDirective } from './Shared/dropdown.directive';
 
 
 
@@ -29,7 +30,8 @@ import { AddBookComponent } from './add-book/add-book.component';
     LoginComponent,
     RegisterComponent,
     DisplaybooksComponent,
-    AddBookComponent
+    AddBookComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
