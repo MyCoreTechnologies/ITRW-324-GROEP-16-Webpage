@@ -1,22 +1,22 @@
-<body style=" position: absolute; left:35%; color:black; background-color:lemonchiffon; width: 250px">
-  <h4>Report Details</h4>
-<label>Student Number</label>
-<input type="text" style="width: 200px;"
+<body style="align-content: center; position: absolute; left:40%; color:black; background-color:whitesmoke; width: 250px; align-self: auto; align-content: center">
+  <h3 style=" text-align: center; font:bolder">Report Details</h3>
+<label style="align-content: center; text-align: center;align-self: auto;">Student Number</label>
+<input type="text" style="width: 250px; text-align: center;"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Student Number">
 
-<label>Reasons for report</label>
-<input type= "text" style="width: 200px"
+<label style=" text-align: center;">Reasons for report</label>
+<input type= "text" style="width: 250px; text-align: center;"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Valid Reason">
 
 
-<label>Date of offence</label>
-<input type= "date" style="width: 200px"
+<label style="align-content: center; text-align: center;align-self: auto;">Date of offence</label>
+<input type= "date" style=" width: 250px; text-align: center; align-self: auto;"
 class= "form-control"(input)="onUpdateServerName($event)">
 
 
 ,<div class = "row">
   <div class = "col-xs-12">
-    <button style="color: white; background-color: darkgray; left: 50%; width: 250px" class ="btn btn-primary" [disabled]="!allowsNewServer">Submit Report</button>
+    <button style="left: 50%; width: 250px" class ="btn btn-primary">Submit Report</button>
   </div>
 </div>
 
