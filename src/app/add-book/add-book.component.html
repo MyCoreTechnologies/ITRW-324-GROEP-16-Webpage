@@ -1,24 +1,28 @@
-<body style=" position: absolute; color:black; background-color:lemonchiffon; width: 250px">
+<body style=" position:absolute; color:black; left: 1%; top: 5%; background-color:lemonchiffon; width: 250px">
   <h3>Enter Book Details</h3>
+
+
 <label>Book Name</label>
-<input type="text" style="width: 220px;"
+<input type="text" style="width: 220px; height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Book Name">
 
 
+
 <label>Book Edition</label>
-<input type= "text" style="width: 220px"
+<input type= "text" style="width: 220px; height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Book Edition">
 
+
 <label>Book ISBN 10 Number</label>
-<input type="text" style="width: 220px"
+<input type="text" style="width: 220px;  height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter ISBN 10 Number">
 
 <label>Book ISBN 13 Number</label>
-<input type= "text" style="width: 220px"
+<input type= "text" style="width: 220px; height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter ISBN 13 Number">
 
 <label>Book Price</label>
-<input type= "text" style="width: 220px"
+<input type= "text" style="width: 220px ; height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Price">
 
 <div class="row">
@@ -43,11 +47,11 @@ class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Pr
 class= "form-control"(input)="onUpdateServerName($event)">
 
 <label>Author Name</label>
-<input type= "text" style="width: 220px"
+<input type= "text" style="width: 220px;  height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Author Name">
 
 <label>Subject Code</label>
-<input type= "text" style="width: 220px"
+<input type= "text" style="width: 220px;  height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Example: ITRW111">
 
   <div class="row">
@@ -87,7 +91,7 @@ class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Example:
      </div>
      </div>
 
-,<div class = "row">
+<div class = "row">
   <div class = "col-xs-12">
     <button style="color: white; left: 50%; width: 250px" class ="btn btn-primary" [disabled]="!allowsNewServer">ADD BOOK</button>
   </div>
