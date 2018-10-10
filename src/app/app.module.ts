@@ -14,11 +14,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DisplaybooksComponent } from './displaybooks/displaybooks.component';
 import { AddBookComponent } from './add-book/add-book.component';
-<<<<<<< HEAD
 import { ReportstudentComponent } from './reportstudent/reportstudent.component';
-=======
 import { DropdownDirective } from './Shared/dropdown.directive';
->>>>>>> DisplayData
 
 
 
@@ -35,11 +32,8 @@ import { DropdownDirective } from './Shared/dropdown.directive';
     RegisterComponent,
     DisplaybooksComponent,
     AddBookComponent,
-<<<<<<< HEAD
-    ReportstudentComponent
-=======
+    ReportstudentComponent,
     DropdownDirective
->>>>>>> DisplayData
   ],
   imports: [
     BrowserModule,
