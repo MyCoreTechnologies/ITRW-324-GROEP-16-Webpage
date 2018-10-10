@@ -10,21 +10,22 @@
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#" (click)="onSelect('login')"data-toggle="tooltip" data-placement="bottom" title="Go to Login form!" >LOGIN</a></li>
-                    <li><a href="#" (click)="onSelect('register')"data-toggle="tooltip" data-placement="bottom" title="Go to Register form!" >REGISTER</a></li>
-                    <li><a href="#" (click)="onSelect('search')"data-toggle="tooltip" data-placement="bottom" title="Go to Search Book Form!" >SEARCH BOOK</a></li>
-                    <li><a href="#" (click)="onSelect('add')"data-toggle="tooltip" data-placement="bottom" title="Go to Add Book Form!" >ADD BOOK</a></li>
+                    <li><a href="#" (click)="onSelect('login')"data-toggle="tooltip" data-placement="bottom" title="Go to Login form!" ><span class="glyphicon glyphicon-lock"></span>LOGIN</a></li>
+                    <li><a href="#" (click)="onSelect('register')"data-toggle="tooltip" data-placement="bottom" title="Go to Register form!" ><span class="glyphicon glyphicon-pencil"></span>REGISTER</a></li>
+                    <li><a href="#" (click)="onSelect('search')"data-toggle="tooltip" data-placement="bottom" title="Go to Search Book Form!" ><span class="glyphicon glyphicon-search
+                      "></span>SEARCH BOOK</a></li>
+                    <li><a href="#" (click)="onSelect('add')"data-toggle="tooltip" data-placement="bottom" title="Go to Add Book Form!" ><span class="glyphicon glyphicon-book"></span>ADD BOOK</a></li>
                  
               <li class="dropdown"appDropdown>
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
-                <span class="caret"></span></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" >MENU
+                <span class="glyphicon glyphicon-menu-hamburger"></span></a>
                 <ul class="dropdown-menu" >
                         <li><a href="#">Help</a></li>
                         <li><a href="#"(click)="onSelect('report')"data-toggle="tooltip" data-placement="bottom" title="Report a Student for unacceptable behaviour!">Report Student</a></li>
                         <li><a href="#">Logout</a></li>
                 </ul>
               </li>
-              <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
             </ul>
           </div>
         </div>
