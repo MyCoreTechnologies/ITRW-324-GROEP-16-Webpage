@@ -19,6 +19,7 @@ import { DropdownDirective } from './Shared/dropdown.directive';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { DropdownDirective } from './Shared/dropdown.directive';
     DisplaybooksComponent,
     AddBookComponent,
     ReportstudentComponent,
-    DropdownDirective
+    DropdownDirective,
+    ReportstudentComponent
   ],
   imports: [
     BrowserModule,
