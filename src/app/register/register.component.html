@@ -1,26 +1,29 @@
-<body style=" position: absolute; color:black; background-color:lemonchiffon">
+<body style=" position: absolute; color:black; background-color:lemonchiffon; width: 250px">
   <h4>Enter Your Details Below</h4>
 <label>Student Number</label>
-<input type="text"
+<input type="text" style="width: 200px;"
 class= "form-control"(input)="onUpdateServerName($event)">
 <label>First Name</label>
-<input type= "Password"
+<input type= "text" style="width: 200px"
 class= "form-control"(input)="onUpdateServerName($event)">
 <label>Last Name</label>
-<input type="text"
+<input type="text" style="width: 200px"
 class= "form-control"(input)="onUpdateServerName($event)">
 <label>Contact Number</label>
-<input type= "Password"
-class= "form-control"(input)="onUpdateServerName($event)">
-<label>Contact Number</label>
-<input type="text"
+<input type= "text" style="width: 200px"
 class= "form-control"(input)="onUpdateServerName($event)">
 <label>Email Address</label>
-<input type= "Password"
+<input type= "text" style="width: 200px"
 class= "form-control"(input)="onUpdateServerName($event)">
 <label>Password</label>
-<input type="text"
+<input type="password" style="width: 200px"
 class= "form-control"(input)="onUpdateServerName($event)">
+
+<div class="row">
+  <div class="col-xs-12">
+    <label>Province</label>
+ </div>
+ </div>
 
 <select>
     <option label="Eastern Cape"></option>  
@@ -33,15 +36,50 @@ class= "form-control"(input)="onUpdateServerName($event)">
     <option label="Northern Cape"></option>
     <option label="Western Cape"></option>
     <option label="Other"></option>
-  
+
   </select>
 
-  <select>
-      <option label="Volvo"></option>
-      <option label="Saab"></option>
-      <option label="Mercedes"></option>
-      <option label="Audi"></option>
-    </select>
+  <div class="row">
+    <div class="col-xs-12">
+      <label>Hostel
+      </label>
+   </div>
+   </div>
 
-<button style="color: white; background-color: darkgray; left: 50%;" class ="btn btn-primary" [disabled]="!allowsNewServer">Register</button>
+  <select>
+      <option label="Caput"></option>
+      <option label="De Wilgers"></option>
+      <option label="Excelsior"></option>
+      <option label="Hombre"></option>
+      <option label="Laureus"></option>
+      <option label="Over de Voor"></option>
+      <option label="Partia"></option>
+      <option label="Ratau"></option>
+      <option label="Veritas"></option>
+      <option label="Eikenhof"></option>
+      <option label="Heide"></option>
+      <option label="Karlien"></option>
+      <option label="Kasteel"></option>
+      <option label="Klawerhof"></option>
+      <option label="Minjonet"></option>
+      <option label="Oosterhof"></option>
+      <option label="Republiek"></option>
+      <option label="Vergeet My Nie"></option>
+      <option label="Wag n Bietjie"></option>
+      <option label="Wanda"></option>
+      <option label="Oppirif"></option>
+      <option label="Private"></option>
+    </select>
+    <div class="row">
+      <div class="col-xs-12">
+        
+     </div>
+     </div>
+
+,<div class = "row">
+  <div class = "col-xs-12">
+    <button style="color: white; background-color: darkgray; left: 50%; width: 250px" class ="btn btn-primary" [disabled]="!allowsNewServer">Register</button>
+  </div>
+</div>
+
 </body>

@@ -13,6 +13,7 @@ import { RequestComponent } from './request/request.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DisplaybooksComponent } from './displaybooks/displaybooks.component';
+import { AddBookComponent } from './add-book/add-book.component';
 
 
 
@@ -27,7 +28,8 @@ import { DisplaybooksComponent } from './displaybooks/displaybooks.component';
     RequestComponent,
     LoginComponent,
     RegisterComponent,
-    DisplaybooksComponent
+    DisplaybooksComponent,
+    AddBookComponent
   ],
   imports: [
     BrowserModule,
