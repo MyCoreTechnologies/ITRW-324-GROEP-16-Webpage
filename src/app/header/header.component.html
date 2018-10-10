@@ -1,28 +1,31 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <!-- <a href="#" class= "navbar-brand">SELIT</a> -->
-            <img style="position: auto ;width: 300px; height: 130px; left:12%; top: 20%" src="../assets/Img/SELIT.png">
-            <div class="image"></div>
-        </div>
-        <div style = "background-color:lemonchiffon;" class="collapse navbar-collapse">
-            <ul class= "nav navbar-nav">
-               <li><a href="#" (click)="onSelect('login')"data-toggle="tooltip" data-placement="bottom" title="Go to Login form!" >LOGIN</a></li>
-               <li><a href="#" (click)="onSelect('register')"data-toggle="tooltip" data-placement="bottom" title="Go to Register form!" >REGISTER</a></li>
-               <li><a href="#" (click)="onSelect('search')"data-toggle="tooltip" data-placement="bottom" title="Go to Search Book Form!" >SEARCH BOOK</a></li>
-               <li><a href="#" (click)="onSelect('add')"data-toggle="tooltip" data-placement="bottom" title="Go to Add Book Form!" >ADD BOOK</a></li>
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#myPage">SELIT</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" (click)="onSelect('login')"data-toggle="tooltip" data-placement="bottom" title="Go to Login form!" >LOGIN</a></li>
+                    <li><a href="#" (click)="onSelect('register')"data-toggle="tooltip" data-placement="bottom" title="Go to Register form!" >REGISTER</a></li>
+                    <li><a href="#" (click)="onSelect('search')"data-toggle="tooltip" data-placement="bottom" title="Go to Search Book Form!" >SEARCH BOOK</a></li>
+                    <li><a href="#" (click)="onSelect('add')"data-toggle="tooltip" data-placement="bottom" title="Go to Add Book Form!" >ADD BOOK</a></li>
+                 
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu" appDropdown>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#"(click)="onSelect('report')"data-toggle="tooltip" data-placement="bottom" title="Report a Student for unacceptable behaviour!">Report Student</a></li>
+                        <li><a href="#">Logout</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
             </ul>
-            <ul class= "nav navbar-nav navbar-right">
-                <li class= "dropdown" appDropdown>
-                    <a href="#" class="dropdown-toggle" role="button">Menu<span class="caret"></span></a>
-                    <ul class= "dropdown-menu">
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#"(click)="onSelect('report')"data-toggle="tooltip" data-placement="bottom" title="Report a Student for unacceptable behaviour!">Report Student</a></li>
-                            <li><a href="#">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
+          </div>
         </div>
-    </div>
-</nav>
-
+      </nav>
