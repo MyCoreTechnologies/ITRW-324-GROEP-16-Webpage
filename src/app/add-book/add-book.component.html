@@ -1,33 +1,33 @@
-<body style=" position:absolute; color:black; left: 5%; top: 7%; background-color:whitesmoke; width: 1200px">
-  <h3>Enter Book Details</h3>
+<body style=" position:absolute; color:black; left: 5%; top: 7%; background-color: transparent; width: 1200px">
+  <h3 style="color:white">Enter Book Details</h3>
 
 <div style="display:flex; flex-direction: row; align-items: center">
   <div style="float:left;margin-right:20px;">
-<label for = "book_name">Book Name</label>
+<label for = "book_name" style="color:white">Book Name</label>
 <input id = "book_name" type="text" style="width: 220px; height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Book Name">
   </div>
 
 <div style="float:left;margin-right:20px;">
-<label for = "book_edition">Book Edition</label>
+<label for = "book_edition" style="color:white">Book Edition</label>
 <input  id = "book_edition" type= "text" style="width: 220px; height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Book Edition">
 </div>
 
 <div style="float:left;margin-right:20px;">
-<label for = "book_isbn-10">Book ISBN 10 Number</label>
+<label for = "book_isbn-10" style="color:white">Book ISBN 10 Number</label>
 <input id= "book_isbn-10" type="text" style="width: 220px;  height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter ISBN 10 Number">
 </div>
 
 <div style="float:left;margin-right:20px;">
-<label for = "book_isbn-13">Book ISBN 13 Number</label>
+<label for = "book_isbn-13" style="color:white">Book ISBN 13 Number</label>
 <input id= "book_isbn-13" type= "text" style="width: 220px; height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter ISBN 13 Number">
 </div>
 
 <div style="float:left;margin-right:20px;">
-<label for = "author_name" >Author Name</label>
+<label for = "author_name" style="color:white">Author Name</label>
 <input id = "author_name" type= "text" style="width: 220px;  height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Author Name">
 </div>
@@ -35,7 +35,7 @@ class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Au
 
 <div style="display:flex; flex-direction: row; align-items: center">
   <div style="float:left;margin-right:20px;">
-<label for = "book_price">Book Price</label>
+<label for = "book_price" style="color:white">Book Price</label>
 <input id = "book_price" type= "text" style="width: 220px ; height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Price">
 </div>
@@ -43,7 +43,7 @@ class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Pr
 <div style="float:left;margin-right:20px;">
 <div class="row">
   <div class="col-xs-12">
-    <label>Book Type
+    <label style="color:white">Book Type
     </label>
  </div>
  </div>
@@ -56,20 +56,20 @@ class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Pr
 </div>
   <div class="row">
     <div class="col-xs-12">
-<label>Date</label>
+<label style="color:white">Date</label>
 </div>
 </div>
 
 <input type= "date" style="width: 220px"
 class= "form-control"(input)="onUpdateServerName($event)">
 
-<label>Subject Code</label>
+<label style="color:white">Subject Code</label>
 <input type= "text" style="width: 220px;  height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Example: ITRW111">
 
   <div class="row">
     <div class="col-xs-12">
-      <label>Hostel
+      <label style="color:white">Hostel
       </label>
    </div>
    </div>
@@ -106,6 +106,6 @@ class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Example:
 
 <div class = "row">
   <div class = "col-xs-12">
-    <button style="color: white; left: 50%; width: 250px" class ="btn btn-primary" [disabled]="!allowsNewServer">ADD BOOK</button>
+    <button style="color: white; background-color: black;left: 50%; width: 250px" class ="btn btn-primary" [disabled]="!allowsNewServer">ADD BOOK</button>
   </div>
 </div>
