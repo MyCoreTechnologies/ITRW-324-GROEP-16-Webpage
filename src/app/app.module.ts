@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-
-
 import { AppComponent } from './app.component';
 import { ServerComponent } from './Server/server.component';
 import { ServersComponent } from './servers/servers.component';
@@ -19,9 +17,19 @@ import { DropdownDirective } from './Shared/dropdown.directive';
 import { HomeComponent } from './home/home.component';
 import { HelpComponent } from './help/help.component';
 import { LogoutComponent } from './logout/logout.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const appRoutes: Routes = [
+  { path: 'reg', component: RegisterComponent },
+  { path: 'dis',      component: DisplaybooksComponent },
+  {
+    path: 'report',
+    component: ReportstudentComponent,
+    data: { title: 'Heroes List' }
+  },
 
-
+  { path: '**', component: AddBookComponent }
+];
 
 @NgModule({
   declarations: [
@@ -45,9 +53,15 @@ import { LogoutComponent } from './logout/logout.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }

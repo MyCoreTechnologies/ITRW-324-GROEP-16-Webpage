@@ -1,4 +1,5 @@
 import { Component, Output,EventEmitter } from "@angular/core";
+import { RouterModule, Routes,RouterLink } from '@angular/router';
 
 
 @Component({
