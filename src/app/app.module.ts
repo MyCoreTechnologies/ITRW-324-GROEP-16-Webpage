@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './Server/server.component';
@@ -18,6 +18,10 @@ import { HomeComponent } from './home/home.component';
 import { HelpComponent } from './help/help.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RouterModule, Routes,Router } from '@angular/router';
+import {subservice} from '../post/web.service';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import {InterceptorService} from '../post/web.interceptor';
+import {HttpClientModule} from '@angular/common/http';
 
 const appRoutes: Routes = [
 ];
@@ -45,12 +49,21 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
       { useHash: true } // <-- debugging purposes only
     )
   ],
-  providers: [],
+  providers: [
+    {provide:ErrorHandler, useClass: ErrorHandler}, 
+    subservice,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+      multi: true
+    } 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
