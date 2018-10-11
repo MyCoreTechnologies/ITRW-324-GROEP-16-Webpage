@@ -4,6 +4,7 @@ import {Router,Routes,RouterLink} from "@angular/router";
 import { LogoutComponent } from '../logout/logout.component';
 import {subservice} from '../../post/web.service';
 import {NgForm} from '@angular/forms';
+import { NgModule, ErrorHandler } from '@angular/core';
 
 
 @Component({
@@ -19,8 +20,9 @@ export class LoginComponent implements OnInit {
   }  
   ngOnInit() {
   }
-  data;
+  
   loginData: {};
+  data;
 
   postSignIn(form: NgForm) {
     console.log(form.value);
@@ -49,8 +51,8 @@ export class LoginComponent implements OnInit {
   // }
 }
 
-const routes : Routes = [
-{path: 'logout', component: LogoutComponent}
-];
+// const routes : Routes = [
+// {path: 'logout', component: LogoutComponent}
+// ];
 
 
