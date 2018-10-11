@@ -7,12 +7,13 @@
      
       <h3 style="color:white">Enter your student number and password.</h3>
       
-    <label style="color:white">Student Number:</label>
+    <label >Student Number:</label>
+    <form (ngSubmit) = "postSignIn(f)" #f="ngForm">
     <div class="input-group" >
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
         
-    <input type="text"
-    class= "form-control"(input)="onUpdateServerName($event)"placeholder="Enter Student Number" style="width: 300px">
+    <input type="text" [(ngModel)]="loginData.student_number" name = "student_number"
+    class= "form-control" placeholder="Enter Student Number" style="width: 300px">
  
   </div>
 
@@ -20,15 +21,16 @@
     <div class="input-group">
       
     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-    <input type= "Password"
-    class= "form-control"(input)="onUpdateServerName($event)"id="pwd" placeholder="Enter password" required="required" style="width: 300px">
+    <input type= "Password" [(ngModel)]="loginData.password" name = "password"
+    class= "form-control"  placeholder="Enter password" required="required" style="width: 300px">
     </div>
     <h1></h1>
     <!-- <a class="btn btn-primary" href="/login.component.html">Logout</a> -->
     <!-- <button (click) = "goHome()" >HELLO</button> -->
 
 
-    <button  data-toggle="tooltip" data-placement="bottom" title="Login!" style="height: 35px; width: 340px;  color: white; position:relative; left: 0%; " class ="btn btn-primary" [disabled]="allowsNewServer">LOGIN</button>
+    <button type = "submit" data-toggle="tooltip" data-placement="bottom" title="Login!" style="height: 35px; width: 350px;  color: white; position:relative; left: 0%; " class ="btn btn-primary" [disabled]="allowsNewServer">LOGIN</button>
+  </form>
   
   </body>
     </span>
