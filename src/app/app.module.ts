@@ -20,15 +20,6 @@ import { LogoutComponent } from './logout/logout.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
-  { path: 'reg', component: RegisterComponent },
-  { path: 'dis',      component: DisplaybooksComponent },
-  {
-    path: 'report',
-    component: ReportstudentComponent,
-    data: { title: 'Heroes List' }
-  },
-
-  { path: '**', component: AddBookComponent }
 ];
 
 @NgModule({

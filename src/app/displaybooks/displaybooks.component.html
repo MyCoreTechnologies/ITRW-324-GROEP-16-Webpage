@@ -13,8 +13,11 @@
       <input type="text"id="name" class="form-control" placeholder="ITRW324" style="text-align: center; align-self: auto; ">
  
       <label for= "amount">Price</label>
-      <input type="Number" id="amount" class="form-control" placeholder="500"style=" text-align: center; align-self: auto;">
-   
+      <div class="input-group">
+          <span class="input-group-addon">R</span>
+          <input type="text" class="form-control"class="form-control" placeholder="500"style=" text-align: center; align-self: auto;" aria-label="Amount (to the nearest dollar)">
+          <span class="input-group-addon">.00</span>
+        </div>
   <div class="row">
         <div class="col-xs-12">
         <label class="radio-inline"><input type="radio" name="optradio" checked>Advertisement</label>
@@ -44,11 +47,15 @@
 <!-- </div> -->
 
 
+   
+ 
 </body>
   </form>
     </div>
   </div>
-
+  <ul class="nav nav-pills" role="tablist">
+      <li role="presentation"><a href="#">Books found <span class="badge">3</span></a></li>
+    </ul>
   </body> 
 
 <body style="width: 1170px; align-content: center; text-align: center; align-self: auto;background-color:whitesmoke;">
@@ -60,6 +67,7 @@
                 <thead>
                     <tr>
                         <th>
+                          
                             Book Name
                         </th>
                         <th>
