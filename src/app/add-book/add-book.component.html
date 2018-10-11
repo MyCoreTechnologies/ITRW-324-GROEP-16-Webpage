@@ -1,30 +1,46 @@
-<body style=" position:absolute; color:black; left: 1%; top: 5%; background-color:whitesmoke; width: 250px">
+<body style=" position:absolute; color:black; left: 5%; top: 7%; background-color:whitesmoke; width: 1200px">
   <h3>Enter Book Details</h3>
 
-
-<label>Book Name</label>
-<input type="text" style="width: 220px; height: 28px"
+<div style="display:flex; flex-direction: row; align-items: center">
+  <div style="float:left;margin-right:20px;">
+<label for = "book_name">Book Name</label>
+<input id = "book_name" type="text" style="width: 220px; height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Book Name">
+  </div>
 
-
-
-<label>Book Edition</label>
-<input type= "text" style="width: 220px; height: 28px"
+<div style="float:left;margin-right:20px;">
+<label for = "book_edition">Book Edition</label>
+<input  id = "book_edition" type= "text" style="width: 220px; height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Book Edition">
+</div>
 
-
-<label>Book ISBN 10 Number</label>
-<input type="text" style="width: 220px;  height: 28px"
+<div style="float:left;margin-right:20px;">
+<label for = "book_isbn-10">Book ISBN 10 Number</label>
+<input id= "book_isbn-10" type="text" style="width: 220px;  height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter ISBN 10 Number">
+</div>
 
-<label>Book ISBN 13 Number</label>
-<input type= "text" style="width: 220px; height: 28px"
+<div style="float:left;margin-right:20px;">
+<label for = "book_isbn-13">Book ISBN 13 Number</label>
+<input id= "book_isbn-13" type= "text" style="width: 220px; height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter ISBN 13 Number">
+</div>
 
-<label>Book Price</label>
-<input type= "text" style="width: 220px ; height: 28px"
+<div style="float:left;margin-right:20px;">
+<label for = "author_name" >Author Name</label>
+<input id = "author_name" type= "text" style="width: 220px;  height: 28px"
+class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Author Name">
+</div>
+</div>
+
+<div style="display:flex; flex-direction: row; align-items: center">
+  <div style="float:left;margin-right:20px;">
+<label for = "book_price">Book Price</label>
+<input id = "book_price" type= "text" style="width: 220px ; height: 28px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Price">
+</div>
 
+<div style="float:left;margin-right:20px;">
 <div class="row">
   <div class="col-xs-12">
     <label>Book Type
@@ -36,7 +52,8 @@ class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Pr
     <option label="Advertisement"></option>
     <option label="Request"></option>
   </select>
-
+</div>
+</div>
   <div class="row">
     <div class="col-xs-12">
 <label>Date</label>
@@ -45,10 +62,6 @@ class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Pr
 
 <input type= "date" style="width: 220px"
 class= "form-control"(input)="onUpdateServerName($event)">
-
-<label>Author Name</label>
-<input type= "text" style="width: 220px;  height: 28px"
-class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Author Name">
 
 <label>Subject Code</label>
 <input type= "text" style="width: 220px;  height: 28px"
