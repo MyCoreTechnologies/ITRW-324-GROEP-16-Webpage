@@ -18,6 +18,7 @@ import { ReportstudentComponent } from './reportstudent/reportstudent.component'
 import { DropdownDirective } from './Shared/dropdown.directive';
 import { HomeComponent } from './home/home.component';
 import { HelpComponent } from './help/help.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
@@ -39,7 +40,8 @@ import { HelpComponent } from './help/help.component';
     DropdownDirective,
     ReportstudentComponent,
     HomeComponent,
-    HelpComponent
+    HelpComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
