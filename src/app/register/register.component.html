@@ -1,36 +1,39 @@
-<body style=" position: absolute; left: 1%; top: 5%; color:black; background-color:transparent; width: 400px">
-  <h3 style="color:ghostwhite">Enter Your Details Below</h3>
-<label style="color:white">Student Number</label>
-<input  id = "student_number"type="text" style="width: 200px; height:30px"
+<body style=" position: absolute; left: 1%; top: 5%; color:black; background-color: transparent; width: 300px">
+  <div>
+  <h3 style="color:white; opacity: 5">Enter Your Details Below</h3>
+<div>
+<label style="color:white;opacity:1.8 ;">Student Number</label>
+<input  id = "student_number"type="text" style="width: 200px; height:30px; opacity:1.8 ;"
 class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Student Number" required minlength="8" maxlength="8">
+</div>
 
 
-<label style="color:white">First Name</label>
-<input type= "text" style="width: 200px; height:30px"
+<label style="color:white;">First Name</label>
+<input type= "text" style="width: 200px; height:30px; opacity:1.8 ;"
 class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter First Name">
 
-<label style="color:white">Last Name</label>
-<input type="text" style="width: 200px; height:30px"
+<label style="color:white; opacity:1.8 ;">Last Name</label>
+<input type="text" style="width: 200px; height:30px; opacity:1.8 ;"
 class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Last Name">
 
-<label style="color:white">Contact Number</label>
-<input type= "text" style="width: 200px; height:30px"
+<label style="color:white; opacity:1.8 ;">Contact Number</label>
+<input type= "text" style="width: 200px; height:30px; opacity:1.8 ;"
 class= "form-control"(input)="onUpdateServerName($event)" placeholder=".Enter Contact Number">
 
-<label style="color:white">Email Address</label>
-<input type= "text" style="width: 200px; height:30px"
+<label style="color:white; opacity:1.8 ;">Email Address</label>
+<input type= "text" style="width: 200px; height:30px; opacity:1.8 ;"
 class= "form-control"(input)="onUpdateServerName($event)" placeholder="youremail@gmail.com">
 
-<label style="color:white">Password</label>
+<label style="color:white; opacity:1.8 ;">Password</label>
 <div class="input-group">
 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-<input type="password" style="width: 200px; height:30px"
+<input type="password" style="width: 200px; height:30px; opacity:1.8 ;"
 class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Password">
 
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <label style="color:white">Province</label>
+    <label style="color:white; opacity:1.8 ;">Province</label>
  </div>
  </div>
 
@@ -50,7 +53,7 @@ class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Pas
 
   <div class="row">
     <div class="col-xs-12">
-      <label style="color:white">Hostel
+      <label style="color:white; opacity:1.8 ;">Hostel
       </label>
    </div>
    </div>
@@ -88,14 +91,15 @@ class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Pas
 
 <div class = "row">
   <div class = "col-xs-12">
-    <button  data-toggle="tooltip" data-placement="bottom" title="Register!" style="color: white; left: 50%;  width: 250px" class ="btn btn-primary" [disabled]="!allowsNewServer" >Register</button>
+    <button  data-toggle="tooltip" data-placement="bottom" title="Register!" style="color: white; left: 50%;  width: 250px; opacity:1.8" class ="btn btn-primary"  >Register</button>
   </div>
 </div>
-
+</div>
 </body>
 
-<body style="height: auto;border-style:initial;left: 380px;width:330px;bottom:290px; position: absolute; color:black; background-color:transparent; border-color: black" class = "rounded">
-    <img style="width: 300px; height: 130px;  bottom: 200px" src="../assets/Img/SELIT.png">
+<body style="height: auto;border-style:initial;left: 380px;width:330px;bottom:290px; position: absolute; color:black; background-color: #2d2d30; opacity: 0.7; border-color: black" class = "rounded">
+  <div>
+    <img style="width: 300px; height: 130px;  bottom: 200px; opacity: 3;" src="../assets/Img/SELIT.png">
     <div class="image" style="align-self: center"></div>
  <p style = "color: white">
   -This site helps you to find textbooks or to sell your own textbooks.
@@ -103,13 +107,16 @@ class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Pas
  <p style = "color: white">
     -Using webpage for wrong purpose can result in a ban. This will remove student access to the system.
    </p>
+  </div>
    <!--<p style = "color: white">
       -
      </p>
      <p style = "color: white">
         -
        </p>-->
+     
     </body>
+
 <!-- <address>
     <strong>Full Name</strong><br>
     <a href="mailto:#">first.last@example.com</a>
