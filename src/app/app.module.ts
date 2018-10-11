@@ -17,7 +17,7 @@ import { DropdownDirective } from './Shared/dropdown.directive';
 import { HomeComponent } from './home/home.component';
 import { HelpComponent } from './help/help.component';
 import { LogoutComponent } from './logout/logout.component';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes,Router } from '@angular/router';
 
 const appRoutes: Routes = [
 ];
@@ -47,12 +47,25 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      { useHash: true } // <-- debugging purposes only
     )
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+export class AppModule {
+  constructor(private router : Router){}
+
+  goHome(){
+    this.router.navigate(['home']);
+  }
+  goLogout(){
+    this.router.navigate(['/logout']);
+  }
+}
+
+const routes : Routes = [
+{path: 'home', component: HomeComponent}
+];
 
 
-export class AppModule { }

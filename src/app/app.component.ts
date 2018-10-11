@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Routes,RouterModule, Router} from '@angular/router';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   loadedFeature = '';
   
+
+
+  
  onNavigate(feature: string){
 this.loadedFeature = feature;
  }
+
 }
