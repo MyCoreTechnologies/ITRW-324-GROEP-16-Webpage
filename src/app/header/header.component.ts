@@ -8,7 +8,12 @@ import { RouterModule, Routes,RouterLink } from '@angular/router';
 })
 export class HeaderComponent{
 
-
+    serverStatus = 'JACQUES';
+    getServerStatus(){
+        return this.serverStatus;
+    }
+    
+    
  @Output() featureSelected = new EventEmitter<string>();
 onSelect(feature:string){
 this.featureSelected.emit(feature); 
