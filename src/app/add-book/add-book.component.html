@@ -1,10 +1,14 @@
 <body style=" position:absolute; color:black; left: 5%; top: 7%; background-color: transparent; width: 1200px">
   <h3 style="color:white">Enter Book Details</h3>
 
+
+  <form (ngSubmit) = "postBooks(f)" #f="ngForm">
+
+
 <div style="display:flex; flex-direction: row; align-items: center">
   <div style="float:left;margin-right:20px;">
 <label for = "book_name" style="color:white">Book Name</label>
-<input id = "book_name" type="text" style="width: 220px; height: 30px"
+<input [(ngModel)]="addBook" name = "book_name" id = "book_name" type="text" style="width: 220px; height: 30px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Book Name">
   </div>
 
@@ -106,6 +110,7 @@ class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Example:
 
 <div class = "row">
   <div class = "col-xs-12">
-   <button style="color: white; background-color: black;left: 50%; width: 250px" class ="btn btn-primary" [disabled]="!allowsNewServer">ADD BOOK</button>
+   <button style="color: white; background-color: black;left: 50%; width: 250px" class ="btn btn-primary" [disabled]="allowsNewServer">ADD BOOK</button>
   </div>
 </div>
+</form>

@@ -8,7 +8,7 @@ import { RouterModule, Routes,RouterLink } from '@angular/router';
 })
 export class HeaderComponent{
 
-    serverStatus = 'JACQUES';
+    serverStatus = '27236285';
     getServerStatus(){
         return this.serverStatus;
     }

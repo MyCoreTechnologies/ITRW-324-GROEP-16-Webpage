@@ -15,6 +15,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   constructor(private router: Router, private submitServe: subservice) {}
+  
   public goToSearch() {
     this.router.navigate(['/book']);
   }  
