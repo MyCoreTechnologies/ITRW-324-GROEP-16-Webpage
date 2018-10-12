@@ -11,7 +11,7 @@
       
     <div>
       <label for="name" style="text-align: center; align-self: auto; color:white ;">Subject Code</label>
-      <input type="text"id="name" [(ngModel)]="loginData" name = "subject_code" class="form-control" placeholder="ITRW324" style="text-align: center; align-self: auto; color: black;">
+      <input type="text"id="name" [(ngModel)]="loginData" name = "subject_code" class="form-control"  placeholder="ITRW324" style="text-align: center; align-self: auto; color: black;">
     </div>
       <label for= "amount" style="color: white ;">Price</label>
       <div class="input-group">
@@ -45,16 +45,7 @@
  
 </body>
 
-<!-- <form (ngSubmit) = "getDisplayBooksByName(f)" #f="ngForm" style="text-align: left; align-self: auto;">
-  <div class="input-group">
-    <input type="text" [(ngModel)]="BookByName" name = "book_name" class="form-control" placeholder="Search your book name.." style="text-align: inherit; align-self: auto;">
-    <div class="input-group-btn">
-      <button class="btn btn-default" type="submit" style="height: 35px ">
-        <i class="glyphicon glyphicon-search"></i>
-      </button>
-    </div>
-  </div>
-</form> -->
+
 <!-- </div> -->
   </form>
     </div>
@@ -143,7 +134,18 @@
             </table>
         </div>
   
-  
+        <!-- <body>
+        <form (ngSubmit) = "getDisplayBooksByName(f)" #f="ngForm" style="text-align: left; align-self: auto;">
+            <div class="input-group">
+              <input type="text" [(ngModel)]="BookByName" name = "book_name" class="form-control" placeholder="Search your book name.." style="text-align: inherit; align-self: auto;">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit" style="height: 35px ">
+                  <i class="glyphicon glyphicon-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </body> -->
         <!-- <div class="col-xs-12"> -->
           
      <!-- DataTables Example -->

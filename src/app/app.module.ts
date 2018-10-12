@@ -71,12 +71,12 @@ const appRoutes: Routes = [
 export class AppModule {
   constructor(private router : Router){}
 
-  goHome(){
-    this.router.navigate(['home']);
-  }
-  goLogout(){
-    this.router.navigate(['/logout']);
-  }
+//   goHome(){
+//     this.router.navigate(['home']);
+//   }
+//   goLogout(){
+//     this.router.navigate(['/logout']);
+//   }
 }
 
 const routes : Routes = [

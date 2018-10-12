@@ -17,10 +17,11 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router, private submitServe: subservice) {}
   
   public goToSearch() {
-    this.router.navigate(['/book']);
+    this.router.navigate(['./logout.component.html']);
   }  
   ngOnInit() {
   }
+
  student_number;
   password;
   loginData:{};
@@ -28,6 +29,8 @@ export class LoginComponent implements OnInit {
   //   return this.student_number;
   // };
   data;
+
+allowserver;
 
   postSignIn(form: NgForm) {
     console.log(form.value);
@@ -49,7 +52,7 @@ export class LoginComponent implements OnInit {
     } 
 
   // goHome(){
-  //   this.router.navigate(['home.component.html']);
+  //   this.router.navigate(['./displaybooks.component.html']);
   // }
   // goLogout(){
   //   this.router.navigate(['logout']);
