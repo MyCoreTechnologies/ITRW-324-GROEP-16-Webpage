@@ -20,19 +20,19 @@ class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Bo
 
 <div style="float:left;margin-right:20px;">
 <label for = "book_isbn-10" style="color:white">Book ISBN 10 Number</label>
-<input id= "book_isbn-10" type="text" style="width: 220px;  height: 30px"
+<input [(ngModel)]="addBook.isbn10" name = "book_isbn_10_number" id= "book_isbn-10" type="text" style="width: 220px;  height: 30px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter ISBN 10 Number">
 </div>
 
 <div style="float:left;margin-right:20px;">
 <label for = "book_isbn-13" style="color:white">Book ISBN 13 Number</label>
-<input id= "book_isbn-13" type= "text" style="width: 220px; height: 30px"
+<input [(ngModel)]="addBook.isbn13" name = "book_isbn_13_number" id= "book_isbn-13" type= "text" style="width: 220px; height: 30px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter ISBN 13 Number">
 </div>
 
 <div style="float:left;margin-right:20px;">
 <label for = "author_name" style="color:white">Author Name</label>
-<input id = "author_name" type= "text" style="width: 220px;  height: 30px"
+<input [(ngModel)]="addBook.author" name = "author_name" id = "author_name" type= "text" style="width: 220px;  height: 30px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Author Name">
 </div>
 </div>
@@ -40,7 +40,7 @@ class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Au
 <div style="display:flex; flex-direction: row; align-items: center">
   <div style="float:left;margin-right:20px;">
 <label for = "book_price" style="color:white">Book Price</label>
-<input id = "book_price" type= "text" style="width: 220px ; height: 30px"
+<input [(ngModel)]="addBook.price" name = "book_price" id = "book_price" type= "text" style="width: 220px ; height: 30px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Price">
 </div>
 
@@ -52,9 +52,9 @@ class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Pr
  </div>
  </div>
 
-<select>
-    <option label="Advertisement"></option>
-    <option label="Request"></option>
+<select [(ngModel)]="addBook.type" name = "book_type">
+    <option label="Advertisement" id="a">Advertisement</option>
+    <option label="Request" id="r">Request</option>
   </select>
 </div>
 </div>
@@ -64,44 +64,21 @@ class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Pr
 </div>
 </div>
 
-<input type= "date" style="width: 220px"
+<input [(ngModel)]="addBook.dateplaced" name = "date_placed" type= "date" style="width: 220px"
 class= "form-control"(input)="onUpdateServerName($event)">
 
 <label style="color:white">Subject Code</label>
-<input type= "text" style="width: 220px;  height: 30px"
+<input [(ngModel)]= "addBook.code" name = "subject_code" type= "text" style="width: 220px;  height: 30px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Example: ITRW111">
 
   <div class="row">
     <div class="col-xs-12">
-      <label style="color:white">Hostel
-      </label>
+ <label>
+   
+ </label>
    </div>
    </div>
 
-  <select>
-      <option label="Caput"></option>
-      <option label="De Wilgers"></option>
-      <option label="Excelsior"></option>
-      <option label="Hombre"></option>
-      <option label="Laureus"></option>
-      <option label="Over de Voor"></option>
-      <option label="Partia"></option>
-      <option label="Ratau"></option>
-      <option label="Veritas"></option>
-      <option label="Eikenhof"></option>
-      <option label="Heide"></option>
-      <option label="Karlien"></option>
-      <option label="Kasteel"></option>
-      <option label="Klawerhof"></option>
-      <option label="Minjonet"></option>
-      <option label="Oosterhof"></option>
-      <option label="Republiek"></option>
-      <option label="Vergeet My Nie"></option>
-      <option label="Wag n Bietjie"></option>
-      <option label="Wanda"></option>
-      <option label="Oppirif"></option>
-      <option label="Private"></option>
-    </select>
     <div class="row">
       <div class="col-xs-12">
         
