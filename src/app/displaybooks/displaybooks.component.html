@@ -10,8 +10,8 @@
   <form (ngSubmit) = "getDisplayBooksSearch(f)" #f="ngForm" style= "text-align: center; align-self: auto;">
       
     <div>
-      <label for="name" style="text-align: center; align-self: auto; color: white ;">Subject Code</label>
-      <input type="text"id="name" [(ngModel)]="loginData" name = "subject_code" class="form-control" placeholder="ITRW324" style="text-align: center; align-self: auto; color: white;">
+      <label for="name" style="text-align: center; align-self: auto; color:white ;">Subject Code</label>
+      <input type="text"id="name" [(ngModel)]="loginData" name = "subject_code" class="form-control" placeholder="ITRW324" style="text-align: center; align-self: auto; color: black;">
     </div>
       <label for= "amount" style="color: white ;">Price</label>
       <div class="input-group">
@@ -21,8 +21,10 @@
         </div>
   <div class="row">
         <div class="col-xs-12">
-        <label class="radio-inline"><input [(ngModel)]="loginData.advertisement" name = "advertisement" type="radio" style="color: rgb(15, 11, 11) ;" checked>Advertisement</label>
-        <label class="radio-inline"><input type="radio" style="color: rgb(15, 11, 11) ;" >Request</label>
+            <select [(ngModel)]="loginData.type" name = "book_type">
+                <option label="Advertisement" id="a">Advertisement</option>
+                <option label="Request" id="r">Request</option>
+              </select>
         <div class="row">
                 <div class="col-xs-12">
                     <!-- <span><i class="fas fa-book-open"></i></span> -->
