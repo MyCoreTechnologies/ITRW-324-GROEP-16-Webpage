@@ -14,6 +14,8 @@ export class ReportstudentComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  nameR;
   addOffence:{};
 
   data;
