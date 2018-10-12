@@ -68,9 +68,12 @@ class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Pr
 class= "form-control"(input)="onUpdateServerName($event)">
 
 <label style="color:white">Subject Code</label>
-<input [(ngModel)]= "addBook.code" name = "subject_code" type= "text" style="width: 220px;  height: 30px"
-class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Example: ITRW111">
-
+<div class="row">
+    <div class="col-xs-12">
+<input  type= "text"  style="width: 220px;  height: 30px"
+ class="text-uppercase"  placeholder="Example: ITRW111" [(ngModel)]= "addBook.code" class="text-uppercase"  name = "subject_code">
+</div>
+</div>
   <div class="row">
     <div class="col-xs-12">
  <label>
