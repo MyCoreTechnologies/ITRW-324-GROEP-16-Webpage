@@ -1,8 +1,55 @@
-<p>
-  student works!
-  sssssss
-  s
-  s
+<body style="width: 1170px; align-content: center; text-align: center; align-self: auto;background-color:whitesmoke;">
+    <div class="container">
+        <div ng-app="todolist" ng-controller="todoCtrl" >
+            <h1></h1>
+            <strong style=" width:auto;left: 0%">SHOW ALL BOOKS</strong>
+            <table  id = "bookdisplay" class="table" style="left:5%; width:auto; align-content: center;">
+                <thead>
+                    <tr>
+                        <th>
+                            Book Name
+                        </th>
+                        <th>
+                            Book Price
+                        </th>
+                        <th>
+                            Book Type
+                        </th>
+                        <th>
+                            Student Number
+                        </th>
+                        <th>
+                            Cellphone Number
+                        </th>                    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="person in people">
+                        <td>
+                           hello <!-- {{person.name}} -->
+                        </td>
+                        <td>
+                          my   <!-- {{person.surname}} -->
+                        </td>
+                        <td>
+                         name    <!-- {{person.age}} -->
+                        </td>
+                        <td>
+                           hello
+                        </td>
+                        <td>
+                            hello <!-- {{person.name}} -->
+                         </td>
+                         
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-  s
-</p>
+        <button style="left: 50%; width: 250px" class ="btn btn-primary">Update</button>
+        <p>
+          
+        </p>
+     <button style="left: 50%; width: 250px" class ="btn btn-primary">Delete</button>
+  
+  
