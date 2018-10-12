@@ -1,17 +1,19 @@
 <body style="align-content: center; position: absolute; left:40%; color:black; background-color:transparent; width: 250px; align-self: auto; align-content: center">
   <h3 style=" text-align: center; font:bolder; color: white">Report Details</h3>
+
+  <form (ngSubmit) = "postOffences(f)" #f="ngForm">
 <label style="align-content: center; text-align: center;align-self: auto; color: white">Student Number</label>
-<input type="text" style="width: 250px; text-align: center;"
+<input [(ngModel)]="addOffence" name = "student_number" type="text" style="width: 250px; text-align: center;"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Student Number">
 
 <label style=" text-align: center; color: white">Reasons for report</label>
-<input type= "text" style="width: 250px; text-align: center;"
+<input [(ngModel)]="addOffence.reason" name = "reason" type= "text" style="width: 250px; text-align: center;"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Valid Reason">
 
 
 <label style="align-content: center; text-align: center;align-self: auto; color: white">Date of offence</label>
 
-<input type= "date" style=" width: 250px; text-align: center; align-self: auto;"
+<input [(ngModel)]="addOffence.date" name = "date_of_offence"  type= "date" style=" width: 250px; text-align: center; align-self: auto;"
 class= "form-control"(input)="onUpdateServerName($event)">
 
 
@@ -22,4 +24,4 @@ class= "form-control"(input)="onUpdateServerName($event)">
   </div>
 </div>
 
-
+</form>
