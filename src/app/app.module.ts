@@ -22,6 +22,7 @@ import {subservice} from '../post/web.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import {InterceptorService} from '../post/web.interceptor';
 import {HttpClientModule} from '@angular/common/http';
+import { StudentComponent } from './student/student.component';
 
 const appRoutes: Routes = [
 ];
@@ -44,7 +45,8 @@ const appRoutes: Routes = [
     ReportstudentComponent,
     HomeComponent,
     HelpComponent,
-    LogoutComponent
+    LogoutComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,
