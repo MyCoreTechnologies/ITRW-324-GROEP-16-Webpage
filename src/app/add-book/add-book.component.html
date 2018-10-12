@@ -14,7 +14,7 @@ class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Bo
 
 <div style="float:left;margin-right:20px;">
 <label for = "book_edition" style="color:white">Book Edition</label>
-<input  id = "book_edition" type= "text" style="width: 220px; height: 30px"
+<input  [(ngModel)]="addBook.edition" name = "book_edition" id = "book_edition" type= "text" style="width: 220px; height: 30px"
 class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Book Edition">
 </div>
 
