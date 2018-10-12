@@ -20,8 +20,12 @@ export class LoginComponent implements OnInit {
   }  
   ngOnInit() {
   }
-  
-  loginData: {};
+ student_number;
+  password;
+  loginData:{};
+  // loginData( ) {
+  //   return this.student_number;
+  // };
   data;
 
   postSignIn(form: NgForm) {

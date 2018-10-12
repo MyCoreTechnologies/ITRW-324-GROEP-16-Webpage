@@ -7,12 +7,12 @@
      
       <h3 style="color:white">Enter your student number and password.</h3>
       
-    <label >Student Number:</label>
+    <label style="color:white">Student Number:</label>
     <form (ngSubmit) = "postSignIn(f)" #f="ngForm">
     <div class="input-group" >
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
         
-    <input type="text" [(ngModel)]="loginData.student_number" name = "student_number"
+    <input type="text" [(ngModel)]="loginData" name = "student_number"
     class= "form-control" placeholder="Enter Student Number" style="width: 300px">
  
   </div>
@@ -72,3 +72,18 @@
           <button style=" size: 50;  color: white; background-color: darkgray; position:relative; left: 40%; " class ="btn btn-primary" [disabled]="!allowsNewServer">Login</button>
           </body>
           </span> -->
+          
+
+          <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+          <script>
+            // Initialize Firebase
+            var config = {
+              apiKey: "AIzaSyAh3uFBtciQAQalO9ZENOzP7_8ZuL_dm6k",
+              authDomain: "selitwebpage.firebaseapp.com",
+              databaseURL: "https://selitwebpage.firebaseio.com",
+              projectId: "selitwebpage",
+              storageBucket: "selitwebpage.appspot.com",
+              messagingSenderId: "135569229694"
+            };
+            firebase.initializeApp(config);
+          </script>
