@@ -13,8 +13,10 @@ export class HeaderComponent{
         return this.serverStatus;
     }
     
-    
+ 
  @Output() featureSelected = new EventEmitter<string>();
+
+
 onSelect(feature:string){
 this.featureSelected.emit(feature); 
 }

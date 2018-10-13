@@ -11,6 +11,7 @@ export class DisplaybooksComponent implements OnInit {
 
   constructor(private router: Router, private submitServe: subservice) {}
   
+  
   loginData:{};
   BookByName:{};
   // loginData( ) {
@@ -27,6 +28,7 @@ export class DisplaybooksComponent implements OnInit {
       (error) => console.log('Problem accuired during displaybooks.'));
     } 
 
+  
   ngOnInit() {
   }
 

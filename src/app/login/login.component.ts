@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { OnInit } from '@angular/core';
 import { DisplaybooksComponent, } from '../displaybooks/displaybooks.component';
 import {Router,Routes,RouterLink} from "@angular/router";
 import { LogoutComponent } from '../logout/logout.component';
 import {subservice} from '../../post/web.service';
 import {NgForm} from '@angular/forms';
 import { NgModule, ErrorHandler } from '@angular/core';
-
+import { Component, Output,EventEmitter } from "@angular/core";
 
 @Component({
   selector: 'app-login',
@@ -22,12 +22,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
- student_number;
-  password;
   loginData:{};
-  // loginData( ) {
-  //   return this.student_number;
-  // };
   data;
 
 allowserver;
@@ -51,6 +46,13 @@ allowserver;
       (error) => console.log('Problem accuired during login.'));
     } 
 
+    
+    @Output() home = new EventEmitter<string>();
+    goHome(feature:string)
+     {
+       this.home.emit(feature);  
+     } 
+   
   // goHome(){
   //   this.router.navigate(['./displaybooks.component.html']);
   // }
