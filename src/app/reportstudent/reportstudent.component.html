@@ -1,6 +1,8 @@
 <body style="align-content: center; position: absolute; left:40%; color:black; background-color:transparent; width: 250px; align-self: auto; align-content: center">
   <h3 style=" text-align: center; font:bolder; color: white">Report Details</h3>
 
+
+
   <form (ngSubmit) = "postOffences(f)" #f="ngForm">
 <label style="align-content: center; text-align: center;align-self: auto; color: white">Student Number</label>
 <input [(ngModel)]="addOffence" name = "student_number" type="text" style="width: 250px; text-align: center;"
@@ -16,12 +18,21 @@ class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Va
 <input [(ngModel)]="addOffence.date" name = "date_of_offence"  type= "date" style=" width: 250px; text-align: center; align-self: auto;"
 class= "form-control"(input)="onUpdateServerName($event)">
 
-
+<div class="row">
+    <div class="col-xs-12">
+      <label style="color:white; opacity:1.8 ;">Type Of Offence</label>
+   </div>
+   </div>
+  
+  <select [(ngModel)]="addOffence.offencetype" name = "type_of_offence">
+      <option label="Report">Reported</option>     
+ </select>
 
 <div class = "row">
   <div class = "col-xs-12">
   <button style="left: 50%; width: 250px" class ="btn btn-primary">Submit Report</button>
   </div>
 </div>
+
 
 </form>

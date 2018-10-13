@@ -14,8 +14,6 @@ export class ReportstudentComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  nameR;
   addOffence:{};
 
   data;
@@ -24,18 +22,8 @@ export class ReportstudentComponent implements OnInit {
     console.log(form.value);
     this.submitServe.postOffence(form.value)
     .subscribe(response => {
-      console.log(response);
-      if(sessionStorage.length < 1){
-        //@ts-ignore
-        this.data=response.body;
-        sessionStorage.setItem('data', this.data);
-      }else{
-        sessionStorage.clear();
-        //@ts-ignore
-        this.data=response.body;
-        sessionStorage.setItem('data', this.data);
-      }
+      console.log(response);      
     },
-      (error) => console.log('Problem accuired during login.'));
+      (error) => console.log('Problem accuired during reported.'));
     } 
 }

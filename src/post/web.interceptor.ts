@@ -16,7 +16,7 @@ export class InterceptorService {
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>>{
     request = request.clone({
       setHeaders: {
-        authorization: '${this.submitService.getToken()}'
+        authorization: `${this.submitService.getToken()}`
       }
     });
     return next.handle(request);
