@@ -11,8 +11,9 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 //  headers: header
             postLogin(value)
             {
+                    console.log(value);
                     const header= new HttpHeaders().set('Content-Type', 'application/json');
-                    return this.httpclient.post('http://192.168.8.104:3000/student/login', value, {});
+                    return this.httpclient.post('http://192.168.8.103:3000/student/login', value, {});
             }
 
             postBook(value)
@@ -34,7 +35,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
             postRegister(value)
             {
                 const header= new HttpHeaders().set('Content-Type', 'application/json');
-                return this.httpclient.post('http://localhost:3000/student/register', value, {headers: header});
+                return this.httpclient.post('http://localhost:3000/student/register', value, {});
             }
             getDisplayBookByName()
             {
