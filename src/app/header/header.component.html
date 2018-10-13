@@ -1,3 +1,5 @@
+
+
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -7,34 +9,36 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>                        
             </button>
-            <a class="navbar-brand" href="/Selit">SELIT</a>
+            <a class="navbar-brand" href="/selit">SELIT</a>
             
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav navbar-left">
-                  <li ><a  href="#" (click)="onSelect('student')"data-toggle="tooltip" title="Go to your profile form!">{{ getServerStatus() }}</a></li>
+                  <li ><a  href="/student" (click)="onSelect('student')"data-toggle="tooltip" title="Go to your profile form!">{{ getServerStatus() }}</a></li>
               </ul>
             <ul class="nav navbar-nav navbar-right">
               
-                    <li ><a href="#" (click)="onSelect('login')"data-toggle="tooltip" data-placement="bottom" title="Go to Login form!" ><span class="glyphicon glyphicon-lock"></span>LOGIN</a></li>
-                    <li ><a href="#" (click)="onSelect('register')"data-toggle="tooltip" data-placement="bottom" title="Go to Register form!" ><span class="glyphicon glyphicon-pencil"></span>REGISTER</a></li>
-                    <li><a href= "#" (click)="onSelect('search')"data-toggle="tooltip" data-placement="bottom" title="Go to Search Book Form!" ><span class="glyphicon glyphicon-search
+                    <li ><a href="/login" (click)="onSelect('login')"data-toggle="tooltip" data-placement="bottom" title="Go to Login form!" ><span class="glyphicon glyphicon-lock"></span>LOGIN</a></li>
+                    <li ><a href="/register" (click)="onSelect('register')"data-toggle="tooltip" data-placement="bottom" title="Go to Register form!" ><span class="glyphicon glyphicon-pencil"></span>REGISTER</a></li>
+                    <li><a href= "/displaybooks" (click)="onSelect('search')"data-toggle="tooltip" data-placement="bottom" title="Go to Search Book Form!" ><span class="glyphicon glyphicon-search
                       "></span>SEARCH BOOK</a></li>
-                    <li><a href="#" (click)="onSelect('add')"data-toggle="tooltip" data-placement="bottom" title="Go to Add Book Form!" ><span class="glyphicon glyphicon-book"></span>ADD BOOK</a></li>
+                    <li><a href="/addbook" (click)="onSelect('add')"data-toggle="tooltip" data-placement="bottom" title="Go to Add Book Form!" ><span class="glyphicon glyphicon-book"></span>ADD BOOK</a></li>
              
               <li class="dropdown"appDropdown>
                 <a class="dropdown-toggle"appDropdown data-toggle="dropdown" href="#" >MENU
                 <span class="glyphicon glyphicon-menu-hamburger"></span></a>
                 <ul class="dropdown-menu" >
-                        <li><a href="#"(click)="onSelect('help')">Help<span class="glyphicon glyphicon-question-sign"></span></a></li>
-                        <li><a href="#"(click)="onSelect('report')"data-toggle="tooltip" data-placement="bottom" title="Report a Student for unacceptable behaviour!">Report Student<span class="glyphicon glyphicon-eye-open"></span></a></li>
-                        <li><a href="#"(click)="onSelect('logout')">Logout<span class="glyphicon glyphicon-off"></span></a></li>
+                        <li><a href="/help"(click)="onSelect('help')">Help<span class="glyphicon glyphicon-question-sign"></span></a></li>
+                        <li><a href="/report"(click)="onSelect('report')"data-toggle="tooltip" data-placement="bottom" title="Report a Student for unacceptable behaviour!">Report Student<span class="glyphicon glyphicon-eye-open"></span></a></li>
+                        <li><a href="/logout"(click)="onSelect('logout')">Logout<span class="glyphicon glyphicon-off"></span></a></li>
                 </ul>
               </li>
-              <li><a href="#" (click)="onSelect('home')"data-toggle="tooltip" data-placement="bottom" title="Go to Home Page"><span class="glyphicon glyphicon-home"></span></a></li>
+              <li><a href="/home" (click)="onSelect('home')"data-toggle="tooltip" data-placement="bottom" title="Go to Home Page"><span class="glyphicon glyphicon-home"></span></a></li>
             </ul>
           </div>
         </div>
       </nav>
+     
 </body>
+
       <!-- <fieldset disabled></fieldset> -->

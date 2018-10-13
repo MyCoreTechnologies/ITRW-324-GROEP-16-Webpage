@@ -25,6 +25,14 @@ import {HttpClientModule} from '@angular/common/http';
 import { StudentComponent } from './student/student.component';
 
 const appRoutes: Routes = [
+  { path: 'displaybooks' , component: DisplaybooksComponent},
+  {path: 'home' , component: HomeComponent},
+  {path: 'register' , component: RegisterComponent}, 
+  {path: 'login' , component: LoginComponent}, 
+  {path: 'logout' , component: LogoutComponent}, 
+  {path: 'addbook' , component: AddBookComponent}, 
+  {path: 'student' , component: StudentComponent}, 
+  {path: 'report' , component: ReportstudentComponent}, 
 ];
 
 @NgModule({
@@ -52,9 +60,9 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+
     RouterModule.forRoot(
-      appRoutes,
-      { useHash: true } // <-- debugging purposes only
+      appRoutes// <-- debugging purposes only
     )
   ],
   providers: [
