@@ -11,7 +11,11 @@
       
     <div>
       <label for="name" style="text-align: center; align-self: auto; color:white ;">Subject Code</label>
-      <input type="text"id="name" [(ngModel)]="loginData" name = "subject_code" class="form-control"  placeholder="ITRW324" style="text-align: center; align-self: auto; color: black;">
+      <div class="row">
+          <div class="col-xs-12">
+      <input type="text"id="name" [(ngModel)]="loginData" name = "subject_code"  class="text-uppercase" placeholder="ITRW324" style="text-align: center; align-self: auto; width: 1170px; color: black;">
+    </div>
+    </div>
     </div>
       <label for= "amount" style="color: white ;">Price</label>
       <div class="input-group">
@@ -23,7 +27,7 @@
         <div class="col-xs-12">
             <select [(ngModel)]="loginData.type" name = "book_type">
                 <option label="Advertisement" id="a">Advertisement</option>
-                <option label="Request" id="r">Request</option>
+                <option label="Request" id="r" class="text-align = center">Request</option>
               </select>
         <div class="row">
                 <div class="col-xs-12">
