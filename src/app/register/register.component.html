@@ -6,13 +6,16 @@
 <div>
 <label style="color:white;opacity:1.8 ;">Student Number</label>
 <input   [(ngModel)]="addStudent" name = "student_number" type="text" style="width: 200px; height:30px; opacity:1.8 ;"
-class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Student Number" >
+class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Student Number"  required minlength="8" maxlength="8">
+
 </div>
+
 
 <div>
 <label style="color:white;">First Name</label>
 <input   [(ngModel)]="addStudent.firstname" name = "first_name" type= "text" style="width: 200px; height:30px; opacity:1.8 ;"
 class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter First Name">
+
 </div>
 
 <div>

@@ -3,6 +3,7 @@ import {subservice} from '../../post/web.service';
 import {NgForm} from '@angular/forms';
 import {Router,Routes,RouterLink} from "@angular/router";
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -10,6 +11,8 @@ import {Router,Routes,RouterLink} from "@angular/router";
 })
 export class RegisterComponent implements OnInit {
 
+  
+  
   constructor(private router: Router, private submitServe: subservice) {}
   addStudent:{};
  
@@ -35,6 +38,8 @@ export class RegisterComponent implements OnInit {
     } 
  
   ngOnInit() {
+
+   
   }
 
 }
