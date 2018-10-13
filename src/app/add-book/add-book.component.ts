@@ -24,16 +24,7 @@ export class AddBookComponent implements OnInit {
     this.submitServe.postBook(form.value)
     .subscribe(response => {
       console.log(response);
-      if(sessionStorage.length < 1){
-        //@ts-ignore
-        this.data=response.body;
-        sessionStorage.setItem('data', this.data);
-      }else{
-        sessionStorage.clear();
-        //@ts-ignore
-        this.data=response.body;
-        sessionStorage.setItem('data', this.data);
-      }
+     
     },
       (error) => console.log('Problem accuired during login.'));
     } 
