@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router,Routes,RouterLink} from "@angular/router";
 import {subservice} from '../../post/web.service';
 import {NgForm} from '@angular/forms';
+import {Response} from '@angular/http';
 @Component({
   selector: 'app-displaybooks',
   templateUrl: './displaybooks.component.html',
@@ -27,6 +28,17 @@ export class DisplaybooksComponent implements OnInit {
     },
       (error) => console.log('Problem accuired during displaybooks.'));
     } 
+
+  getDisplay(){
+    this.submitServe.getDisplayBookData()
+    .subscribe((response: Response) => {
+      const data = response.json();
+      console.log(data);
+    },
+      (error) => console.log('Problem accuired during displaybooks.'));
+    } 
+
+
 
   
   ngOnInit() {

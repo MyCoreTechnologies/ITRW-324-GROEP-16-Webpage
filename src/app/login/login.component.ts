@@ -83,7 +83,7 @@ allowserver;
       (error) => console.log('Problem accuired during login.'));
     } 
 
-
+  
     @Output() selected = new EventEmitter<string>();
     goHome(feature:string)
      {
