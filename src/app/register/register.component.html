@@ -1,6 +1,7 @@
 <body style=" position: absolute; left: 1%; top: 5%; color:black; background-color: transparent; width: 300px">
   <div>
       <form (ngSubmit) = "postStudent(f)" #f="ngForm">
+         
   <h3 style="color:white; opacity: 5">Enter Your Details Below</h3>
 <div>
 <label style="color:white;opacity:1.8 ;">Student Number</label>
@@ -114,6 +115,26 @@ class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Pas
     <button  data-toggle="tooltip" data-placement="bottom" title="Register!" style="color: white; left: 50%;  width: 250px; opacity:1.8" class ="btn btn-primary"  >Register</button>
   </div>
 </div>
+<div class="row">
+    <div class="col-xs-12">
+      <label style="color:white; opacity:1.8 ;">Province</label>
+   </div>
+   </div>
+  
+  <select [(ngModel)]="addStudent.student" name = "student">
+      <option label="Student">1</option>     
+      
+    </select>
+    <div class="row">
+        <div class="col-xs-12">
+          <label style="color:white; opacity:1.8 ;">Province</label>
+       </div>
+       </div>
+      
+      <select [(ngModel)]="addStudent.admin" name = "admin">
+          <option label="Admin">0</option>     
+          
+        </select>
 </form>
 </div>
 
