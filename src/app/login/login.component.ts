@@ -6,6 +6,8 @@ import {subservice} from '../../post/web.service';
 import {NgForm} from '@angular/forms';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { Component, Output,EventEmitter } from "@angular/core";
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login',
@@ -14,18 +16,48 @@ import { Component, Output,EventEmitter } from "@angular/core";
 })
 export class LoginComponent implements OnInit {
 
+    form: FormGroup;                    
+    private formSubmitAttempt: boolean; 
+  
+      private fb: FormBuilder;     
+   
   constructor(private router: Router, private submitServe: subservice) {}
   
   public goToSearch() {
     this.router.navigate(['./logout.component.html']);
   }  
+  
   ngOnInit() {
+    this.form = this.fb.group({     // {5}
+      userName: ['', Validators.required],
+      password: ['', Validators.required]
+    });
   }
+  isFieldInvalid(field: string) { // {6}
+    return (
+      (!this.form.get(field).valid && this.form.get(field).touched) ||
+      (this.form.get(field).untouched && this.formSubmitAttempt)
+    );
+  }
+
+  onSubmit() {
+    if (this.form.valid) {
+      this.submitServe.postLogin(this.form.value); // {7}
+    }
+    this.formSubmitAttempt = true;             // {8}
+  }
+
+
+  
 studentnumber;
 
   getStudent()
   {
     return this.studentnumber;
+  }
+
+  loadDisplayBooks(){
+    this.router.navigate(['/displaybooks']);
   }
 
   loginData:{};
