@@ -6,20 +6,25 @@
                                         
                                                        <app-login  *ngIf="loadedFeature == 'login'"></app-login>  
                                                        <app-register *ngIf="loadedFeature == 'register'"></app-register>
-                                                       <!-- <app-displaybooks *ngIf="loadedFeature == 'search'"></app-displaybooks> -->
+                                                       <app-displaybooks *ngIf="loadedFeature == 'search'"></app-displaybooks>
                                                        <app-add-book  *ngIf="loadedFeature == 'add'"></app-add-book>
                                                        <app-reportstudent  *ngIf="loadedFeature == 'report'"></app-reportstudent>
                                                        <app-home  *ngIf="loadedFeature == 'home'"></app-home>
                                                        <app-help *ngIf="loadedFeature == 'help'"></app-help>
                                                        <app-logout *ngIf="loadedFeature == 'logout'"></app-logout>
                                                        <app-student *ngIf="loadedFeature == 'student'"> </app-student>
-                                                       <app-displaybooks *ngIf="goHome == 'h'"></app-displaybooks>
+                                                       <app-displaybooks *ngIf="homeFeature == 'h'"></app-displaybooks>
                                                        
                                 </div>
                       </div>    
         </div>
-     
-      
+
+
+     <app-login (selected) = "onNavigate($event)"> </app-login>
+     <app-displaybooks *ngIf="homeFeature == 'h'"></app-displaybooks>
+     <div>
+                <app-displaybooks *ngIf="homeFeature == 'h'"></app-displaybooks>
+     </div>
 <!-- 
 <div class="contaier">
   <div class="row">ho

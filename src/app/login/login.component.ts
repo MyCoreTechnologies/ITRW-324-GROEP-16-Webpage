@@ -21,10 +21,15 @@ export class LoginComponent implements OnInit {
   }  
   ngOnInit() {
   }
+studentnumber;
+
+  getStudent()
+  {
+    return this.studentnumber;
+  }
 
   loginData:{};
   data;
-
 allowserver;
 
   postSignIn(form: NgForm) {
@@ -46,11 +51,11 @@ allowserver;
       (error) => console.log('Problem accuired during login.'));
     } 
 
-    
-    @Output() home = new EventEmitter<string>();
+
+    @Output() selected = new EventEmitter<string>();
     goHome(feature:string)
      {
-       this.home.emit(feature);  
+       this.selected.emit(feature);  
      } 
    
   // goHome(){
