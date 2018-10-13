@@ -18,42 +18,14 @@ export class DisplaybooksComponent implements OnInit {
   // };
   data;
 
-  getDisplayBooksSearch(form: NgForm) {
+  postDisplayBooksSearch(form: NgForm) {
     console.log(form.value);
-    this.submitServe.getDisplayBookData()
+    this.submitServe.postDisplayBookData(form.value)
     .subscribe(response => {
       console.log(response);
-      if(sessionStorage.length < 1){
-        //@ts-ignore
-        this.data=response.body;
-        sessionStorage.setItem('data', this.data);
-      }else{
-        sessionStorage.clear();
-        //@ts-ignore
-        this.data=response.body;
-        sessionStorage.setItem('data', this.data);
-      }
     },
-      (error) => console.log('Problem accuired during login.'));
+      (error) => console.log('Problem accuired during displaybooks.'));
     } 
-    getDisplayBooksByName(form: NgForm) {
-      console.log(form.value);
-      this.submitServe.getDisplayBookByName()
-      .subscribe(response => {
-        console.log(response);
-        if(sessionStorage.length < 1){
-          //@ts-ignore
-          this.data=response.body;
-          sessionStorage.setItem('data', this.data);
-        }else{
-          sessionStorage.clear();
-          //@ts-ignore
-          this.data=response.body;
-          sessionStorage.setItem('data', this.data);
-        }
-      },
-        (error) => console.log('Problem accuired during login.'));
-      } 
 
   ngOnInit() {
   }

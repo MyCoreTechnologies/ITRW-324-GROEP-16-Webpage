@@ -27,10 +27,17 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
             }
 
             
-            getDisplayBookData()
+        //     getDisplayBookData()
+        //     {
+        //             return this.httpclient.get('http://192.168.8.103:3000/book/subject/price/type');
+        //     }
+
+            postDisplayBookData(value)
             {
-                    return this.httpclient.get('http://192.168.8.104:3000/book/getBook');
+                    const header= new HttpHeaders().set('Content-Type', 'application/json');
+                    return this.httpclient.post('http://192.168.8.103:3000/book/subject/price/type', value, {headers: header});
             }
+
 
             postRegister(value)
             {
