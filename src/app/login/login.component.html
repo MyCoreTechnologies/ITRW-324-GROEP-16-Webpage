@@ -22,16 +22,16 @@
     <div class="input-group">
       
     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-    <input required="required" type= "Password" [(ngModel)]="loginData.password" name = "password"
-    class= "form-control"  placeholder="Enter password"  style="width: 300px">
+    <input onclick="checkLogin()" required="required" type= "Password" [(ngModel)]="loginData.password" name = "password"
+    class= "form-control"  id = "loginpass" placeholder="Enter password"  style="width: 300px">
     </div>
     <h1></h1>
     <!-- <a class="btn btn-primary" href="/login.component.html">Logout</a> -->
     <!-- <button (click) = "goHome()" >HELLO</button> -->
 
 <div>
-    <!-- <button class = "btn btn-primary" (click) = "loadDisplayBooks()">LOGIN</button> -->
-    <button onclick="header()"type = "submit" data-toggle="tooltip" data-placement="bottom" title="Login!" style="height: 35px; width: 350px;  color: white; position:relative; left: 0%; " class ="btn btn-primary" [disabled]="allowsNewServer">LOGIN</button>
+  
+    <button onclick="header()"type = "submit" data-toggle="tooltip" data-placement="bottom" title="Login!" style="height: 35px; width: 340px;  color: white; position:relative; left: 0%; " class ="btn btn-primary" [disabled]="allowsNewServer">LOGIN</button>
     <!-- <router-outlet></router-outlet>  -->
   </div>
   

@@ -15,6 +15,47 @@
 }
   </script>
 <script>
+
+
+        function passowrdCheck() {
+         var password, confirmpassword;
+         password = document.getElementById("registerpassword");
+         password.style.visibility = "hidden";
+          if(password &&  password.value)
+          {
+            alert("My input has a value!");
+            password.style.color =  red;
+            <div class="alert alert-warning">
+         <strong>Warning!</strong> Indicates a warning that might need attention.
+        </div>
+        
+          }
+        }
+    </script>
+
+<script>
+
+
+    function checkLogin() {
+     var password, student;
+     password = document.getElementById("loginpass");
+     password.style.visibility = "hidden";
+      if(password &&  password.value)
+      {
+        alert("My input has a value!");
+        password.style.color =  red;
+        <div class="alert alert-warning">
+     <strong>Warning!</strong> Indicates a warning that might need attention.
+    </div>
+    
+      }
+    }
+</script>
+<script>
+   
+
+
+
 function myFunction() {
     // Declare variables
     var input, filter, ul, li, a, i;

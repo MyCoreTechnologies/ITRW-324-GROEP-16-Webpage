@@ -58,6 +58,7 @@ studentnumber;
   }
 
   loadDisplayBooks(){
+    
     this.router.navigate(['/displaybooks']);
   }
   loadDisplayBooksError()
@@ -72,23 +73,25 @@ allowserver;
   postSignIn(form: NgForm) {
     console.log(form.value);
     this.submitServe.postLogin(form.value)
-    .subscribe(response => { this.loadDisplayBooks()
+    .subscribe(response => { 
+      // this.loadDisplayBooks()
       console.log(response);
       if(sessionStorage.length < 1){
         //@ts-ignore
         this.data=response.body;
         sessionStorage.setItem('data', this.data);
-        this.loadDisplayBooks();
+        // this.loadDisplayBooks();
       }else{
         sessionStorage.clear();
         //@ts-ignore
         this.data=response.body;
         sessionStorage.setItem('data', this.data);
-        this.loadDisplayBooks();
+        // this.loadDisplayBooks();
       }
     },
+  
       (error) => console.log('Problem accuired during login.'));
-      this.loadDisplayBooks();
+      // this.loadDisplayBooks();
     } 
 
   

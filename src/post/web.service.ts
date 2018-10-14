@@ -65,4 +65,21 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
                 return this.httpclient.post('http://192.168.8.103:3000/student_offence/reportOffence', value, {});
                 
             }
+
+
+
+
+
+
+
+            postMyBook(value) //student show/delete/update
+            {
+                    const header= new HttpHeaders().set('Content-Type', 'application/json');
+                    return this.httpclient.post('http://192.168.8.103:3000/book/subject/price/type', value, {headers: header});
+            }
+            postDeleteMyBooks(value) //student show/delete/update
+            {
+                    const header= new HttpHeaders().set('Content-Type', 'application/json');
+                    return this.httpclient.post('http://192.168.8.103:3000/book/subject/price/type', value, {headers: header});
+            }
     }
