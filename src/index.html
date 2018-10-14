@@ -4,6 +4,16 @@
   <meta charset="utf-8">
   <title>SELIT</title>
   <base href="/">
+
+  <script>
+  
+  function header() {
+    var x = document.getElementById("loginheader");
+    var y = document.getElementById("header");   
+        x.style.visibility = "hidden";
+        y.style.visibility = "visible"
+}
+  </script>
 <script>
 function myFunction() {
     // Declare variables
@@ -23,7 +33,15 @@ function myFunction() {
         }
     }
 }
+window.onscroll = function() {scroll()};
+function scroll() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
 </script>
+
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">

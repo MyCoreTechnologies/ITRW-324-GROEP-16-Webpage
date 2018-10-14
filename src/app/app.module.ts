@@ -36,6 +36,7 @@ const appRoutes: Routes = [
   {path: 'student' , component: StudentComponent}, 
   {path: 'report' , component: ReportstudentComponent}, 
   {path: 'show' , component: ShowallbooksComponent}, 
+  {path: 'help' , component: HelpComponent}, 
 ];
 
 @NgModule({
