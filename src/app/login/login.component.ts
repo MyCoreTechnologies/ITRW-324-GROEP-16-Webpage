@@ -1,4 +1,4 @@
-import { OnInit } from '@angular/core';
+import { OnInit, Input } from '@angular/core';
 import { DisplaybooksComponent, } from '../displaybooks/displaybooks.component';
 import {Router,Routes,RouterLink} from "@angular/router";
 import { LogoutComponent } from '../logout/logout.component';
@@ -7,6 +7,7 @@ import {NgForm} from '@angular/forms';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { Component, Output,EventEmitter } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { LoginheaderComponent } from '../loginheader/loginheader.component';
 
 
 @Component({
@@ -59,7 +60,11 @@ studentnumber;
   loadDisplayBooks(){
     this.router.navigate(['/displaybooks']);
   }
-
+  loadDisplayBooksError()
+  {
+    (error) => console.log('Books could not be displayed');
+   
+  }
   loginData:{};
   data;
 allowserver;
@@ -67,20 +72,23 @@ allowserver;
   postSignIn(form: NgForm) {
     console.log(form.value);
     this.submitServe.postLogin(form.value)
-    .subscribe(response => {
+    .subscribe(response => { this.loadDisplayBooks()
       console.log(response);
       if(sessionStorage.length < 1){
         //@ts-ignore
         this.data=response.body;
         sessionStorage.setItem('data', this.data);
+        this.loadDisplayBooks();
       }else{
         sessionStorage.clear();
         //@ts-ignore
         this.data=response.body;
         sessionStorage.setItem('data', this.data);
+        this.loadDisplayBooks();
       }
     },
       (error) => console.log('Problem accuired during login.'));
+      this.loadDisplayBooks();
     } 
 
   

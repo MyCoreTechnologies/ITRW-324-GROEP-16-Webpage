@@ -23,6 +23,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import {InterceptorService} from '../post/web.interceptor';
 import {HttpClientModule} from '@angular/common/http';
 import { StudentComponent } from './student/student.component';
+import { LoginheaderComponent } from './loginheader/loginheader.component';
+import { ShowallbooksComponent } from './showallbooks/showallbooks.component';
 
 const appRoutes: Routes = [
   { path: 'displaybooks' , component: DisplaybooksComponent},
@@ -33,6 +35,7 @@ const appRoutes: Routes = [
   {path: 'addbook' , component: AddBookComponent}, 
   {path: 'student' , component: StudentComponent}, 
   {path: 'report' , component: ReportstudentComponent}, 
+  {path: 'show' , component: ShowallbooksComponent}, 
 ];
 
 @NgModule({
@@ -54,7 +57,9 @@ const appRoutes: Routes = [
     HomeComponent,
     HelpComponent,
     LogoutComponent,
-    StudentComponent
+    StudentComponent,
+    LoginheaderComponent,
+    ShowallbooksComponent
   ],
   imports: [
     BrowserModule,

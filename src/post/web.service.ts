@@ -32,17 +32,24 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
         //             return this.httpclient.get('http://192.168.8.103:3000/book/subject/price/type');
         //     }
 
-            postDisplayBookData(value)
+            postDisplayBookData(value) //searchbooks
             {
                     const header= new HttpHeaders().set('Content-Type', 'application/json');
                     return this.httpclient.post('http://192.168.8.103:3000/book/subject/price/type', value, {headers: header});
             }
+            postDisplayBook(value) //showall books
+            {
+                    const header= new HttpHeaders().set('Content-Type', 'application/json');
+                    return this.httpclient.post('http://192.168.8.103:3000/book/subject/price/type', value, {headers: header});
+            }
+
+
             getDisplayBookData(){
 
                 return this.httpclient.get('http://192.168.8.103:3000/book/subject/price/type');
              
               
-        }
+             }
 
 
             postRegister(value)
