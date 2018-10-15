@@ -43,6 +43,22 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
                     return this.httpclient.post('http://192.168.8.103:3000/book/subject/price/type', value, {headers: header});
             }
 
+           
+
+            getMyBooks(){//student books
+
+                return this.httpclient.get('http://192.168.8.100:3000/book/myBook');
+             
+              
+             }
+
+             getAllBooks(){ //show all books tab
+
+                return this.httpclient.get('http://192.168.8.100:3000/book/getBook');
+             
+              
+             }
+
 
             getDisplayBookData(){
 

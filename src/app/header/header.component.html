@@ -1,4 +1,4 @@
-
+<form (ngSubmit) = "getMyBooksForm(f)" #f="ngForm">
 
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -14,13 +14,10 @@
           </div>
           <div class="collapse navbar-collapse" id="header" class="invisible">
               <ul class="nav navbar-nav navbar-left">
-                  <li ><a  routerLink ="/student" (click)="onSelect('student')"data-toggle="tooltip" title="Go to your profile form!">{{ getServerStatus() }}</a></li>
+                  <li ><a  [(ngModel)]="myData" routerLink ="/student" (click)="onSelect('student'); getMyBooksForm()"data-toggle="tooltip" title="Go to your profile form!">{{ getServerStatus() }}</a></li>
               </ul>
-            <ul class="nav navbar-nav navbar-right">
-              
-                    <li ><a routerLink="/login" (click)="onSelect('login')"data-toggle="tooltip" data-placement="bottom" title="Go to Login form!" ><span class="glyphicon glyphicon-lock"></span>LOGIN</a></li>
-                    <li ><a routerLink="/register" (click)="onSelect('register')"data-toggle="tooltip" data-placement="bottom" title="Go to Register form!" ><span class="glyphicon glyphicon-pencil"></span>REGISTER</a></li>
-                    <li><a routerLink= "/show" (click)="onSelect('show')"data-toggle="tooltip" data-placement="bottom" title="Go to Show All Books Form!" ><span class="glyphicon glyphicon-search
+            <ul class="nav navbar-nav navbar-right">                               
+                    <li><a [(ngModel)]="myData" routerLink= "/show" (click)="onSelect('show'); getShowAllBooks()"data-toggle="tooltip" data-placement="bottom" title="Go to Show All Books Form!" ><span class="glyphicon glyphicon-search
                       "></span>SHOW ALL BOOKS</a></li>
                     <li><a routerLink= "/displaybooks" (click)="onSelect('search')"data-toggle="tooltip" data-placement="bottom" title="Go to Search Book Form!" ><span class="glyphicon glyphicon-search
                       "></span>SEARCH BOOK</a></li>
@@ -42,5 +39,5 @@
       </nav>
      
 </body>
-
+</form>
       <!-- <fieldset disabled></fieldset> -->

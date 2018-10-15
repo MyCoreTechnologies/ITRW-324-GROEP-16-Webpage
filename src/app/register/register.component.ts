@@ -31,7 +31,7 @@ export class RegisterComponent implements OnInit {
         sessionStorage.setItem('data', this.data);
       }
     },
-      (error) => console.log('Problem accuired during login.'));
+    (error) => alert("ERROR\n Could not register!"));
       this.header();
       this.loadDisplayBooks();
     } 
