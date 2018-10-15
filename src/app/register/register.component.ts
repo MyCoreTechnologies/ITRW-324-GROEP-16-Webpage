@@ -33,6 +33,7 @@ export class RegisterComponent implements OnInit {
     },
       (error) => console.log('Problem accuired during login.'));
       this.header();
+      this.loadDisplayBooks();
     } 
     loadDisplayBooks(){
       this.router.navigate(['/displaybooks']);
