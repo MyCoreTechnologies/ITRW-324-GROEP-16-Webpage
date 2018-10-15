@@ -16,10 +16,10 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
                     return this.httpclient.post('http://192.168.8.100:3000/student/login', value, {});
             }
 
-            postBook(value)
+            postBook(value)//ADD BOOK
             {
                     const header= new HttpHeaders().set('Content-Type', 'application/json');
-                    return this.httpclient.post('http://192.168.8.103:3000/book/addbook', value, {headers: header});
+                    return this.httpclient.post('http://192.168.8.100:3000/book/addBook', value, {headers: header});
             }
 
             getToken(){
@@ -71,7 +71,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
             postRegister(value)
             {
                 const header= new HttpHeaders().set('Content-Type', 'application/json');
-                return this.httpclient.post('http://192.168.8.103:3000/student/register', value, {});
+                return this.httpclient.post('http://192.168.8.100:3000/student/register', value, {});
             }
    
 

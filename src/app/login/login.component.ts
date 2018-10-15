@@ -99,19 +99,17 @@ allowserver;
     
     } 
 
-  
+    // (error) => alert("ERROR\nStudent number or password incorrect!"));
+
+
     @Output() selected = new EventEmitter<string>();
     goHome(feature:string)
      {
        this.selected.emit(feature);  
      } 
+     
    
-  // goHome(){
-  //   this.router.navigate(['./displaybooks.component.html']);
-  // }
-  // goLogout(){
-  //   this.router.navigate(['logout']);
-  // 
+  
    header() {
     var x = document.getElementById("loginheader");
     var y = document.getElementById("header");   
@@ -120,9 +118,6 @@ allowserver;
   }
 }
 
-// const routes : Routes = [
-// {path: 'logout', component: LogoutComponent}
-// ];
 
 
 

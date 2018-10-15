@@ -24,17 +24,21 @@ export class RegisterComponent implements OnInit {
         //@ts-ignore
         this.data=response.body;
         sessionStorage.setItem('data', this.data);
+        this.header();
+        this.loadDisplayBooks();
       }else{
         sessionStorage.clear();
         //@ts-ignore
         this.data=response.body;
         sessionStorage.setItem('data', this.data);
+        this.header();
+        this.loadDisplayBooks();
       }
     },
-    (error) => alert("ERROR\n Could not register!"));
-      this.header();
-      this.loadDisplayBooks();
+    (error) => alert("ERROR\nCould not register make sure your information is correct!"));
     } 
+
+
     loadDisplayBooks(){
       this.router.navigate(['/displaybooks']);
     }
