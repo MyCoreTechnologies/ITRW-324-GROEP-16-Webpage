@@ -81,6 +81,7 @@ allowserver;
         this.data=response.body;
         sessionStorage.setItem('data', this.data);
         // this.loadDisplayBooks();
+        // this.header();
       }else{
         sessionStorage.clear();
         //@ts-ignore
@@ -91,7 +92,8 @@ allowserver;
     },
   
       (error) => console.log('Problem accuired during login.'));
-      // this.loadDisplayBooks();
+      this.loadDisplayBooks();
+      this.header();
     } 
 
   
@@ -106,11 +108,20 @@ allowserver;
   // }
   // goLogout(){
   //   this.router.navigate(['logout']);
-  // }
+  // 
+   header() {
+    var x = document.getElementById("loginheader");
+    var y = document.getElementById("header");   
+        x.style.visibility = "hidden";
+        y.style.visibility = "visible"
+  }
 }
 
 // const routes : Routes = [
 // {path: 'logout', component: LogoutComponent}
 // ];
 
+
+
+  
 
