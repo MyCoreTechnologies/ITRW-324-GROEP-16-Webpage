@@ -8,6 +8,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { Component, Output,EventEmitter } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { LoginheaderComponent } from '../loginheader/loginheader.component';
+import { Alert } from 'selenium-webdriver';
 
 
 @Component({
@@ -80,20 +81,22 @@ allowserver;
         //@ts-ignore
         this.data=response.body;
         sessionStorage.setItem('data', this.data);
-        // this.loadDisplayBooks();
-        // this.header();
+        this.loadDisplayBooks();
+        this.header();
+     
       }else{
         sessionStorage.clear();
         //@ts-ignore
         this.data=response.body;
         sessionStorage.setItem('data', this.data);
-        // this.loadDisplayBooks();
+        this.loadDisplayBooks();
+        this.header();
       }
     },
-  
-      (error) => console.log('Problem accuired during login.'));
-      this.loadDisplayBooks();
-      this.header();
+    (error) => alert("ERROR\nStudent number or password incorrect!"));
+      // this.loadDisplayBooks();
+      // this.header();
+    
     } 
 
   
