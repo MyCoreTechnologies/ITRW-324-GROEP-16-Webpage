@@ -1,52 +1,6 @@
 
 
-<body style=" width: 1170px; align-content: center;background-color: #2d2d30; opacity: 0.8;" >
-     
-    
-    
-        <h3 style="left: 500%; font:bold;text-align: center; align-self: auto; color: white ;">Search for your book</h3>
-      <div class="row">
-        <div class="col-xs-12">
-      <form (ngSubmit) = "postMyBooks(f)" #f="ngForm" style= "text-align: center; align-self: auto;">
-          
-        <div>
-          <label for="name" style="text-align: center; align-self: auto; color:white ;">Student Number</label>
-          <div class="row">
-              <div class="col-xs-12">
-          <input type="text"id="name" [(ngModel)]="ShowBooks" maxlength="8"  name = "student_number"    style="text-align: center; align-self: auto; width: 1170px; color: black;">
-        </div>
-        </div>
-        </div>
-          <div class="input-group">
-              
-            </div>
-      <div class="row">
-            <div class="col-xs-12">
-          <h1>
-
-          </h1>
-            <div class="row">
-                    <div class="col-xs-12">
-                        <!-- <span><i class="fas fa-book-open"></i></span> -->
-                      <button class="btn btn-info" type="Submit" data-toggle="tooltip" data-placement="bottom" title="Show my books" style="width: 202px">Show</button>
-                      <button class="btn btn-info" type="Submit" data-toggle="tooltip" data-placement="bottom" title="Delete my book" style="width: 202px">Delete</button>
-                      <button class="btn btn-info" type="Submit" data-toggle="tooltip" data-placement="bottom" title="Update my book" style="width: 202px">Update</button>
-                   </div>
-                   </div> 
-        </div>
-      </div>
-      <body style="align-self: center background-color;background-color:whitesmoke;">
-        <h1> 
-        
-        </h1>     
-   
-    
-       
-     
-    </body>
-    </form>
-    
-    
+<body style=" width: 1170px; align-content: center;background-color: #2d2d30; opacity: 0.8;" >   
 
 
     <form (ngSubmit) = "postDeleteMyBooks(f)" #f="ngForm" style= "text-align: center; align-self: auto;">
@@ -54,7 +8,7 @@
                     <label for="name" style="text-align: center; align-self: auto; color:white ;">Book Number</label>
                     <div class="row">
                         <div class="col-xs-12">
-                    <input type="text"id="name" [(ngModel)]="DeleteBooks" maxlength="8"  name = "book_number"    style="text-align: center; align-self: auto; width: 1170px; color: black;">
+                    <input type="number"id="name" [(ngModel)]="DeleteBooks" maxlength="8"  name = "book_number"    style="text-align: center; align-self: auto; width: 1170px; color: black;">
                   </div>
                   </div>
                   </div>
@@ -86,11 +40,7 @@
     </form>
     
     <!-- </div> -->
-      
-        </div>
-      </div>
-      </body> 
-    
+
     
     <body style="width: 1170px; align-content: center; text-align: center; align-self: auto;background-color:whitesmoke;">
         <div class="container">
