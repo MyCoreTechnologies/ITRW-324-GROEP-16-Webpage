@@ -30,11 +30,9 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 
                         return this.httpclient.get('http://192.168.8.100:3000/book/getBook');
             }
-
             getMyBooks(){//student books profile get my books
                  return this.httpclient.get('http://192.168.8.100:3000/book/myBook');
             }
-
             postBook(value)//ADD BOOK component
             {
                     const header= new HttpHeaders().set('Content-Type', 'application/json');
@@ -46,9 +44,13 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
                 return this.httpclient.post('http://192.168.8.100:3000/student_offence/reportOffence', value, {});
                 
             }
-
             logout() //discard token
             {                  
                 sessionStorage.clear();                   
             }   
+            postDeleteBookOfStudent(value) //Delete the book form Student by book Number
+            {
+                const header= new HttpHeaders().set('Content-Type', 'application/json');
+                return this.httpclient.post('http://192.168.8.100:3000/book/myBook/delete', value, {headers: header});
+            }
     }
