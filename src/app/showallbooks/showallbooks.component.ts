@@ -10,19 +10,7 @@ import {Response} from '@angular/http';
 })
 export class ShowallbooksComponent implements OnInit {
 
-  constructor(private router: Router, private submitServe: subservice) {}
-  loginData:{};
-  BookByName:{};
-
-  postBooksSearch(form: NgForm) {
-    console.log(form.value);
-    this.submitServe.postDisplayBook(form.value)
-    .subscribe(response => {
-      console.log(response);
-    },
-      (error) => console.log('Problem accuired during displaybooks.'));
-    } 
-    
+  constructor(private router: Router, private submitServe: subservice) {}  
   ngOnInit() {
   }
 

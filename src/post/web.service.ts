@@ -8,7 +8,6 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
             constructor(private httpclient: HttpClient) {
                 
             }
-
             postLogin(value) //Login HeaderLOGIN 
             {
                     console.log(value);
@@ -28,79 +27,30 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
                 const header= new HttpHeaders().set('Content-Type', 'application/json');
                 return this.httpclient.post('http://192.168.8.100:3000/student/register', value, {});
             }
+            getAllBooks(){ //show all books tab getAll Books
 
+                        return this.httpclient.get('http://192.168.8.100:3000/book/getBook');
+            }
 
+            getMyBooks(){//student books profile get my books
+                 return this.httpclient.get('http://192.168.8.100:3000/book/myBook');
+            }
 
-
-
-
-
-
-        //     postBook(value)//ADD BOOK
-        //     {
-        //             const header= new HttpHeaders().set('Content-Type', 'application/json');
-        //             return this.httpclient.post('http://192.168.8.100:3000/book/addBook', value, {headers: header});
-        //     }
-
-
-           
-
-        //     getMyBooks(){//student books
-
-        //         return this.httpclient.get('http://192.168.8.100:3000/book/myBook');
-             
-              
-        //      }
-
-        //      getAllBooks(){ //show all books tab
-
-        //         return this.httpclient.get('http://192.168.8.100:3000/book/getBook');
-             
-              
-        //      }
-
-
-        //     getDisplayBookData(){
-
-        //         return this.httpclient.get('http://192.168.8.100:3000/book/subject/price/type');
-             
-              
-        //      }
-
-
-        //     postRegister(value)
-        //     {
-        //         const header= new HttpHeaders().set('Content-Type', 'application/json');
-        //         return this.httpclient.post('http://192.168.8.100:3000/student/register', value, {});
-        //     }
-   
-
-        //     postOffence(value)
-        //     {
-        //         const header= new HttpHeaders().set('Content-Type', 'application/json');
-        //         return this.httpclient.post('http://192.168.8.100:3000/student_offence/reportOffence', value, {});
+            postBook(value)//ADD BOOK component
+            {
+                    const header= new HttpHeaders().set('Content-Type', 'application/json');
+                    return this.httpclient.post('http://192.168.8.100:3000/book/addBook', value, {headers: header});
+            }
+            postOffence(value)// Report component report student
+            {
+                const header= new HttpHeaders().set('Content-Type', 'application/json');
+                return this.httpclient.post('http://192.168.8.100:3000/student_offence/reportOffence', value, {});
                 
-        //     }
+            }
 
-
-        //     logout()
-        //     {
-        //              sessionStorage.clear();
-
-        //              alert("Logged out!")                   
-        //     }
-
-
-
-
-        //     postMyBook(value) //student show/delete/update
-        //     {
-        //             const header= new HttpHeaders().set('Content-Type', 'application/json');
-        //             return this.httpclient.post('http://192.168.8.100:3000/book/subject/price/type', value, {headers: header});
-        //     }
-        //     postDeleteMyBooks(value) //student show/delete/update
-        //     {
-        //             const header= new HttpHeaders().set('Content-Type', 'application/json');
-        //             return this.httpclient.post('http://192.168.8.100:3000/book/subject/price/type', value, {headers: header});
-        //     }
+            logout() //discard token
+            {
+                     sessionStorage.clear();
+                     alert("Logged out!")                   
+            }   
     }
