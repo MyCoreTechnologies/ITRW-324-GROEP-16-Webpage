@@ -5,23 +5,54 @@
 
   <form (ngSubmit) = "postOffences(f)" #f="ngForm">
 <label style="align-content: center; text-align: center;align-self: auto; color: white">Student Number</label>
-<input [(ngModel)]="addOffence" name = "student_number" type="text" style="width: 250px; text-align: center;"
-class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Student Number">
+<input 
+      [(ngModel)]="addOffence" 
+      name = "student_number" 
+      type="text" 
+      style="width: 250px; text-align: center;"
+      class= "form-control"(input)="onUpdateServerName($event)"  
+      placeholder="Enter Student Number"
+      maxlength="8"
+      minlength="8"
+      required
+      #studentnum = "ngModel">
+      <span class = "help-block" 
+            style="color:white" 
+            *ngIf = "!studentnum.valid && studentnum.touched">Please enter a valid Student Number!</span>
 
 <label style=" text-align: center; color: white">Reasons for report</label>
-<input [(ngModel)]="addOffence.reason" name = "reason" type= "text" style="width: 250px; text-align: center;"
-class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Valid Reason">
+<input 
+      [(ngModel)]="addOffence.reason" 
+      name = "reason" 
+      type= "text" 
+      style="width: 250px; text-align: center;"
+      class= "form-control"(input)="onUpdateServerName($event)"  
+      placeholder="Enter Valid Reason"
+      required
+      #report = "ngModel">
+      <span class = "help-block" 
+            style="color:white" 
+            *ngIf = "!report.valid && report.touched">Please enter a valid Reason for Reporting another student!</span>
 
 
 <label style="align-content: center; text-align: center;align-self: auto; color: white">Date of offence</label>
 
-<input [(ngModel)]="addOffence.date" name = "date_of_offence"  type= "date" style=" width: 250px; text-align: center; align-self: auto;"
-class= "form-control"(input)="onUpdateServerName($event)">  
-  <select [ngModel]="'Reported'" name = "type_of_offence" class= "invisible"></select>
+<input 
+      [(ngModel)]="addOffence.date" 
+      name = "date_of_offence"  
+      type= "date" 
+      style=" width: 250px; text-align: center; align-self: auto;"
+      class= "form-control"(input)="onUpdateServerName($event)"
+      required>  
+   <select [ngModel]="'Reported'" 
+           name = "type_of_offence" 
+           class= "invisible"></select>
 
 <div class = "row">
   <div class = "col-xs-12">
-  <button style="left: 50%; width: 250px" class ="btn btn-primary">Submit Report</button>
+  <button style="left: 50%; width: 250px" 
+          class ="btn btn-primary"
+          [disabled]="!f.valid">Submit Report</button>
   </div>
 </div>
 
