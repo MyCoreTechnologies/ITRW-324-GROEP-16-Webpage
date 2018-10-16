@@ -83,7 +83,12 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
             }
 
 
+            logout()
+            {
 
+                     alert("Logged out!");
+                    this.getToken() == null;                
+            }
 
 
 

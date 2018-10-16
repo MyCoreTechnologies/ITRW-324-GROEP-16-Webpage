@@ -182,27 +182,9 @@
             class ="btn btn-primary"  
             [disabled]="!f.valid">Register</button>
   </div>
-</div>
-<div class="row">
-    <div class="col-xs-12">
-      <label style="color:white; opacity:1.8 ;">Province</label>
-   </div>
-   </div>
-  
-  <select [(ngModel)]="addStudent.student" name = "student">
-      <option label="Student">1</option>     
-      
-    </select>
-    <div class="row">
-        <div class="col-xs-12">
-          <label style="color:white; opacity:1.8 ;">Province</label>
-       </div>
-       </div>
-      
-      <select [(ngModel)]="addStudent.admin" name = "admin">
-          <option label="Admin">0</option>     
-          
-        </select>
+</div> 
+  <select [ngModel]="'1'" name = "student"  class= "invisible"></select>   
+  <select [ngModel]="'0'" name = "admin" class= "invisible"></select>
 </form>
 </div>
 

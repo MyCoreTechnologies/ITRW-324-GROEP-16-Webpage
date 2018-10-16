@@ -16,17 +16,8 @@ class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Va
 <label style="align-content: center; text-align: center;align-self: auto; color: white">Date of offence</label>
 
 <input [(ngModel)]="addOffence.date" name = "date_of_offence"  type= "date" style=" width: 250px; text-align: center; align-self: auto;"
-class= "form-control"(input)="onUpdateServerName($event)">
-
-<div class="row">
-    <div class="col-xs-12">
-      <label style="color:white; opacity:1.8 ;">Type Of Offence</label>
-   </div>
-   </div>
-  
-  <select [(ngModel)]="addOffence.offencetype" name = "type_of_offence">
-      <option label="Report">Reported</option>     
- </select>
+class= "form-control"(input)="onUpdateServerName($event)">  
+  <select [ngModel]="'Reported'" name = "type_of_offence" class= "invisible"></select>
 
 <div class = "row">
   <div class = "col-xs-12">
