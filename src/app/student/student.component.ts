@@ -19,24 +19,24 @@ export class StudentComponent implements OnInit {
   DeleteBooks:{};
   UpdateBooks:{};
   
-  postDeleteMyBooks(form: NgForm) {
-    console.log(form.value);
-    this.submitServe.postMyBook(form.value)
-    .subscribe(response => {
-      console.log(response);
-    },
-      (error) => console.log('Problem accuired during displaybooks.'));
-    } 
+  // postDeleteMyBooks(form: NgForm) {
+  //   console.log(form.value);
+  //   this.submitServe.postMyBook(form.value)
+  //   .subscribe(response => {
+  //     console.log(response);
+  //   },
+  //     (error) => console.log('Problem accuired during displaybooks.'));
+  //   } 
   
 
-  postMyBooks(form: NgForm) {
-    console.log(form.value);
-    this.submitServe.postMyBook(form.value)
-    .subscribe(response => {
-      console.log(response);
-    },
-      (error) => console.log('Problem accuired during displaybooks.'));
-    } 
+  // postMyBooks(form: NgForm) {
+  //   console.log(form.value);
+  //   this.submitServe.postMyBook(form.value)
+  //   .subscribe(response => {
+  //     console.log(response);
+  //   },
+  //     (error) => console.log('Problem accuired during displaybooks.'));
+  //   } 
     
 }
 

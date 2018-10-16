@@ -14,7 +14,7 @@
           </div>
           <div class="collapse navbar-collapse" id="header" class="invisible">
               <ul class="nav navbar-nav navbar-left">
-                  <li ><a  [(ngModel)]="myData" routerLink ="/student" (click)="onSelect('student'); getMyBooksForm();"data-toggle="tooltip" title="Go to your profile form!" id ="studentHeader" >PROFILE</a></li>
+                  <li ><a  [(ngModel)]="myData" routerLink ="/student" (click)="onSelect('student'); getMyBooksStudent();"data-toggle="tooltip" title="Go to your profile form!" id ="studentHeader" >PROFILE</a></li>
               </ul>
             <ul class="nav navbar-nav navbar-right">                               
                     <li><a [(ngModel)]="myData" routerLink= "/show" (click)="onSelect('show'); getShowAllBooks()"data-toggle="tooltip" data-placement="bottom" title="Go to Show All Books Form!" ><span class="glyphicon glyphicon-search

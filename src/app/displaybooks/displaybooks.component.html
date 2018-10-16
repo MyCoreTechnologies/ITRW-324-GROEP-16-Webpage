@@ -32,7 +32,7 @@
         <div class="row">
                 <div class="col-xs-12">
                     <!-- <span><i class="fas fa-book-open"></i></span> -->
-                  <button class="btn btn-info" type="Submit" data-toggle="tooltip" data-placement="bottom" title="Search for your book" style="width: 202px">Search</button>
+                  <button (click) = "postDisplayBooksSearch()" class="btn btn-info" type="Submit" data-toggle="tooltip" data-placement="bottom" title="Search for your book" style="width: 202px">Search</button>
                </div>
                </div> 
     </div>
@@ -54,8 +54,8 @@
   </form>
     </div>
   </div>
-  <ul class="nav nav-pills" role="tablist">
-      <li role="presentation"><a href="#">Books found <span class="badge">3</span></a></li>
+  <ul class="nav nav-pills" role="tablist" >
+      <li role="presentation"><a style = " color: white">Books found <span class="badge">{{books?.length}}</span></a></li>
     </ul>
   </body> 
 
@@ -70,14 +70,13 @@
 
 <body style="width: 1170px; align-content: center; text-align: center; align-self: auto;background-color:whitesmoke;">
     <div class="container">
-        <div ng-app="todolist" ng-controller="todoCtrl" >
+        <div ng-app="DisplayBooksSearch" ng-controller="DisplayBooksSearchCtrl" >
             <h1></h1>
             <strong style=" width:auto; align-content: center;">SHOW ALL BOOKS</strong>
             <table  id = "bookdisplay" class="table" style=" width:auto; align-content: center;">
                 <thead>
                     <tr>
                         <th>
-                          
                             Book Name
                         </th>
                         <th>
@@ -85,10 +84,7 @@
                         </th>
                         <th>
                             Book Author
-                        </th>
-                        <th>
-                            ISBN Number 13
-                        </th>
+                        </th>   
                         <th>
                             Subject Code
                         </th>
@@ -96,58 +92,49 @@
                             Book Price
                         </th>
                         <th>
+                            ISBN Number 10
+                        </th>
+                        <th>
+                            ISBN Number 13
+                        </th>                                                       
+                        <th>
                             Book Type
                         </th>
                         <th>
                             Student Number
                         </th>
                         <th>
-                            Email
+                            First Name
                         </th>
                         <th>
                             Cellphone Number
-                        </th>                    
+                        </th> 
+                        <th>
+                            Email
+                        </th>
+                                           
                     </tr>
                 </thead>
-                <tbody>
-                    <tr ng-repeat="person in people">
-                        <td>
-                           hello <!-- {{person.name}} -->
-                        </td>
-                        <td>
-                          my   <!-- {{person.surname}} -->
-                        </td>
-                        <td>
-                         name    <!-- {{person.age}} -->
-                        </td>
-                        <td>
-                           hello
-                        </td>
-                        <td>
-                            hello <!-- {{person.name}} -->
-                         </td>
-                         <td>
-                           my   <!-- {{person.surname}} -->
-                         </td>
-                         <td>
-                          name    <!-- {{person.age}} -->
-                         </td>
-                         <td>
-                            hello
-                         </td>
-                         <td>
-                            name    <!-- {{person.age}} -->
-                           </td>
-                           <td>
-                              hello
-                           </td>
-                                 
+                <tbody *ngIf = "books?.length != 0" >
+                    <tr *ngFor = "let book of books">
+                        <td>{{book.Book_Name}}</td>
+                        <td>{{book.Book_Edition}}</td>
+                        <td>{{book.Author_Name}}</td>
+                        <td>{{book.Subject_Code}}</td>
+                        <td>{{book.Book_Price}}</td>
+                        <td>{{book.Book_ISBN_10_Number}}</td>
+                        <td>{{book.Book_ISBN_13_Number}}</td>
+                        <td>{{book.Book_Type}}</td>                     
+                        <td>{{book.Student_Number}}</td>
+                        <td>{{book.First_Name}}</td>
+                        <td>{{book.Contact_Number}}</td>
+                        <td>{{book.Email_Address}}</td>                                                         
                     </tr>
                 </tbody>
             </table>
         </div>
       </div>
-      
+   </body>   
         <!-- <body>
         <form (ngSubmit) = "getDisplayBooksByName(f)" #f="ngForm" style="text-align: left; align-self: auto;">
             <div class="input-group">
