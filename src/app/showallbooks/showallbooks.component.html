@@ -3,7 +3,15 @@
     <form (ngSubmit) = "postBooksSearch(f)" #f="ngForm">
     <h1>
     </h1>
-    <input [(ngModel)]="loginData" name = "book_name" type="text" id="myInput" style ="text-align: center; " onkeyup="myFilterShowAllBooks()" placeholder="Search for your book..">
+    <input 
+          [(ngModel)]="loginData" 
+          name = "book_name" 
+          type="text" 
+          id="myInput" 
+          style ="text-align: center; " 
+          onkeyup="myFilterShowAllBooks()" 
+          placeholder="Search for your book..">
+          
    <div class="col">
     <div class="row col-xs-12">
         <strong style=" width:auto; align-content: center; color: white">SHOW ALL BOOKS</strong>
