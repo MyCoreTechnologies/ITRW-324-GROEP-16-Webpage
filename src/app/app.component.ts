@@ -9,12 +9,14 @@ import { NgModel } from '@angular/forms';
 })
 export class AppComponent {
   loadedFeature = '';
-  
+  homeFeature = '';
 
 
   
  onNavigate(feature: string){
 this.loadedFeature = feature;
+this.homeFeature = feature;
  }
 
+ 
 }

@@ -1,55 +1,124 @@
-<body style="width: 1170px; align-content: center; text-align: center; align-self: auto;background-color:whitesmoke;">
-    <div class="container">
-        <div ng-app="todolist" ng-controller="todoCtrl" >
-            <h1></h1>
-            <strong style=" width:auto;left: 0%">SHOW ALL BOOKS</strong>
-            <table  id = "bookdisplay" class="table" style="left:5%; width:auto; align-content: center;">
-                <thead>
-                    <tr>
-                        <th>
-                            Book Name
-                        </th>
-                        <th>
-                            Book Price
-                        </th>
-                        <th>
-                            Book Type
-                        </th>
-                        <th>
-                            Student Number
-                        </th>
-                        <th>
-                            Cellphone Number
-                        </th>                    
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="person in people">
-                        <td>
-                           hello <!-- {{person.name}} -->
-                        </td>
-                        <td>
-                          my   <!-- {{person.surname}} -->
-                        </td>
-                        <td>
-                         name    <!-- {{person.age}} -->
-                        </td>
-                        <td>
-                           hello
-                        </td>
-                        <td>
-                            hello <!-- {{person.name}} -->
-                         </td>
-                         
-                    </tr>
-                </tbody>
-            </table>
-        </div>
 
-        <button style="left: 50%; width: 250px" class ="btn btn-primary">Update</button>
-        <p>
+
+<body style=" width: 1170px; align-content: center;background-color: #2d2d30; opacity: 0.8;" >   
+
+
+    <form (ngSubmit) = "postDeleteMyBooks(f)" #f="ngForm" style= "text-align: center; align-self: auto;">
+            <div>
+                    <label for="name" style="text-align: center; align-self: auto; color:white ;">Book Number</label>
+                    <div class="row">
+                        <div class="col-xs-12">
+                    <input type="number"id="name" [(ngModel)]="DeleteBooks" maxlength="8"  name = "book_number"    style="text-align: center; align-self: auto; width: 1170px; color: black;">
+                  </div>
+                  </div>
+                  </div>
+                    <div class="input-group">
+                        
+                      </div>
+                <div class="row">
+                      <div class="col-xs-12">
+                    <h1>
           
-        </p>
-     <button style="left: 50%; width: 250px" class ="btn btn-primary">Delete</button>
-  
-  
+                    </h1>
+                      <div class="row">
+                              <div class="col-xs-12">
+                                  <!-- <span><i class="fas fa-book-open"></i></span> -->
+                                <button class="btn btn-info" type="Submit" data-toggle="tooltip" data-placement="bottom" title="Delete my book" style="width: 202px">Delete</button>
+                             </div>
+                             </div> 
+                  </div>
+                </div>
+                <body style="align-self: center background-color;background-color:whitesmoke;">
+                  <h1> 
+                  
+                  </h1>     
+             
+              
+                 
+               
+              </body>
+    </form>
+    
+    <!-- </div> -->
+
+    
+    <body style="width: 1170px; align-content: center; text-align: center; align-self: auto;background-color:whitesmoke;">
+        <div class="container">
+            <div ng-app="todolist" ng-controller="todoCtrl" >
+                <h1></h1>
+                <strong style=" width:auto; align-content: center;">SHOW ALL MY BOOKS</strong>
+                <table  id = "bookdisplay" class="table" style=" width:auto; align-content: center;">
+                    <thead>
+                        <tr>
+                            <th>
+                              
+                                Book Name
+                            </th>
+                            <th>
+                                Book Edition
+                            </th>
+                            <th>
+                                Book Author
+                            </th>
+                            <th>
+                                ISBN Number 13
+                            </th>
+                            <th>
+                                Subject Code
+                            </th>
+                            <th>
+                                Book Price
+                            </th>
+                            <th>
+                                Book Type
+                            </th>
+                            <th>
+                                Student Number
+                            </th>
+                            <th>
+                                Email
+                            </th>
+                            <th>
+                                Cellphone Number
+                            </th>                    
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="person in people">
+                            <td>
+                               hello <!-- {{person.name}} -->
+                            </td>
+                            <td>
+                              my   <!-- {{person.surname}} -->
+                            </td>
+                            <td>
+                             name    <!-- {{person.age}} -->
+                            </td>
+                            <td>
+                               hello
+                            </td>
+                            <td>
+                                hello <!-- {{person.name}} -->
+                             </td>
+                             <td>
+                               my   <!-- {{person.surname}} -->
+                             </td>
+                             <td>
+                              name    <!-- {{person.age}} -->
+                             </td>
+                             <td>
+                                hello
+                             </td>
+                             <td>
+                                name    <!-- {{person.age}} -->
+                               </td>
+                               <td>
+                                  hello
+                               </td>
+                                     
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>         
+      

@@ -1,0 +1,21 @@
+<body style=" text-align: center; width: 1170px; align-content: center;background-color: #2d2d30; opacity: 0.8;" >
+    <h3 style="left: 500%; font:bold;text-align: center; align-self: auto; color: white ;">All Books Found</h3>   
+    <form (ngSubmit) = "postBooksSearch(f)" #f="ngForm">
+    <h1>
+    </h1>
+    <input [(ngModel)]="loginData" name = "book_name" type="text" id="myInput" style ="text-align: center; " onkeyup="myFilterShowAllBooks()" placeholder="Search for your book..">
+    
+    <ul id="myUL">
+      <li><a href="#">Adele</a></li>
+      <li><a href="#">Agnes</a></li>
+    
+      <li><a href="#">Billy</a></li>
+      <li><a href="#">Bob</a></li>
+    
+      <li><a href="#">Calvin</a></li>
+      <li><a href="#">Christina</a></li>
+      <li><a href="#">Cindy</a></li>
+    </ul>
+    
+  </form>
+</body>

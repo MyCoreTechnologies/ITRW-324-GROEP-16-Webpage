@@ -50,7 +50,7 @@ class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Pas
     <div class="input-group">
     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
     <input type="password" style="width: 200px; height:30px; opacity:1.8 ;"
-    class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Password">
+    class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Password" name ="confirmpassword">
     </div>
     </div>
   
@@ -115,7 +115,7 @@ class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Pas
 
 <div class = "row">
   <div class = "col-xs-12">
-    <button  data-toggle="tooltip" data-placement="bottom" title="Register!" style="color: white; left: 50%;  width: 250px; opacity:1.8" class ="btn btn-primary"  >Register</button>
+    <button onclick="header()" data-toggle="tooltip" data-placement="bottom" title="Register!" style="color: white; left: 50%;  width: 250px; opacity:1.8" class ="btn btn-primary"  >Register</button>
   </div>
 </div>
 <div class="row">

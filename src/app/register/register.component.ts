@@ -27,16 +27,30 @@ export class RegisterComponent implements OnInit {
         //@ts-ignore
         this.data=response.body;
         sessionStorage.setItem('data', this.data);
+        this.header();
+        this.loadDisplayBooks();
       }else{
         sessionStorage.clear();
         //@ts-ignore
         this.data=response.body;
         sessionStorage.setItem('data', this.data);
+        this.header();
+        this.loadDisplayBooks();
       }
     },
-      (error) => console.log('Problem accuired during login.'));
+    (error) => alert("ERROR\nCould not register make sure your information is correct!"));
     } 
- 
+
+
+    loadDisplayBooks(){
+      this.router.navigate(['/displaybooks']);
+    }
+    header() {
+      var x = document.getElementById("loginheader");
+      var y = document.getElementById("header");   
+          x.style.visibility = "hidden";
+          y.style.visibility = "visible"
+    }
   ngOnInit() {
 
    

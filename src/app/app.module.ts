@@ -23,8 +23,20 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import {InterceptorService} from '../post/web.interceptor';
 import {HttpClientModule} from '@angular/common/http';
 import { StudentComponent } from './student/student.component';
-
+import { LoginheaderComponent } from './loginheader/loginheader.component';
+import { ShowallbooksComponent } from './showallbooks/showallbooks.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 const appRoutes: Routes = [
+  { path: 'displaybooks' , component: DisplaybooksComponent},
+  {path: 'home' , component: HomeComponent},
+  {path: 'register' , component: RegisterComponent}, 
+  {path: 'login' , component: LoginComponent}, 
+  {path: 'logout' , component: LogoutComponent}, 
+  {path: 'addbook' , component: AddBookComponent}, 
+  {path: 'student' , component: StudentComponent}, 
+  {path: 'report' , component: ReportstudentComponent}, 
+  {path: 'show' , component: ShowallbooksComponent}, 
+  {path: 'help' , component: HelpComponent}, 
 ];
 
 @NgModule({
@@ -46,15 +58,17 @@ const appRoutes: Routes = [
     HomeComponent,
     HelpComponent,
     LogoutComponent,
-    StudentComponent
+    StudentComponent,
+    LoginheaderComponent,
+    ShowallbooksComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+
     RouterModule.forRoot(
-      appRoutes,
-      { useHash: true } // <-- debugging purposes only
+      appRoutes// <-- debugging purposes only
     )
   ],
   providers: [
@@ -79,8 +93,8 @@ export class AppModule {
 //   }
 }
 
-const routes : Routes = [
-{path: 'home', component: HomeComponent}
-];
+// const routes : Routes = [
+// {path: 'home', component: HomeComponent}
+// ];
 
 

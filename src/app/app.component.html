@@ -1,5 +1,7 @@
 
- <app-header (featureSelected) ="onNavigate($event)"></app-header>
+ <app-loginheader  (featureSelected) ="onNavigate($event)"></app-loginheader>
+ 
+ <app-header class="invisible"></app-header>
  <div class="image">
                 <div class = "container">
                                 <div class= "row">
@@ -13,15 +15,26 @@
                                                        <app-help *ngIf="loadedFeature == 'help'"></app-help>
                                                        <app-logout *ngIf="loadedFeature == 'logout'"></app-logout>
                                                        <app-student *ngIf="loadedFeature == 'student'"> </app-student>
-                                                       
+                                                       <app-displaybooks *ngIf="homeFeature == 'h'"></app-displaybooks>
+                                                       <app-showallbooks *ngIf="homeFeature == 'show'"> </app-showallbooks>
+                                                       <router-outlet></router-outlet> 
                                 </div>
+                                
                       </div>    
+                     
         </div>
-     
-      
+
+        
+
+
+     <!-- <app-login (selected) = "onNavigate($event)"> </app-login>
+     <app-displaybooks *ngIf="homeFeature == 'h'"></app-displaybooks>
+     <div>
+                <app-displaybooks *ngIf="homeFeature == 'h'"></app-displaybooks>
+     </div> -->
 <!-- 
 <div class="contaier">
-  <div class="row">
+  <div class="row">ho
           <div class="col-xs-12">
                   <h3>hello</h3>  
 

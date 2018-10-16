@@ -22,6 +22,7 @@
     "@angular/router": "^6.1.0",
     "bootstrap": "^3.3.7",
     "core-js": "^2.5.4",
+    "ngx-spinner": "^6.1.2",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },
@@ -41,6 +42,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.0",
     "karma-jasmine": "~1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "node.jwt": "^0.1.5",
     "protractor": "~5.4.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",

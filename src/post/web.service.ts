@@ -13,13 +13,13 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
             {
                     console.log(value);
                     const header= new HttpHeaders().set('Content-Type', 'application/json');
-                    return this.httpclient.post('http://192.168.8.103:3000/student/login', value, {});
+                    return this.httpclient.post('http://192.168.8.100:3000/student/login', value, {});
             }
 
-            postBook(value)
+            postBook(value)//ADD BOOK
             {
                     const header= new HttpHeaders().set('Content-Type', 'application/json');
-                    return this.httpclient.post('http://192.168.8.103:3000/book/addbook', value, {headers: header});
+                    return this.httpclient.post('http://192.168.8.100:3000/book/addBook', value, {headers: header});
             }
 
             getToken(){
@@ -32,27 +32,70 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
         //             return this.httpclient.get('http://192.168.8.103:3000/book/subject/price/type');
         //     }
 
-            postDisplayBookData(value)
+            postDisplayBookData(value) //searchbooks
+            {
+                    const header= new HttpHeaders().set('Content-Type', 'application/json');
+                    return this.httpclient.post('http://192.168.8.103:3000/book/subject/price/type', value, {headers: header});
+            }
+            postDisplayBook(value) //showall books
             {
                     const header= new HttpHeaders().set('Content-Type', 'application/json');
                     return this.httpclient.post('http://192.168.8.103:3000/book/subject/price/type', value, {headers: header});
             }
 
+           
+
+            getMyBooks(){//student books
+
+                return this.httpclient.get('http://192.168.8.100:3000/book/myBook');
+             
+              
+             }
+
+             getAllBooks(){ //show all books tab
+
+                return this.httpclient.get('http://192.168.8.100:3000/book/getBook');
+             
+              
+             }
+
+
+            getDisplayBookData(){
+
+                return this.httpclient.get('http://192.168.8.103:3000/book/subject/price/type');
+             
+              
+             }
+
 
             postRegister(value)
             {
                 const header= new HttpHeaders().set('Content-Type', 'application/json');
-                return this.httpclient.post('http://192.168.8.103:3000/student/register', value, {});
+                return this.httpclient.post('http://192.168.8.100:3000/student/register', value, {});
             }
-            getDisplayBookByName()
-            {
-                    return this.httpclient.get('http://192.168.8.104:3000/book/getBook');
-            }
+   
 
             postOffence(value)
             {
                 const header= new HttpHeaders().set('Content-Type', 'application/json');
                 return this.httpclient.post('http://192.168.8.103:3000/student_offence/reportOffence', value, {});
                 
+            }
+
+
+
+
+
+
+
+            postMyBook(value) //student show/delete/update
+            {
+                    const header= new HttpHeaders().set('Content-Type', 'application/json');
+                    return this.httpclient.post('http://192.168.8.103:3000/book/subject/price/type', value, {headers: header});
+            }
+            postDeleteMyBooks(value) //student show/delete/update
+            {
+                    const header= new HttpHeaders().set('Content-Type', 'application/json');
+                    return this.httpclient.post('http://192.168.8.103:3000/book/subject/price/type', value, {headers: header});
             }
     }
