@@ -37,6 +37,7 @@ const appRoutes: Routes = [
   {path: 'report' , component: ReportstudentComponent}, 
   {path: 'show' , component: ShowallbooksComponent}, 
   {path: 'help' , component: HelpComponent}, 
+  {path: 'header', component: HeaderComponent}
 ];
 
 @NgModule({
@@ -84,17 +85,8 @@ const appRoutes: Routes = [
 })
 export class AppModule {
   constructor(private router : Router){}
-
-//   goHome(){
-//     this.router.navigate(['home']);
-//   }
-//   goLogout(){
-//     this.router.navigate(['/logout']);
-//   }
 }
 
-// const routes : Routes = [
-// {path: 'home', component: HomeComponent}
-// ];
+
 
 
