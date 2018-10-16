@@ -85,9 +85,9 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 
             logout()
             {
+                     sessionStorage.clear();
 
-                     alert("Logged out!");
-                    this.getToken() == null;                
+                     alert("Logged out!")                   
             }
 
 
