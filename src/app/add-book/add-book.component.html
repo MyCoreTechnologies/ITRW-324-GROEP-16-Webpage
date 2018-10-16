@@ -8,40 +8,106 @@
 <div style="display:flex; flex-direction: row; align-items: center">
   <div style="float:left;margin-right:20px;">
 <label for = "book_name" style="color:white">Book Name</label>
-<input [(ngModel)]="addBook" name = "book_name" id = "book_name" type="text" style="width: 220px; height: 30px"
-class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Book Name">
+<input
+      [(ngModel)]="addBook" 
+      name = "book_name" 
+      id = "book_name" 
+      type="text" 
+      style="width: 220px; height: 30px"
+      class = "form-control"(input)="onUpdateServerName($event)"  
+      placeholder="Enter Book Name"
+      required
+      #bookname = "ngModel">
+      <span class = "help-block" 
+              style="color:white" 
+              *ngIf = "!bookname.valid && bookname.touched">Please enter a Book Titel!</span>
   </div>
 
 <div style="float:left;margin-right:20px;">
 <label for = "book_edition" style="color:white">Book Edition</label>
-<input  [(ngModel)]="addBook.edition" name = "book_edition" id = "book_edition" type= "text" style="width: 220px; height: 30px"
-class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Book Edition">
+<input  
+      [(ngModel)]="addBook.edition" 
+      name = "book_edition" 
+      id = "book_edition" 
+      type= "text" 
+      style="width: 220px; height: 30px"
+      class= "form-control"(input)="onUpdateServerName($event)"  
+      placeholder="Enter Book Edition"
+      required
+      #bookedt = "ngModel">
+      <span class = "help-block" 
+              style="color:white" 
+              *ngIf = "!bookedt.valid && bookedt.touched">Please enter Book edition!</span>
 </div>
 
 <div style="float:left;margin-right:20px;">
 <label for = "book_isbn-10" style="color:white">Book ISBN 10 Number</label>
-<input [(ngModel)]="addBook.isbn10" name = "book_isbn_10_number" id= "book_isbn-10" type="text" style="width: 220px;  height: 30px"
-class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter ISBN 10 Number">
+<input 
+      [(ngModel)]="addBook.isbn10" 
+      name = "book_isbn_10_number" 
+      id= "book_isbn-10" 
+      type="text" 
+      style="width: 220px;  height: 30px"
+      class= "form-control"(input)="onUpdateServerName($event)"  
+      placeholder="Enter ISBN 10 Number"
+      required
+      #bookisbn10 = "ngModel">
+      <span class = "help-block" 
+              style="color:white" 
+              *ngIf = "!bookisbn10.valid && bookisbn10.touched">Please enter an ISBN number!</span>
 </div>
 
 <div style="float:left;margin-right:20px;">
 <label for = "book_isbn-13" style="color:white">Book ISBN 13 Number</label>
-<input [(ngModel)]="addBook.isbn13" name = "book_isbn_13_number" id= "book_isbn-13" type= "text" style="width: 220px; height: 30px"
-class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter ISBN 13 Number">
+<input 
+      [(ngModel)]="addBook.isbn13" 
+      name = "book_isbn_13_number" 
+      id= "book_isbn-13" 
+      type= "text" 
+      style="width: 220px; height: 30px"
+      class= "form-control"(input)="onUpdateServerName($event)"  
+      placeholder="Enter ISBN 13 Number"
+      required
+      #bookisbn13 = "ngModel">
+      <span class = "help-block" 
+              style="color:white" 
+              *ngIf = "!bookisbn13.valid && bookisbn13.touched">Please enter an ISBN number!</span>
 </div>
 
 <div style="float:left;margin-right:20px;">
 <label for = "author_name" style="color:white">Author Name</label>
-<input [(ngModel)]="addBook.author" name = "author_name" id = "author_name" type= "text" style="width: 220px;  height: 30px"
-class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Author Name">
+<input 
+      [(ngModel)]="addBook.author" 
+      name = "author_name" 
+      id = "author_name" 
+      type= "text" 
+      style="width: 220px;  height: 30px"
+      class= "form-control"(input)="onUpdateServerName($event)"  
+      placeholder="Enter Author Name"
+      required
+      #authorname = "ngModel">
+      <span class = "help-block" 
+              style="color:white" 
+              *ngIf = "!authorname.valid && authorname.touched">Please enter the Author Name!</span>
 </div>
 </div>
 
 <div style="display:flex; flex-direction: row; align-items: center">
   <div style="float:left;margin-right:20px;">
 <label for = "book_price" style="color:white">Book Price</label>
-<input [(ngModel)]="addBook.price" name = "book_price" id = "book_price" type= "text" style="width: 220px ; height: 30px"
-class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Price">
+<input 
+      [(ngModel)]="addBook.price" 
+      name = "book_price" 
+      id = "book_price" 
+      type= "text" 
+      style="width: 220px ; height: 30px"
+      class= "form-control"(input)="onUpdateServerName($event)"  
+      placeholder="Enter Price"
+      required
+      #bookprice = "ngModel">
+      <span class = "help-block" 
+              style="color:white" 
+              *ngIf = "!bookprice.valid && bookprice.touched">Please enter your Book price!</span>
 </div>
 
 <div style="float:left;margin-right:20px;">
@@ -64,14 +130,30 @@ class= "form-control"(input)="onUpdateServerName($event)"  placeholder="Enter Pr
 </div>
 </div>
 
-<input [(ngModel)]="addBook.dateplaced" name = "date_placed" type= "date" style="width: 220px"
-class= "form-control"(input)="onUpdateServerName($event)">
+<input 
+      [(ngModel)]="addBook.dateplaced" 
+      name = "date_placed" 
+      type= "date" 
+      style="width: 220px"
+      class= "form-control"(input)="onUpdateServerName($event)"
+      required>
 
 <label style="color:white">Subject Code</label>
-<div class="row" class="text-uppercase">
+  <div class="row" class="text-uppercase">
     <div class="col-xs-12" class="text-uppercase">
-<input  type= "text"  style="width: 220px;  height: 30px"
- class="text-uppercase"  placeholder=" ITRW111" [(ngModel)]= "addBook.code" class="text-uppercase"  name = "subject_code">
+    <input  
+          type= "text"  
+          style="width: 220px;  height: 30px"
+          class="text-uppercase"  
+          placeholder=" ITRW111" 
+          [(ngModel)]= "addBook.code" 
+          class="text-uppercase"  
+          name = "subject_code"
+          required
+          #subjectcode = "ngModel">
+          <span class = "help-block" 
+              style="color:white" 
+              *ngIf = "!subjectcode.valid && subjectcode.touched">Please enter the Subject Code!</span>
 </div>
 </div>
   <div class="row">
@@ -90,7 +172,10 @@ class= "form-control"(input)="onUpdateServerName($event)">
 
 <div class = "row">
   <div class = "col-xs-12">
-   <button style="color: white; background-color: black;left: 50%; width: 250px" class ="btn btn-primary" [disabled]="allowsNewServer">ADD BOOK</button>
+   <button 
+          style="color: white; background-color: black;left: 50%; width: 250px" 
+          class ="btn btn-primary" 
+          [disabled]="allowsNewServer">ADD BOOK</button>
   </div>
 </div>
 </form>

@@ -14,7 +14,10 @@
          required 
          minlength="8" 
          maxlength="8"
-         >
+         #studentnum = "ngModel">
+        <span class = "help-block" 
+              style="color:white" 
+              *ngIf = "!studentnum.valid && studentnum.touched">Please a valid Student Number!</span>
 </div>
 
 
@@ -96,7 +99,12 @@
        class= "form-control"(input)="onUpdateServerName($event)" 
        placeholder="Enter Password"
        required
-       maxlength="20">
+       maxlength="20" 
+      >
+      <!--<span class = "help-block" 
+             style="color:white" 
+             *ngIf = "!password.valid && password.touched">Please enter valid password!</span>-->
+
 </div>
 </div>
 <div style="float:left;margin-right:20px;">
@@ -109,7 +117,11 @@
            class= "form-control"(input)="onUpdateServerName($event)" 
            placeholder="Enter Password"
            required
-           maxlength="20">
+           maxlength="20"
+          >
+            <!--<span class = "help-block" 
+                style="color:white" 
+                *ngIf = "!studentpass.valid && studentpass.touched">Please enter correct password!</span>-->
     </div>
     </div>
   
@@ -159,8 +171,8 @@
       <option label="Minjonet">Minjonet</option>
       <option label="Oosterhof">Oosterhof</option>
       <option label="Republiek">Republiek</option>
-      <option label="Vergeet My Nie">Vergeet My Nie</option>
-      <option label="Wag n Bietjie">Wag n Bietjie</option>
+      <option label="Vergeet My Nie">Vergeet-My-Nie</option>
+      <option label="Wag n Bietjie">Wag-n-Bietjie</option>
       <option label="Wanda">Wanda</option>
       <option label="Oppirif">Oppirif</option>
       <option label="Private">Private</option>

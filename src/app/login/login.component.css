@@ -1,5 +1,10 @@
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+    background-color:rgb(250, 192, 201) ;
+}
 .alert{
     color: red;
     position: absolute;
     width: 50px;
 }
+
