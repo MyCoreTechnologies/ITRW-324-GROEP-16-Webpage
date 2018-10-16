@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 
-
 @Injectable()
 
     export class subservice{
@@ -49,8 +48,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
             }
 
             logout() //discard token
-            {
-                     sessionStorage.clear();
-                     alert("Logged out!")                   
+            {                  
+                sessionStorage.clear();                   
             }   
     }

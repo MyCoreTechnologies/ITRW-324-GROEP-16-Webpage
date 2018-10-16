@@ -52,72 +52,51 @@
                         <tr>
                             <th>
                               
-                                Book Name
+                                Book Number
                             </th>
                             <th>
-                                Book Edition
-                            </th>
-                            <th>
-                                Book Author
-                            </th>
-                            <th>
-                                ISBN Number 13
-                            </th>
-                            <th>
-                                Subject Code
-                            </th>
-                            <th>
-                                Book Price
-                            </th>
-                            <th>
-                                Book Type
-                            </th>
-                            <th>
-                                Student Number
-                            </th>
-                            <th>
-                                Email
-                            </th>
-                            <th>
-                                Cellphone Number
-                            </th>                    
+                                    Book Name
+                                </th>
+                                <th>
+                                    Book Edition
+                                </th>
+                                <th>
+                                    Book Author
+                                </th>   
+                                <th>
+                                    Subject Code
+                                </th>
+                                <th>
+                                    Book Price
+                                </th>
+                                <th>
+                                    ISBN Number 10
+                                </th>
+                                <th>
+                                    ISBN Number 13
+                                </th>                                                       
+                                <th>
+                                    Book Type
+                                </th>
+                                <th>
+                                    Date Placed
+                                </th>                                     
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr ng-repeat="person in people">
-                            <td>
-                               hello <!-- {{person.name}} -->
-                            </td>
-                            <td>
-                              my   <!-- {{person.surname}} -->
-                            </td>
-                            <td>
-                             name    <!-- {{person.age}} -->
-                            </td>
-                            <td>
-                               hello
-                            </td>
-                            <td>
-                                hello <!-- {{person.name}} -->
-                             </td>
-                             <td>
-                               my   <!-- {{person.surname}} -->
-                             </td>
-                             <td>
-                              name    <!-- {{person.age}} -->
-                             </td>
-                             <td>
-                                hello
-                             </td>
-                             <td>
-                                name    <!-- {{person.age}} -->
-                               </td>
-                               <td>
-                                  hello
-                               </td>
-                                     
-                        </tr>
-                    </tbody>
+                    <tbody *ngIf = "books?.length != 0" >
+                            <tr *ngFor = "let book of books">
+                                    <td>{{book.Book_Number}}</td>
+                                <td>{{book.Book_Name}}</td>
+                                <td>{{book.Book_Edition}}</td>
+                                <td>{{book.Author_Name}}</td>
+                                <td>{{book.Subject_Code}}</td>
+                                <td>{{book.Book_Price}}</td>
+                                <td>{{book.Book_ISBN_10_Number}}</td>
+                                <td>{{book.Book_ISBN_13_Number}}</td>
+                                <td>{{book.Book_Type}}</td>                     
+                                <td>{{book.Date_Placed}}</td>                                                         
+                            </tr>
+                        </tbody>
                 </table>
             </div>
           </div>         

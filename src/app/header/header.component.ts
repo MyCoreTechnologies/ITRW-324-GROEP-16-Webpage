@@ -23,7 +23,7 @@ export class HeaderComponent{
             },
             (error) => alert("ERROR\nStudent number or password incorrect!"));
     }
-    getShowAllBooks(){ //show all books component
+    getShowAllBooks(){
         this.submitServe.getAllBooks().subscribe(
             (response) => {
                 console.log(response);

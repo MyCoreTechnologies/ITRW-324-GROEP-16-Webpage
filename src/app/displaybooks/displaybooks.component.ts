@@ -12,28 +12,10 @@ export class DisplaybooksComponent implements OnInit {
 
 
   constructor(private router: Router, private submitServe: subservice) {}
-  
-  
+
   loginData:{};
   BookByName:{};
-  // loginData( ) {
-  //   return this.student_number;
-  // };
-  data;
-
   books;
-
-  // getDisplay(){
-  //   //Request is send to web service
-  //   this.submitServe.getDisplayBookData()
-  //   // Service sends the book list
-  //   .subscribe(response => {
-  //     console.log(response);
-  //     this.books = response;
-
-  //   },
-  //   (error) => console.log('Problem accuired during book retrieval.'));
-  // }  
 
   postDisplayBooksSearch(form: NgForm) {
     console.log(form.value);

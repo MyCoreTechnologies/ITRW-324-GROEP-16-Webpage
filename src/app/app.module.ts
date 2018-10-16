@@ -26,6 +26,7 @@ import { StudentComponent } from './student/student.component';
 import { LoginheaderComponent } from './loginheader/loginheader.component';
 import { ShowallbooksComponent } from './showallbooks/showallbooks.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+
 const appRoutes: Routes = [
   { path: 'displaybooks' , component: DisplaybooksComponent},
   {path: 'home' , component: HomeComponent},
