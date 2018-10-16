@@ -5,35 +5,82 @@
   <h3 style="color:white; opacity: 5">Enter Your Details Below</h3>
 <div>
 <label style="color:white;opacity:1.8 ;">Student Number</label>
-<input   [(ngModel)]="addStudent" name = "student_number" type="text" style="width: 200px; height:30px; opacity:1.8 ;"
-class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Student Number"  required minlength="8" maxlength="8">
-
+<input   [(ngModel)]="addStudent" 
+         name = "student_number" 
+         type="text" 
+         style="width: 200px; height:30px; opacity:1.8 ;"
+         class= "form-control"(input)="onUpdateServerName($event)" 
+         placeholder="Enter Student Number"  
+         required 
+         minlength="8" 
+         maxlength="8"
+         >
 </div>
 
 
 <div>
 <label style="color:white;">First Name</label>
-<input   [(ngModel)]="addStudent.firstname" name = "first_name" type= "text" style="width: 200px; height:30px; opacity:1.8 ;"
-class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter First Name">
-
+<input  
+         [(ngModel)]="addStudent.firstname"
+         name = "first_name" 
+         type= "text" 
+         style="width: 200px; height:30px; opacity:1.8 ;"
+         class= "form-control"(input)="onUpdateServerName($event)" 
+         placeholder="Enter First Name"
+         required
+         #firstname = "ngModel">
+        <span class = "help-block" 
+              style="color:white" 
+              *ngIf = "!firstname.valid && firstname.touched">Please enter first name!</span>
 </div>
 
 <div>
 <label style="color:white; opacity:1.8 ;">Last Name</label>
-<input [(ngModel)]="addStudent.lastname" name = "last_name" type="text" style="width: 200px; height:30px; opacity:1.8 ;"
-class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Last Name">
+<input 
+        [(ngModel)]="addStudent.lastname" 
+        name = "last_name" 
+        type="text" 
+        style="width: 200px; height:30px; opacity:1.8 ;"
+        class= "form-control"(input)="onUpdateServerName($event)" 
+        placeholder="Enter Last Name"
+        required 
+        #lastname = "ngModel">
+        <span class = "help-block" 
+              style="color:white" 
+              *ngIf = "!lastname.valid && lastname.touched">Please enter last name!</span>
 </div>
 
 <div>
 <label style="color:white; opacity:1.8 ;">Contact Number</label>
-<input  [(ngModel)]="addStudent.contactnumber" name = "contact_number" type= "text" style="width: 200px; height:30px; opacity:1.8 ;"
-class= "form-control"(input)="onUpdateServerName($event)" placeholder=".Enter Contact Number">
+<input  
+        [(ngModel)]="addStudent.contactnumber" 
+        name = "contact_number" 
+        type= "text" 
+        style="width: 200px; height:30px; opacity:1.8 ;"
+        class= "form-control"(input)="onUpdateServerName($event)" 
+        placeholder=".Enter Contact Number"
+        required
+        maxlength="10" 
+        #contactnum = "ngModel">
+        <span class = "help-block" 
+              style="color:white" 
+              *ngIf = "!contactnum.valid && contactnum.touched">Please enter Contact Number!</span>
 </div>
 
 <div>
 <label style="color:white; opacity:1.8 ;">Email Address</label>
-<input  [(ngModel)]="addStudent.email" name = "email_address" type= "text" style="width: 200px; height:30px; opacity:1.8 ;"
-class= "form-control"(input)="onUpdateServerName($event)" placeholder="youremail@gmail.com">
+<input  [(ngModel)]="addStudent.email" 
+        name = "email_address" 
+        type= "email" 
+        style="width: 200px; height:30px; opacity:1.8 ;"
+        class= "form-control"(input)="onUpdateServerName($event)" 
+        placeholder="youremail@gmail.com"
+        required
+        email
+        #emailtest = "ngModel">
+        <span class = "help-block" 
+              style="color:white" 
+              *ngIf = "!emailtest.valid && emailtest.touched">Please enter valid email!</span>
 </div>
 
 <div style="display:flex; flex-direction: row; align-items: center">
@@ -41,16 +88,28 @@ class= "form-control"(input)="onUpdateServerName($event)" placeholder="youremail
 <label style="color:white; opacity:1.8 ;">Password</label>
 <div class="input-group">
 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-<input  [(ngModel)]="addStudent.password" name = "password"type="password" style="width: 200px; height:30px; opacity:1.8 ;"
-class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Password">
+<input  
+       [(ngModel)]="addStudent.password" 
+       name = "password"
+       type="password" 
+       style="width: 200px; height:30px; opacity:1.8 ;"
+       class= "form-control"(input)="onUpdateServerName($event)" 
+       placeholder="Enter Password"
+       required
+       maxlength="20">
 </div>
 </div>
 <div style="float:left;margin-right:20px;">
     <label style="color:white; opacity:1.8 ;" > Confirm Password</label>
     <div class="input-group">
     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-    <input type="password" style="width: 200px; height:30px; opacity:1.8 ;"
-    class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Password" name ="confirmpassword">
+    <input 
+           type="password" 
+           style="width: 200px; height:30px; opacity:1.8 ;"
+           class= "form-control"(input)="onUpdateServerName($event)" 
+           placeholder="Enter Password"
+           required
+           maxlength="20">
     </div>
     </div>
   
@@ -61,7 +120,7 @@ class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Pas
  </div>
  </div>
 
-<select [(ngModel)]="addStudent.province" name = "province_name">
+<select [(ngModel)]="addStudent.province" name = "province_name" required>
     <option label="Eastern Cape">Eastern Cape</option>  
     <option label="Free State">Free State</option>
     <option label="Gauteng">Gauteng</option>
@@ -82,7 +141,7 @@ class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Pas
    </div>
    </div>
 
-  <select [(ngModel)]="addStudent.hostel" name = "hostel_name">
+  <select [(ngModel)]="addStudent.hostel" name = "hostel_name" required> 
       <option label="Caput">Caput</option>
       <option label="De Wilgers">De Wilgers</option>
       <option label="Excelsior"> Excelsior</option>
@@ -115,7 +174,13 @@ class= "form-control"(input)="onUpdateServerName($event)" placeholder="Enter Pas
 
 <div class = "row">
   <div class = "col-xs-12">
-    <button onclick="header()" data-toggle="tooltip" data-placement="bottom" title="Register!" style="color: white; left: 50%;  width: 250px; opacity:1.8" class ="btn btn-primary"  >Register</button>
+    <button  
+            data-toggle="tooltip" 
+            data-placement="bottom" 
+            title="Register!" 
+            style="color: white; left: 50%;  width: 250px; opacity:1.8" 
+            class ="btn btn-primary"  
+            [disabled]="!f.valid">Register</button>
   </div>
 </div>
 <div class="row">

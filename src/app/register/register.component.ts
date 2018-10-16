@@ -11,7 +11,7 @@ import {Router,Routes,RouterLink} from "@angular/router";
 })
 export class RegisterComponent implements OnInit {
 
-  
+  ng
   
   constructor(private router: Router, private submitServe: subservice) {}
   addStudent:{};
