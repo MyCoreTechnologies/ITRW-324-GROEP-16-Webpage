@@ -18,6 +18,7 @@ export class ShowallbooksComponent implements OnInit {
 filer:{};
 
     postFilterBooksAddRequest(form: NgForm) {
+      console.log("filter");
     console.log(form.value);
     this.submitServe.postDisplayBookData(form.value)
     .subscribe(response => {
