@@ -32,7 +32,8 @@ const appRoutes: Routes = [
   {path: 'report' , component: ReportstudentComponent}, 
   {path: 'show' , component: ShowallbooksComponent}, 
   {path: 'help' , component: HelpComponent}, 
-  {path: 'header', component: HeaderComponent}
+  {path: 'header', component: HeaderComponent},
+  {path: '' , component: HomeComponent},
 ];
 
 @NgModule({
