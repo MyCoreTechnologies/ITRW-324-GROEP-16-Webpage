@@ -1,4 +1,4 @@
-<body style=" position:absolute; color:black; left: 5%; top: 7%; background-color: #2d2d30; opacity: 0.7; ; width: 1200px">
+<body style=" position:absolute; color:black; left: 5%; top: 7%; background-color: #2d2d30; opacity: 0.8; ; width: 1200px">
   <h3 style="color:white">Enter Book Details</h3>
 
 
@@ -94,7 +94,8 @@
 
 <div style="display:flex; flex-direction: row; align-items: center">
   <div style="float:left;margin-right:20px;">
-<label for = "book_price" style="color:white">Book Price</label>
+<label for = "book_price" style="color:white; opacity:1.8">Book Price</label>
+ <div>
 <input 
       [(ngModel)]="addBook.price" 
       name = "book_price" 
@@ -105,7 +106,9 @@
       placeholder="Enter Price"
       required
       #bookprice = "ngModel">
-      <span class = "help-block" 
+      
+   </div>
+   <span class = "help-block" 
               style="color:white" 
               *ngIf = "!bookprice.valid && bookprice.touched">Please enter your Book price!</span>
 </div>
