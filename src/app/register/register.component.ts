@@ -43,7 +43,7 @@ export class RegisterComponent implements OnInit {
 
 
     loadDisplayBooks(){
-      this.router.navigate(['/login']);
+     this.router.navigate(['/login']);
     }
     header() {
       var x = document.getElementById("loginheader");
