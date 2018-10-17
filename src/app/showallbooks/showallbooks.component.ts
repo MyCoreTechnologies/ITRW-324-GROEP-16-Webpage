@@ -11,12 +11,14 @@ import {Response} from '@angular/http';
 export class ShowallbooksComponent implements OnInit {
   allbooks;
   constructor(private router: Router, private submitServe: subservice) {
+    // on load display all books when clicked on show all books in navbar
     this.getAllBooks();
   }  
   ngOnInit() {
   }
+  // variable to save the books found from json format
 filer:{};
-
+    // method to post the filter, get from the service
     postFilterBooksAddRequest(form: NgForm) {
       console.log("filter");
     console.log(form.value);
@@ -27,7 +29,7 @@ filer:{};
     },
       (error) => console.log('Problem accuired during displaybooks.'));
     } 
-  
+  //mehtod created to get all books from service
   getAllBooks(){
     console.log("hello");
     this.submitServe.getAllBooks().subscribe(
@@ -37,7 +39,6 @@ filer:{};
         },
         (error) => alert("ERROR\nStudent number or password incorrect!"));
 }
-  
 }
 
 

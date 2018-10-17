@@ -15,9 +15,9 @@ export class ReportstudentComponent implements OnInit {
   ngOnInit() {
   }
   addOffence:{};
-
+  // variable to get the data from the respose send form the service
   data;
-
+  // method created to post the offences to the service to report a student
   postOffences(form: NgForm) {
     console.log(form.value);
     this.submitServe.postOffence(form.value)

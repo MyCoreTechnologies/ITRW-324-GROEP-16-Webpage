@@ -1,16 +1,17 @@
+<!-- body created for displaying better the component -->
 <body style=" text-align: center; align-self: auto; width: 1170px; align-content: center;background-color: #2d2d30; opacity: 0.8;" >
     <h3 style="left: 500%; font:bold;text-align: center; align-self: auto; color: white ;">All Books Found</h3>   
+    <!-- form created to send the data as an object to the server and displaying the data received -->
     <form (ngSubmit) = "postFilterBooksAddRequest(f)" #f="ngForm">
-    <h1>
-    </h1>           
+    <h1></h1>           
+    <!-- selection posting the request to filter only addvertisements or requests -->
     <select style = "text-align: center"[(ngModel)]="filer" name = "book_Type" required> 
         <option style = "text-align: center" label="Advertisement">Advertisement</option>
         <option style = "text-align: center" label="Request">Request</option>
         </select>
         <h1></h1>
-          <div class="row">
-
-          <div class="col-xs-12">
+        <div class="row">
+        <div class="col-xs-12">
         <button 
         class="btn btn-info" 
         type="Submit" 
@@ -21,10 +22,9 @@
     </div>
     </div> 
     <ul class="nav nav-pills" role="tablist" >
+        <!-- running a for to see how many books there are -->
         <li role="presentation"><a style = " color: white">Books found <span class="badge">{{allbooks?.length}}</span></a></li>
-      </ul>
-
-
+    </ul>
       <body style="width: 1170px; align-content: center; align-self: auto;background-color:whitesmoke;">
         <div class="container">
             <div ng-app="DisplayBooksSearch" ng-controller="DisplayBooksSearchCtrl" >
@@ -71,6 +71,7 @@
                             </th>                                            
                         </tr>
                     </thead>
+                    <!-- displaying the books that was found in the service -->
                     <tbody *ngIf = "allbooks?.length != 0" >
                         <tr *ngFor = "let book of allbooks">
                             <td>{{book.Book_Name}}</td>
@@ -91,5 +92,5 @@
             </div>
           </div>
        </body>   
-  </form>
+    </form>
 
