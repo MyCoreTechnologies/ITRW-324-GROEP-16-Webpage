@@ -1,0 +1,212 @@
+<body style=" position: absolute; left: 1%; top: 5%; color:black; background-color: transparent; width: 300px">
+  <div>
+      <form (ngSubmit) = "postStudent(f)" #f="ngForm">
+         
+  <h3 style="color:white; opacity: 5">Enter Your Details Below</h3>
+<div>
+<label style="color:white;opacity:1.8 ;">Student Number</label>
+<input   [(ngModel)]="addStudent" 
+         name = "student_number" 
+         type="text" 
+         style="width: 200px; height:30px; opacity:1.8 ;"
+         class= "form-control"(input)="onUpdateServerName($event)" 
+         placeholder="Enter Student Number"  
+         required 
+         minlength="8" 
+         maxlength="8"
+         #studentnum = "ngModel">
+        <span class = "help-block" 
+              style="color:white" 
+              *ngIf = "!studentnum.valid && studentnum.touched">Please enter a valid Student Number!</span>
+</div>
+
+
+<div>
+<label style="color:white;">First Name</label>
+<input  
+         [(ngModel)]="addStudent.firstname"
+         name = "first_name" 
+         type= "text" 
+         style="width: 200px; height:30px; opacity:1.8 ;"
+         class= "form-control"(input)="onUpdateServerName($event)" 
+         placeholder="Enter First Name"
+         required
+         #firstname = "ngModel">
+        <span class = "help-block" 
+              style="color:white" 
+              *ngIf = "!firstname.valid && firstname.touched">Please enter First name!</span>
+</div>
+
+<div>
+<label style="color:white; opacity:1.8 ;">Last Name</label>
+<input 
+        [(ngModel)]="addStudent.lastname" 
+        name = "last_name" 
+        type="text" 
+        style="width: 200px; height:30px; opacity:1.8 ;"
+        class= "form-control"(input)="onUpdateServerName($event)" 
+        placeholder="Enter Last Name"
+        required 
+        #lastname = "ngModel">
+        <span class = "help-block" 
+              style="color:white" 
+              *ngIf = "!lastname.valid && lastname.touched">Please enter Last name!</span>
+</div>
+
+<div>
+<label style="color:white; opacity:1.8 ;">Contact Number</label>
+<input  
+        [(ngModel)]="addStudent.contactnumber" 
+        name = "contact_number" 
+        type= "text" 
+        style="width: 200px; height:30px; opacity:1.8 ;"
+        class= "form-control"(input)="onUpdateServerName($event)" 
+        placeholder=".Enter Contact Number"
+        required
+        maxlength="10" 
+        #contactnum = "ngModel">
+        <span class = "help-block" 
+              style="color:white" 
+              *ngIf = "!contactnum.valid && contactnum.touched">Please enter Contact Number!</span>
+</div>
+
+<div>
+<label style="color:white; opacity:1.8 ;">Email Address</label>
+<input  [(ngModel)]="addStudent.email" 
+        name = "email_address" 
+        type= "email" 
+        style="width: 200px; height:30px; opacity:1.8 ;"
+        class= "form-control"(input)="onUpdateServerName($event)" 
+        placeholder="youremail@gmail.com"
+        required
+        email
+        #emailtest = "ngModel">
+        <span class = "help-block" 
+              style="color:white" 
+              *ngIf = "!emailtest.valid && emailtest.touched">Please enter valid email!</span>
+</div>
+
+<div style="display:flex; flex-direction: row; align-items: center" ng-controller="confirmCtrl">
+    <div style="float:left;margin-right:20px;">
+<label style="color:white; opacity:1.8 ;">Password</label>
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+<input  
+       [(ngModel)]="addStudent.password" 
+       name = "password"
+       type="password" 
+       style="width: 200px; height:30px; opacity:1.8 ;"
+       class= "form-control"(input)="onUpdateServerName($event)" 
+       placeholder="Enter Password"
+       required
+       maxlength="20">
+
+</div>
+</div>
+<div style="float:left;margin-right:20px;">
+    <label style="color:white; opacity:1.8 ;" > Confirm Password</label>
+    <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    <input 
+           type="password"
+           style="width: 200px; height:30px; opacity:1.8 ;"
+           class= "form-control"(input)="onUpdateServerName($event)" 
+           placeholder="Enter Password"
+           required
+           maxlength="20"
+           >
+         <!-- <span class = "help-block" 
+                style="color:white" 
+                *ngIf = "confirmpassword.error?.required? && confirmpassword.touched">Please enter correct password!</span>-->
+    </div>
+    </div>
+  
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <label style="color:white; opacity:1.8 ;">Province</label>
+ </div>
+ </div>
+
+<select [(ngModel)]="addStudent.province" name = "province_name" required>
+    <option label="Eastern Cape">Eastern Cape</option>  
+    <option label="Free State">Free State</option>
+    <option label="Gauteng">Gauteng</option>
+    <option label="KwaZulu-Natal">KwaZulu-Natal</option>
+    <option label="Limpopo">Limpopo</option>
+    <option label="Mpumalanga">Mpumalanga</option>
+    <option label="North West">North West</option>
+    <option label="Northern Cape">Northern Cape</option>
+    <option label="Western Cape">Western Cape</option>
+    <option label="Other">Other</option>
+
+  </select>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <label style="color:white; opacity:1.8 ;">Hostel
+      </label>
+   </div>
+   </div>
+
+  <select [(ngModel)]="addStudent.hostel" name = "hostel_name" required> 
+      <option label="Caput">Caput</option>
+      <option label="De Wilgers">De Wilgers</option>
+      <option label="Excelsior"> Excelsior</option>
+      <option label="Hombre">Hombre</option>
+      <option label="Laureus">Laureus</option>
+      <option label="Over de Voor">Over de Voor</option>
+      <option label="Patria">Patria</option>
+      <option label="Ratau">Ratau</option>
+      <option label="Veritas">Veritas</option>
+      <option label="Eikenhof">Eikenhof</option>
+      <option label="Heide">Heide</option>
+      <option label="Karlien">Karlien</option>
+      <option label="Kasteel">Kasteel</option>
+      <option label="Klawerhof">Klawerhof</option>
+      <option label="Minjonet">Minjonet</option>
+      <option label="Oosterhof">Oosterhof</option>
+      <option label="Republiek">Republiek</option>
+      <option label="Vergeet-My-Nie">Vergeet-My-Nie</option>
+      <option label="Wag-n-Bietjie">Wag-n-Bietjie</option>
+      <option label="Wanda">Wanda</option>
+      <option label="Oppirif">Oppirif</option>
+      <option label="Private">Private</option>
+    </select>
+   
+    <div class="row">
+      <div class="col-xs-12">
+        
+     </div>
+     </div>
+
+<div class = "row">
+  <div class = "col-xs-12">
+    <button  
+            data-toggle="tooltip" 
+            data-placement="bottom" 
+            title="Register!" 
+            style="color: white; left: 50%;  width: 250px; opacity:1.8" 
+            class ="btn btn-primary"  
+            [disabled]="!f.valid">Register</button>
+  </div>
+</div> 
+  <select [ngModel]="'1'" name = "student"  class= "invisible"></select>   
+  <select [ngModel]="'0'" name = "admin" class= "invisible"></select>
+</form>
+</div>
+
+</body>
+
+<body style="height: auto;border-style:initial;left: 380px;width:330px;bottom:290px; position: absolute; color:black; background-color: #2d2d30; opacity: 0.7; border-color: black" class = "rounded">
+  <div>
+    <img style="width: 300px; height: 130px;  bottom: 200px; opacity: 3;" src="../assets/Img/SELIT.png">
+    <div class="image" style="align-self: center"></div>
+ <p style = "color: white">
+  -This site helps you to find textbooks or to sell your own textbooks.
+ </p>
+ <p style = "color: white">
+    -Using webpage for wrong purpose can result in a ban. This will remove student access to the system.
+   </p>
+  </div>   
+    </body>

@@ -1,0 +1,96 @@
+<body style=" text-align: center; align-self: auto; width: 1170px; align-content: center;background-color: #2d2d30; opacity: 0.8;" >
+    <h3 style="left: 500%; font:bold;text-align: center; align-self: auto; color: white ;">All Books Found</h3>   
+    <form (ngSubmit) = "getAllBooks(f); postFilterBooksAddRequest(f)" #f="ngForm">
+    <h1>
+    </h1>
+            
+    <select style = "text-align: center"[(ngModel)]="filer" name = "book_Type" required> 
+        <option style = "text-align: center" label="Advertisement">Advertisement</option>
+        <option style = "text-align: center" label="Request">Request</option>
+        </select>
+        <h1></h1>
+          <div class="row">
+
+          <div class="col-xs-12">
+        <button 
+        class="btn btn-info" 
+        type="Submit" 
+        data-toggle="tooltip" 
+        data-placement="bottom" 
+        title="Search for your book" 
+        style="width: 202px">Filter</button>
+    </div>
+    </div> 
+    <ul class="nav nav-pills" role="tablist" >
+        <li role="presentation"><a style = " color: white">Books found <span class="badge">{{allbooks?.length}}</span></a></li>
+      </ul>
+
+
+      <body style="width: 1170px; align-content: center; align-self: auto;background-color:whitesmoke;">
+        <div class="container">
+            <div ng-app="DisplayBooksSearch" ng-controller="DisplayBooksSearchCtrl" >
+                <h1></h1>
+                <strong style=" width:auto; align-content: center;">SHOW ALL BOOKS</strong>
+                <table  id = "bookdisplay" class="table" style=" width:auto;">
+                    <thead>
+                        <tr>
+                            <th>
+                                Book Name
+                            </th>
+                            <th>
+                                Book Edition
+                            </th>
+                            <th>
+                                Book Author
+                            </th>   
+                            <th>
+                                Subject Code
+                            </th>
+                            <th>
+                                Book Price
+                            </th>
+                            <th>
+                                ISBN Number 10
+                            </th>
+                            <th>
+                                ISBN Number 13
+                            </th>                                                       
+                            <th>
+                                Book Type
+                            </th>
+                            <th>
+                                Student Number
+                            </th>
+                            <th>
+                                First Name
+                            </th>
+                            <th>
+                                Cellphone Number
+                            </th> 
+                            <th>
+                                Email
+                            </th>                                            
+                        </tr>
+                    </thead>
+                    <tbody *ngIf = "allbooks?.length != 0" >
+                        <tr *ngFor = "let book of allbooks">
+                            <td>{{book.Book_Name}}</td>
+                            <td>{{book.Book_Edition}}</td>
+                            <td>{{book.Author_Name}}</td>
+                            <td>{{book.Subject_Code}}</td>
+                            <td>{{book.Book_Price}}</td>
+                            <td>{{book.Book_ISBN_10_Number}}</td>
+                            <td>{{book.Book_ISBN_13_Number}}</td>
+                            <td>{{book.Book_Type}}</td>                     
+                            <td>{{book.Student_Number}}</td>
+                            <td>{{book.First_Name}}</td>
+                            <td>{{book.Contact_Number}}</td>
+                            <td>{{book.Email_Address}}</td>                                                         
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+       </body>   
+  </form>
+

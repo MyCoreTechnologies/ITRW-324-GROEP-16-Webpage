@@ -1,0 +1,128 @@
+
+
+  
+ <span class="border border-dark">
+    <body style="height: auto;border-style:initial;left: 3%;width:350px;bottom:100; position: absolute; color:black; background-color:transparent; border-color: black" class = "rounded">
+     
+     
+      <h3 style="color:white">Enter your student number and password.</h3>
+      
+    <label style="color:white">Student Number:</label>
+    <form (ngSubmit) = "postSignIn(f)" #f="ngForm">
+    <div class="input-group" >
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        
+    <input 
+          required
+          type="text" [(ngModel)]="loginData" 
+          name = "student_number" 
+          class= "form-control" 
+          placeholder="Enter Student Number" 
+          maxlength="8" 
+          minlength="8" 
+          style="width: 300px"
+          #studentnum = "ngModel">
+          <span class = "help-block" 
+                style="color:white" 
+                *ngIf = "!studentnum.valid && studentnum.touched">Please a valid Student Number!</span>
+  </div>
+
+    <label style="color:white">Password:</label>
+    <div class="input-group">
+      
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    <input 
+          onclick="checkLogin()" 
+          required
+          type= "Password" 
+          [(ngModel)]="loginData.password" 
+          name = "password"
+          class= "form-control" 
+          id = "loginpass" 
+          placeholder="Enter password"  
+          style="width: 300px">
+    </div>
+    <h1></h1>
+    <!-- <a class="btn btn-primary" href="/login.component.html">Logout</a> -->
+    <!-- <button (click) = "goHome()" >HELLO</button> -->
+
+<div>
+  
+    <button 
+           type = "submit" 
+           data-toggle="tooltip" 
+           data-placement="bottom" 
+           title="Login!" 
+           style="height: 35px; width: 340px;  color: white; position:relative; left: 0%; " 
+           class ="btn btn-primary" 
+           [disabled]="allowsNewServer">LOGIN</button>
+    <!-- <router-outlet></router-outlet>  -->
+  </div>
+  
+  </form>
+  
+  </body>
+    </span>
+
+    
+
+    <!-- <div id="myDIV">
+      This is my DIV element.
+    </div> <button onclick="myFunction()">Click Me</button>
+
+    <div id="myDIV">
+      This is my DIV element.
+    </div> -->
+<!-- 
+<script lang="javascript">
+(click) = "check(this.form)"
+function check(form)
+{
+  if(form.student_number.value === "1" && from.password === "1")
+  {
+   alert("SUCCESS")
+  }
+  else
+  {
+    alert("ERROR")
+  }
+}
+
+</script> -->
+
+
+    <!-- <div class="form-group has-error has-feedback">
+        <label class="control-label" for="inputError2">Input with error</label>
+        <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+        <span id="inputError2Status" class="sr-only">(error)</span>
+      </div> -->
+
+
+
+
+
+
+
+
+
+      <!-- <span class="border border-dark">
+          <body style=" border-style:initial;left: 500px;bottom:100; position: absolute; color:black; background-color:whitesmoke; border-color: black" class = "rounded">
+              <img style="width: 300px; height: 130px; left:500px; bottom: 150px" src="../assets/Img/SELIT.png">
+              <div class="image"></div>
+           
+            <h4>Enter your student number and password.</h4>
+            
+          <label>Username:</label>
+          <input type="text"
+          class= "form-control"(input)="onUpdateServerName($event)"placeholder="Enter username">
+          <label>Password:</label>
+          <input type= "Password"
+          class= "form-control"(input)="onUpdateServerName($event)"id="pwd" placeholder="Enter password">
+          <h1></h1>
+          <button style=" size: 50;  color: white; background-color: darkgray; position:relative; left: 40%; " class ="btn btn-primary" [disabled]="!allowsNewServer">Login</button>
+          </body>
+          </span> -->
+          
+
+      

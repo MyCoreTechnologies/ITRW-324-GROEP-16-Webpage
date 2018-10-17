@@ -1,0 +1,25 @@
+/* CSS tp style the image */
+.image{
+    
+    background-image: url("../assets/Img/Free-Images-Book-Wallpapers-HD.jpg");
+    background-position:static;
+    height:50em;
+    background-size:cover;
+
+  }
+  body {
+    position: relative;
+  }
+
+  li{
+    color: aqua;
+  }
+  a{
+    color: aqua;
+}
+nav{
+    border-color: black;
+}
+h4{
+    color: brown;
+}

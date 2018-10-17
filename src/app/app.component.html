@@ -1,0 +1,24 @@
+<!-- on load start with default header only login and register showed -->
+<app-loginheader  (featureSelected) ="onNavigate($event)"></app-loginheader>
+<!-- normal header is invicible til the student has logged in or registered -->
+  <app-header class="invisible"></app-header>
+ <div class="image">
+                <div class = "container">
+                                <div class= "row">  
+                                                      <!-- If clicked on the navbar components they will display -->
+                                                      <app-login  *ngIf="loadedFeature == 'login'"></app-login>  
+                                                       <app-register *ngIf="loadedFeature == 'register'"></app-register>
+                                                       <app-displaybooks *ngIf="loadedFeature == 'search'"></app-displaybooks>
+                                                       <app-add-book  *ngIf="loadedFeature == 'add'"></app-add-book>
+                                                       <app-reportstudent  *ngIf="loadedFeature == 'report'"></app-reportstudent>
+                                                       <app-home  *ngIf="loadedFeature == 'home'"></app-home>
+                                                       <app-help *ngIf="loadedFeature == 'help'"></app-help>
+                                                       <app-logout *ngIf="loadedFeature == 'logout'"></app-logout>
+                                                       <app-student *ngIf="loadedFeature == 'student'"> </app-student>
+                                                       <app-displaybooks *ngIf="homeFeature == 'h'"></app-displaybooks>
+                                                       <app-showallbooks *ngIf="homeFeature == 'show'"> </app-showallbooks>
+                                                       <!-- routerlik to navigate without refresing the page -->
+                                                       <router-outlet></router-outlet> 
+                                </div>                               
+                      </div>                        
+        </div>
