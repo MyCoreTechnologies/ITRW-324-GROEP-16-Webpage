@@ -1,9 +1,8 @@
 <body style=" text-align: center; align-self: auto; width: 1170px; align-content: center;background-color: #2d2d30; opacity: 0.8;" >
     <h3 style="left: 500%; font:bold;text-align: center; align-self: auto; color: white ;">All Books Found</h3>   
-    <form (ngSubmit) = "getAllBooks(f); postFilterBooksAddRequest(f)" #f="ngForm">
+    <form (ngSubmit) = "postFilterBooksAddRequest(f)" #f="ngForm">
     <h1>
-    </h1>
-            
+    </h1>           
     <select style = "text-align: center"[(ngModel)]="filer" name = "book_Type" required> 
         <option style = "text-align: center" label="Advertisement">Advertisement</option>
         <option style = "text-align: center" label="Request">Request</option>
