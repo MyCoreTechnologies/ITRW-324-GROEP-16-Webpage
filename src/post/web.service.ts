@@ -4,29 +4,28 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 @Injectable()
 
     export class subservice{
-            constructor(private httpclient: HttpClient) {
-                
-            }
-            postLogin(value) //Login HeaderLOGIN 
+            constructor(private httpclient: HttpClient) {}
+            
+            postLogin(value)//Login HeaderLOGIN 
             {
                     console.log(value);
                     const header= new HttpHeaders().set('Content-Type', 'application/json');
                     return this.httpclient.post('http://192.168.8.100:3000/student/login', value, {});
             }
-            getToken(){      //Get Token
+            getToken(){//Get Token
                 return sessionStorage.getItem('data');
             }
-            postDisplayBookData(value) //Search Book header display book data subject price type
+            postDisplayBookData(value)//Search Book header display book data subject price type
         {
                 const header= new HttpHeaders().set('Content-Type', 'application/json');
                 return this.httpclient.post('http://192.168.8.100:3000/book/subject/price/type', value, {headers: header});
             }
-            postRegister(value) //Header Register Student
+            postRegister(value)//Header Register Student
             {
                 const header= new HttpHeaders().set('Content-Type', 'application/json');
                 return this.httpclient.post('http://192.168.8.100:3000/student/register', value, {});
             }
-            getAllBooks(){ //show all books tab getAll Books
+            getAllBooks(){//show all books tab getAll Books
 
                         return this.httpclient.get('http://192.168.8.100:3000/book/getBook');
             }
@@ -44,16 +43,16 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
                 return this.httpclient.post('http://192.168.8.100:3000/student_offence/reportOffence', value, {});
                 
             }
-            logout(event) //discard token
+            logout(event)//discard token
             {                  
                 sessionStorage.clear();                   
             }   
-            postDeleteBookOfStudent(value) //Delete the book form Student by book Number
+            postDeleteBookOfStudent(value)//Delete the book form Student by book Number
             {
                 const header= new HttpHeaders().set('Content-Type', 'application/json');
                 return this.httpclient.post('http://192.168.8.100:3000/book/myBook/delete', value, {headers: header});
             }         
-            postFilterBooksAddRequest(value) //Delete the book form Student by book Number
+            postFilterBooksAddRequest(value) //Filter the book form Show all books by add or request
             {
             const header= new HttpHeaders().set('Content-Type', 'application/json');
             return this.httpclient.post('http://192.168.8.100:3000/book/type', value, {headers: header});
