@@ -56,6 +56,6 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
             postFilterBooksAddRequest(value) //Delete the book form Student by book Number
             {
             const header= new HttpHeaders().set('Content-Type', 'application/json');
-            return this.httpclient.post('http://192.168.8.100:3000/book/myBook/delete', value, {headers: header});
+            return this.httpclient.post('http://192.168.8.100:3000/book/type', value, {headers: header});
             }
     }

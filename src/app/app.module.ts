@@ -9,6 +9,7 @@ import { DisplaybooksComponent } from './displaybooks/displaybooks.component';
 import { AddBookComponent } from './add-book/add-book.component';
 import { ReportstudentComponent } from './reportstudent/reportstudent.component';
 import { HomeComponent } from './home/home.component';
+import { DropdownDirective } from './Shared/dropdown.directive';
 import { HelpComponent } from './help/help.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RouterModule, Routes,Router } from '@angular/router';
@@ -51,7 +52,8 @@ const appRoutes: Routes = [
     LogoutComponent,
     StudentComponent,
     LoginheaderComponent,
-    ShowallbooksComponent
+    ShowallbooksComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
