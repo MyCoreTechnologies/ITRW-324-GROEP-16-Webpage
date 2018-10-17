@@ -1,12 +1,12 @@
-
- <app-loginheader  (featureSelected) ="onNavigate($event)"></app-loginheader>
- 
- <app-header class="invisible"></app-header>
+<!-- on load start with default header only login and register showed -->
+<app-loginheader  (featureSelected) ="onNavigate($event)"></app-loginheader>
+<!-- normal header is invicible til the student has logged in or registered -->
+  <app-header class="invisible"></app-header>
  <div class="image">
                 <div class = "container">
-                                <div class= "row">
-                                        
-                                                       <app-login  *ngIf="loadedFeature == 'login'"></app-login>  
+                                <div class= "row">  
+                                                      <!-- If clicked on the navbar components they will display -->
+                                                      <app-login  *ngIf="loadedFeature == 'login'"></app-login>  
                                                        <app-register *ngIf="loadedFeature == 'register'"></app-register>
                                                        <app-displaybooks *ngIf="loadedFeature == 'search'"></app-displaybooks>
                                                        <app-add-book  *ngIf="loadedFeature == 'add'"></app-add-book>
@@ -17,58 +17,8 @@
                                                        <app-student *ngIf="loadedFeature == 'student'"> </app-student>
                                                        <app-displaybooks *ngIf="homeFeature == 'h'"></app-displaybooks>
                                                        <app-showallbooks *ngIf="homeFeature == 'show'"> </app-showallbooks>
+                                                       <!-- routerlik to navigate without refresing the page -->
                                                        <router-outlet></router-outlet> 
-                                </div>
-                                
-                      </div>    
-                     
+                                </div>                               
+                      </div>                        
         </div>
-
-        
-
-
-     <!-- <app-login (selected) = "onNavigate($event)"> </app-login>
-     <app-displaybooks *ngIf="homeFeature == 'h'"></app-displaybooks>
-     <div>
-                <app-displaybooks *ngIf="homeFeature == 'h'"></app-displaybooks>
-     </div> -->
-<!-- 
-<div class="contaier">
-  <div class="row">ho
-          <div class="col-xs-12">
-                  <h3>hello</h3>  
-
-                  <app-servers></app-servers>
-                  <input type="text" [(ngModel)]="name"> 
-                   <p> {{name}}</p>
-
-
-          </div>
-  </div>
-</div>
- -->
-<!-- <div>
- <app-header (featureSelected) ="onNavigate($event)"></app-header>
-</div>
- <app-login *ngIf="loadedFeature == 'login'"></app-login>
- <app-register *ngIf="loadedFeature == 'register'"></app-register> -->
-  <!-- <app-display-books *ngIf="loadedFeature == 'add'"></app-display-books> -->
-
-
-<!-- <div class="container">
-        <div class="row">
-                <div class="col-md-20">
-                      
-                </div>
-        </div>
-</div> -->
-
-<!-- <img style="position: auto ;width: 300px; height: 130px; left:12%; top: 20%" src="../assets/Img/SELIT.png">
-<div class="image">
-  
-  </div>
-</div>
-
-<
- -->
- <!-- <app-displaybooks></app-displaybooks> -->
