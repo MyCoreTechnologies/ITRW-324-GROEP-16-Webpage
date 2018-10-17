@@ -26,12 +26,12 @@
       </ul>
 
 
-      <body style="width: 1170px; align-content: center; text-align: center; align-self: auto;background-color:whitesmoke;">
+      <body style="width: 1170px; align-content: center; align-self: auto;background-color:whitesmoke;">
         <div class="container">
             <div ng-app="DisplayBooksSearch" ng-controller="DisplayBooksSearchCtrl" >
                 <h1></h1>
                 <strong style=" width:auto; align-content: center;">SHOW ALL BOOKS</strong>
-                <table  id = "bookdisplay" class="table" style=" width:auto; align-content: center;">
+                <table  id = "bookdisplay" class="table" style=" width:auto;">
                     <thead>
                         <tr>
                             <th>
@@ -69,8 +69,7 @@
                             </th> 
                             <th>
                                 Email
-                            </th>
-                                               
+                            </th>                                            
                         </tr>
                     </thead>
                     <tbody *ngIf = "allbooks?.length != 0" >
