@@ -5,6 +5,74 @@
   <title>SELIT</title>
   <base href="/">
 
+<script>
+        function passowrdCheck() {
+         var password, confirmpassword;
+         password = document.getElementById("registerpassword");
+         password.style.visibility = "hidden";
+         if(password &&  password.value)
+         {
+            alert("My input has a value!");
+             password.style.color =  red;
+            <div class="alert alert-warning">
+         <strong>Warning!</strong> Indicates a warning that might need attention.
+        </div>
+        
+          }
+        }
+    </script>
+
+<script>
+
+
+    function checkLogin() {
+     var password, student;
+     password = document.getElementById("loginpass");
+     password.style.visibility = "hidden";
+      if(password &&  password.value)
+      {
+        alert("My input has a value!");
+        password.style.color =  red;
+        <div class="alert alert-warning">
+     <strong>Warning!</strong> Indicates a warning that might need attention.
+    </div>
+    
+      }
+    }
+</script>
+<script>
+   
+
+
+
+function myFilterShowAllBooks() {
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+window.onscroll = function() {scroll()};
+function scroll() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,23 +113,20 @@
      <!-- Demo scripts for this page-->
      <script src="js/demo/datatables-demo.js"></script>
      <script src="js/demo/chart-area-demo.js"></script>
-
-     <!-- <script>
-     
-     angular.module('MyApp', ['ngRoute']).config(function($sroutProvider){
-    $sroutProvider.when('/login',{
-    templateUrl:'logout.component.html'
-});
-     });
-     
-     </script> -->
+     <script src="bootstrap.bundle.min.js / bootstrap.bundle.js"></script>
   <style>
     
     body {
       font: 400 15px/1.8 Lato, sans-serif;
       color: #777;
   }
+  .flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+}
 
+.flip-box-back {
+  transform: rotateX(180deg);
+}
   .container {
       padding: 70px 0px;
   }
@@ -72,6 +137,11 @@
       height: 80%;
       opacity: 0.7;
   }
+  .alert{
+    color: red;
+    position: absolute;
+    width: 50px;
+}
   .person:hover {
       border-color: #f1f1f1;
   }
@@ -193,13 +263,8 @@
       resize: none;
   }
     </style>
-       <!-- <footer class="sticky-footer">
-            <div class="container my-auto">
-              <div class="copyright text-center my-auto">
-                <span>Copyright © Your Website 2018</span>
-              </div>
-            </div>
-          </footer> -->
   <app-root></app-root>
+  
 </body>
+
 </html>

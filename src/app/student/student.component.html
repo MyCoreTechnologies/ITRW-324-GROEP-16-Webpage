@@ -1,0 +1,101 @@
+
+<!-- body created for displaying better the component -->
+<body style=" width: 1170px; align-content: center;background-color: #2d2d30; opacity: 0.8;" >   
+<!-- form is created to send back the data as an object to the server -->
+    <form (ngSubmit) = "postDeleteMyBooks(f)" #f="ngForm" style= "text-align: center; align-self: auto;">
+            <div>
+                <label for="name" style="text-align: center; align-self: auto; color:white ;">Book Number</label>
+                    <!-- row added to display table  -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <!-- input to retreive the book number from service with the post to delete the book  -->
+                             <input type="number"id="name" [(ngModel)]="DeleteBooks" maxlength="8"  name = "book_number"    style="text-align: center; align-self: auto; width: 1170px; color: black;">
+                        </div>
+                  </div>
+            </div>
+            <!-- inputbox to select a number -->
+            <div class="input-group"></div>
+             <!-- row added to display table  -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1></h1>
+                        <div class="row">
+                                <div class="col-xs-12">
+                                    <!-- button to delte the book that was added -->
+                                    <button class="btn btn-info" type="Submit" data-toggle="tooltip" data-placement="bottom" title="Delete my book" style="width: 202px">Delete</button>
+                                </div>
+                        </div> 
+                </div>
+            </div>
+            <!-- body added for styling the page and better display -->
+            <body style="align-self: center background-color;background-color:whitesmoke;">
+                <h1></h1>                                
+            </body>
+    </form>
+<!-- body created for displaying better the component -->
+<body style="width: 1170px; align-content: center; text-align: center; align-self: auto;background-color:whitesmoke;">
+        <div class="container">
+            <!-- naming the controller -->
+            <div ng-app="allStudentBooks" ng-controller="studentBooks" >
+                <h1></h1>
+                    <!-- bold texting the header of the table -->
+                    <strong style=" width:auto; align-content: center;">SHOW ALL MY BOOKS</strong>
+                        <!-- creating a table to display information received from student -->
+                        <table  id = "bookdisplay" class="table" style=" width:auto; align-content: center;">
+                            <!-- adding table head -->
+                            <thead>
+                                <!-- table row -->
+                                 <tr>
+                                     <!-- table header to see what information would be returned -->
+                                    <th>                             
+                                         Book Number
+                                    </th>
+                                    <th>
+                                         Book Name
+                                    </th>
+                                    <th>
+                                        Book Edition
+                                    </th>
+                                     <th>
+                                        Book Author
+                                    </th>   
+                                    <th>
+                                        Subject Code
+                                    </th>
+                                    <th>
+                                        Book Price
+                                    </th>
+                                    <th>
+                                        ISBN Number 10
+                                    </th>
+                                    <th>
+                                        ISBN Number 13
+                                    </th>                                                       
+                                    <th>
+                                        Book Type
+                                    </th>
+                                    <th>
+                                        Date Placed
+                                    </th>                                     
+                                </tr>
+                            </thead>
+                            <!-- creating a if of information of all books found -->
+                            <tbody *ngIf = "studentBooks?.length != 0" >
+                                    <!-- running a for to display all books found -->
+                                    <tr *ngFor = "let book of studentBooks">
+                                        <td>{{book.Book_Number}}</td>
+                                        <td>{{book.Book_Name}}</td>
+                                        <td>{{book.Book_Edition}}</td>
+                                        <td>{{book.Author_Name}}</td>
+                                        <td>{{book.Subject_Code}}</td>
+                                        <td>{{book.Book_Price}}</td>
+                                        <td>{{book.Book_ISBN_10_Number}}</td>
+                                        <td>{{book.Book_ISBN_13_Number}}</td>
+                                        <td>{{book.Book_Type}}</td>                     
+                                        <td>{{book.Date_Placed}}</td>                                                         
+                                        </tr>
+                            </tbody>
+                            </table>
+            </div>
+        </div>         
+      

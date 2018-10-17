@@ -7,37 +7,88 @@
      
       <h3 style="color:white">Enter your student number and password.</h3>
       
-    <label >Student Number:</label>
+    <label style="color:white">Student Number:</label>
     <form (ngSubmit) = "postSignIn(f)" #f="ngForm">
     <div class="input-group" >
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
         
-    <input type="text" [(ngModel)]="loginData.student_number" name = "student_number"
-    class= "form-control" placeholder="Enter Student Number" style="width: 300px">
- 
+    <input 
+          required
+          type="text" [(ngModel)]="loginData" 
+          name = "student_number" 
+          class= "form-control" 
+          placeholder="Enter Student Number" 
+          maxlength="8" 
+          minlength="8" 
+          style="width: 300px"
+          #studentnum = "ngModel">
+          <span class = "help-block" 
+                style="color:white" 
+                *ngIf = "!studentnum.valid && studentnum.touched">Please a valid Student Number!</span>
   </div>
 
     <label style="color:white">Password:</label>
     <div class="input-group">
       
     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-    <input type= "Password" [(ngModel)]="loginData.password" name = "password"
-    class= "form-control"  placeholder="Enter password"  style="width: 300px">
+    <input 
+          onclick="checkLogin()" 
+          required
+          type= "Password" 
+          [(ngModel)]="loginData.password" 
+          name = "password"
+          class= "form-control" 
+          id = "loginpass" 
+          placeholder="Enter password"  
+          style="width: 300px">
     </div>
     <h1></h1>
     <!-- <a class="btn btn-primary" href="/login.component.html">Logout</a> -->
     <!-- <button (click) = "goHome()" >HELLO</button> -->
 
-
-    <button type = "submit" data-toggle="tooltip" data-placement="bottom" title="Login!" style="height: 35px; width: 350px;  color: white; position:relative; left: 0%; " class ="btn btn-primary" [disabled]="allowsNewServer">LOGIN</button>
+<div>
+  
+    <button 
+           type = "submit" 
+           data-toggle="tooltip" 
+           data-placement="bottom" 
+           title="Login!" 
+           style="height: 35px; width: 340px;  color: white; position:relative; left: 0%; " 
+           class ="btn btn-primary" 
+           [disabled]="allowsNewServer">LOGIN</button>
+    <!-- <router-outlet></router-outlet>  -->
+  </div>
+  
   </form>
   
   </body>
     </span>
 
+    
 
+    <!-- <div id="myDIV">
+      This is my DIV element.
+    </div> <button onclick="myFunction()">Click Me</button>
 
+    <div id="myDIV">
+      This is my DIV element.
+    </div> -->
+<!-- 
+<script lang="javascript">
+(click) = "check(this.form)"
+function check(form)
+{
+  if(form.student_number.value === "1" && from.password === "1")
+  {
+   alert("SUCCESS")
+  }
+  else
+  {
+    alert("ERROR")
+  }
+}
 
+</script> -->
 
 
     <!-- <div class="form-group has-error has-feedback">
@@ -72,3 +123,6 @@
           <button style=" size: 50;  color: white; background-color: darkgray; position:relative; left: 40%; " class ="btn btn-primary" [disabled]="!allowsNewServer">Login</button>
           </body>
           </span> -->
+          
+
+      
