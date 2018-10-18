@@ -2,10 +2,10 @@
 <body style=" position: absolute; left: 1%; top: 5%; color:black; background-color: transparent; width: 300px">
   <div>
     <!-- form created to send the data as an object to the server and displaying the data received -->
-      <form (ngSubmit) = "postStudent(f)" #f="ngForm">
-         
-  <h3 style="color:white; opacity: 5">Enter Your Details Below</h3>
+      <form (ngSubmit) = "postStudent(f)" #f="ngForm">      
+<h3 style="color:white; opacity: 5">Enter Your Details Below</h3>
 <div>
+  <!-- student number and check method for validation -->
 <label style="color:white;opacity:1.8 ;">Student Number</label>
 <input   [(ngModel)]="addStudent" 
          name = "student_number" 
@@ -21,8 +21,7 @@
               style="color:white" 
               *ngIf = "!studentnum.valid && studentnum.touched">Please enter a valid Student Number!</span>
 </div>
-
-
+<!-- first Name and check method for validation -->
 <div>
 <label style="color:white;">First Name</label>
 <input  
@@ -38,7 +37,7 @@
               style="color:white" 
               *ngIf = "!firstname.valid && firstname.touched">Please enter First name!</span>
 </div>
-
+<!-- Last Name and check method for validation -->
 <div>
 <label style="color:white; opacity:1.8 ;">Last Name</label>
 <input 
@@ -54,7 +53,7 @@
               style="color:white" 
               *ngIf = "!lastname.valid && lastname.touched">Please enter Last name!</span>
 </div>
-
+<!-- contact number and check method for validation -->
 <div>
 <label style="color:white; opacity:1.8 ;">Contact Number</label>
 <input  
@@ -73,6 +72,7 @@
 </div>
 
 <div>
+  <!-- email and check method for validation -->
 <label style="color:white; opacity:1.8 ;">Email Address</label>
 <input  [(ngModel)]="addStudent.email" 
         name = "email_address" 
@@ -87,7 +87,7 @@
               style="color:white" 
               *ngIf = "!emailtest.valid && emailtest.touched">Please enter valid email!</span>
 </div>
-
+<!-- password and check method for validation -->
 <div style="display:flex; flex-direction: row; align-items: center" ng-controller="confirmCtrl">
     <div style="float:left;margin-right:20px;">
 <label style="color:white; opacity:1.8 ;">Password</label>
@@ -105,6 +105,7 @@
 
 </div>
 </div>
+<!-- confim password and check method for validation -->
 <div style="float:left;margin-right:20px;">
     <label style="color:white; opacity:1.8 ;" > Confirm Password</label>
     <div class="input-group">
@@ -117,9 +118,6 @@
            required
            maxlength="20"
            >
-         <!-- <span class = "help-block" 
-                style="color:white" 
-                *ngIf = "confirmpassword.error?.required? && confirmpassword.touched">Please enter correct password!</span>-->
     </div>
     </div>
   
@@ -129,7 +127,7 @@
     <label style="color:white; opacity:1.8 ;">Province</label>
  </div>
  </div>
-
+<!-- selection to choose for faculty -->
 <select [(ngModel)]="addStudent.province" name = "province_name" required>
     <option label="Eastern Cape">Eastern Cape</option>  
     <option label="Free state">Free state</option>
@@ -141,8 +139,7 @@
     <option label="Northern Cape">Northern Cape</option>
     <option label="Western Cape">Western Cape</option>
     <option label="Other">Other</option>
-
-  </select>
+</select>
 
   <div class="row">
     <div class="col-xs-12">
@@ -150,7 +147,7 @@
       </label>
    </div>
    </div>
-
+<!-- selection to choose for hostel -->
   <select [(ngModel)]="addStudent.hostel" name = "hostel_name" required> 
       <option label="Caput">Caput</option>
       <option label="De Wilgers">De Wilgers</option>
@@ -193,6 +190,7 @@
             [disabled]="!f.valid">Register</button>
   </div>
 </div> 
+<!-- default value send of admin and student to service -->
   <select [ngModel]="'1'" name = "student"  class= "invisible"></select>   
   <select [ngModel]="'0'" name = "admin" class= "invisible"></select>
 </form>
