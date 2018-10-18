@@ -22,7 +22,7 @@ filer:{};
     postFilterBooksAddRequest(form: NgForm) {
       console.log("filter");
     console.log(form.value);
-    this.submitServe.postDisplayBookData(form.value)
+    this.submitServe.postFilterBooksAddRequest(form.value)
     .subscribe(response => {
       console.log(response);
       this.allbooks = response;

@@ -5,7 +5,7 @@
     <form (ngSubmit) = "postFilterBooksAddRequest(f)" #f="ngForm">
     <h1></h1>           
     <!-- selection posting the request to filter only addvertisements or requests -->
-    <select style = "text-align: center"[(ngModel)]="filer" name = "book_Type" required> 
+    <select style = "text-align: center"[(ngModel)]="filer" name = "book_type" required> 
         <option style = "text-align: center" label="Advertisement">Advertisement</option>
         <option style = "text-align: center" label="Request">Request</option>
         </select>
