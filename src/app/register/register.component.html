@@ -88,6 +88,7 @@
               *ngIf = "!emailtest.valid && emailtest.touched">Please enter valid email!</span>
 </div>
 <!-- password and check method for validation -->
+
 <div style="display:flex; flex-direction: row; align-items: center" ng-controller="confirmCtrl">
     <div style="float:left;margin-right:20px;">
 <label style="color:white; opacity:1.8 ;">Password</label>
@@ -97,12 +98,13 @@
        [(ngModel)]="addStudent.password" 
        name = "password"
        type="password" 
+       id="password"
        style="width: 200px; height:30px; opacity:1.8 ;"
        class= "form-control"(input)="onUpdateServerName($event)" 
        placeholder="Enter Password"
        required
        maxlength="20">
-
+       
 </div>
 </div>
 <!-- confim password and check method for validation -->
@@ -112,16 +114,18 @@
     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
     <input 
            type="password"
+           id="confimpassword"
            style="width: 200px; height:30px; opacity:1.8 ;"
            class= "form-control"(input)="onUpdateServerName($event)" 
            placeholder="Enter Password"
            required
-           maxlength="20"
-           >
+           maxlength="20">          
     </div>
     </div>
   
 </div>
+
+
 <div class="row">
   <div class="col-xs-12">
     <label style="color:white; opacity:1.8 ;">Province</label>
