@@ -1,6 +1,8 @@
+<!-- form created to send the data as an object to the server and displaying the data received -->
 <form (ngSubmit) = "getMyBooksForm(f)" #f="ngForm">
 
 <body>
+  <!--Creating Navigation bar-->
 <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -22,7 +24,7 @@
                     <li><a routerLink= "/displaybooks" (click)="onSelect('search')"data-toggle="tooltip" data-placement="bottom" title="Go to Search Book Form!" ><span class="glyphicon glyphicon-search
                       "></span>SEARCH BOOK</a></li>
                     <li><a routerLink="/addbook" (click)="onSelect('add')"data-toggle="tooltip" data-placement="bottom" title="Go to Add Book Form!" ><span class="glyphicon glyphicon-book"></span>ADD BOOK</a></li>
-             
+              <!--Creates dropdown menu-->
               <li class="dropdown"appDropdown>
                 <a class="dropdown-toggle"appDropdown data-toggle="dropdown" routerLink="#" >MENU
                 <span class="glyphicon glyphicon-menu-hamburger"></span></a>
@@ -40,4 +42,4 @@
      
 </body>
 </form>
-      <!-- <fieldset disabled></fieldset> -->
+      

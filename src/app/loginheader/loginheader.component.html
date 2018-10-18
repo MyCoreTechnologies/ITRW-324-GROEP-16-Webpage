@@ -1,25 +1,27 @@
-<!-- body created for displaying better the component -->
+<!-- body created for displaying the component better-->
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>                        
-              </button>
-              <a class="navbar-brand" href="/home">SELIT</a>              
-            </div>
-            <div class="collapse navbar-collapse" id="loginheader">
-                <ul class="nav navbar-nav navbar-left">                  
-                </ul>
-              <ul class="nav navbar-nav navbar-right">              
-                      <li ><a href="/login" (click)="onSelect('login')"data-toggle="tooltip" data-placement="bottom" title="Go to Login form!" ><span class="glyphicon glyphicon-lock"></span>LOGIN</a></li>
-                      <li ><a href="/register" (click)="onSelect('register')"data-toggle="tooltip" data-placement="bottom" title="Go to Register form!" ><span class="glyphicon glyphicon-pencil"></span>REGISTER</a></li>      
-                <li><a routerLinkActive = "active" href="/home" (click)="onSelect('home')"data-toggle="tooltip" data-placement="bottom" title="Go to Home Page"><span class="glyphicon glyphicon-home"></span></a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>      
-  </body>
+   <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/home">SELIT</a>              
+    </div>
+<div class="collapse navbar-collapse" id="loginheader">
+  <ul 
+     class="nav navbar-nav navbar-left">                  
+  </ul>
+
+  <ul class="nav navbar-nav navbar-right">              
+    <li><a href="/login" (click)="onSelect('login')"data-toggle="tooltip" data-placement="bottom" title="Go to Login form!" ><span class="glyphicon glyphicon-lock"></span>LOGIN</a></li>
+    <li><a href="/register" (click)="onSelect('register')"data-toggle="tooltip" data-placement="bottom" title="Go to Register form!" ><span class="glyphicon glyphicon-pencil"></span>REGISTER</a></li>      
+    <li><a routerLinkActive = "active" href="/home" (click)="onSelect('home')"data-toggle="tooltip" data-placement="bottom" title="Go to Home Page"><span class="glyphicon glyphicon-home"></span></a></li>
+  </ul>
+      </div>
+    </div>
+  </nav>      
+</body>
   
