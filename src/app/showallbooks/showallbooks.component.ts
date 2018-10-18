@@ -12,7 +12,7 @@ export class ShowallbooksComponent implements OnInit {
   allbooks;
   constructor(private router: Router, private submitServe: subservice) {
     // on load display all books when clicked on show all books in navbar
-    this.getAllBooks();
+    this.getAllBook();
   }  
   ngOnInit() {
   }
@@ -30,7 +30,7 @@ filer:{};
       (error) => console.log('Problem accuired during displaybooks.'));
     } 
   //mehtod created to get all books from service
-  getAllBooks(){
+  getAllBook(){
     console.log("hello");
     this.submitServe.getAllBooks().subscribe(
         (response) => {
