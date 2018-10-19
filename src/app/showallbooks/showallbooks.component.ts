@@ -31,7 +31,7 @@ filer:{};
     } 
   //mehtod created to get all books from service
   getAllBook(){
-    console.log("hello");
+    console.log("getbooks");
     this.submitServe.getAllBooks().subscribe(
         (response) => {
             console.log(response);

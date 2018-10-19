@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
         this.data=response.body;
         sessionStorage.setItem('data', this.data);
           // load header and returned to login 
-        this.header();
+        // this.header();
         this.loadLogin();
       }else{
         sessionStorage.clear();
@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
         this.data=response.body;
         sessionStorage.setItem('data', this.data);
         // load header and returned to login 
-        this.header();
+        // this.header();
         this.loadLogin();
       }
     },
@@ -46,12 +46,12 @@ export class RegisterComponent implements OnInit {
      this.router.navigate(['/login']);
     }
     //header loginheader is displayed on load, normal header when registered is disabled
-    header() {
-      var x = document.getElementById("loginheader");
-      var y = document.getElementById("header");   
-          x.style.visibility = "hidden";
-          y.style.visibility = "visible"
-    }
+    // header() {
+    //   var x = document.getElementById("loginheader");
+    //   var y = document.getElementById("header");   
+    //       x.style.visibility = "hidden";
+    //       y.style.visibility = "visible"
+    // }
   ngOnInit() {   
   } 
 }
