@@ -1,5 +1,5 @@
 <!-- form created to send the data as an object to the server and displaying the data received -->
-<form (ngSubmit) = "getMyBooksForm(f)" #f="ngForm">
+<form>
 
 <body>
   <!--Creating Navigation bar-->
@@ -16,10 +16,10 @@
           </div>
           <div class="collapse navbar-collapse" id="header" class="invisible">
               <ul class="nav navbar-nav navbar-left">
-                  <li ><a  [(ngModel)]="myData" routerLink ="/student" (click)="onSelect('student');"data-toggle="tooltip" title="Go to your profile form!" id ="studentHeader" >PROFILE</a></li>
+                  <li ><a routerLink ="/student" (click)="onSelect('student');"data-toggle="tooltip" title="Go to your profile form!" id ="studentHeader" >PROFILE</a></li>
               </ul>
             <ul class="nav navbar-nav navbar-right">                               
-                    <li><a [(ngModel)]="myData" routerLink= "/show" (click)="onSelect('show');"data-toggle="tooltip" data-placement="bottom" title="Go to Show All Books Form!" ><span class="glyphicon glyphicon-search
+                    <li><a routerLink= "/show" (click)="onSelect('show');"data-toggle="tooltip" data-placement="bottom" title="Go to Show All Books Form!" ><span class="glyphicon glyphicon-search
                       "></span>SHOW ALL BOOKS</a></li>
                     <li><a routerLink= "/displaybooks" (click)="onSelect('search')"data-toggle="tooltip" data-placement="bottom" title="Go to Search Book Form!" ><span class="glyphicon glyphicon-search
                       "></span>SEARCH BOOK</a></li>
