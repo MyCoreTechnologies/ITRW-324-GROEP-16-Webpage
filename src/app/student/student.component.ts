@@ -29,13 +29,20 @@ export class StudentComponent implements OnInit {
 }
   ngOnInit() {
   }
+  //reloads the page after book is deleted
+  ReloadPage(){
+    
+    this.router.navigate(['/show']);
+  }
   DeleteBooks:{};
   //method received from service to delete a book that was added by the student, by Book Number
   postDeleteMyBooks(form: NgForm) {
-    console.log(form.value);
+    console.log(form.value);        
     this.submitServe.postDeleteBookOfStudent(form.value)
     .subscribe(response => {
       console.log(response);
+      alert("Your books has been deleted!");
+       this.ReloadPage();  
     },
     (error) => alert("ERROR\nMake sure you delete the right book number!"));
     }  

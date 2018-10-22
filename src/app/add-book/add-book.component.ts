@@ -18,13 +18,19 @@ export class AddBookComponent implements OnInit {
   //   return this.student_number;
   // };
   data;
-
+  ReloadPage(){
+    
+    this.router.navigate(['/show']);
+  }
   postBooks(form: NgForm) {
     console.log(form.value);
+    
     this.submitServe.postBook(form.value)
+    
     .subscribe(response => {
       console.log(response);
-     
+      alert("Your book has been successfully added.");
+      this.ReloadPage();
     },
       (error) => console.log('Problem accuired during login.'));
     } 

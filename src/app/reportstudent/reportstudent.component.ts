@@ -17,12 +17,18 @@ export class ReportstudentComponent implements OnInit {
   addOffence:{};
   // variable to get the data from the respose send form the service
   data;
+  ReloadPage(){
+    
+    this.router.navigate(['/home']);
+  }
   // method created to post the offences to the service to report a student
   postOffences(form: NgForm) {
     console.log(form.value);
     this.submitServe.postOffence(form.value)
     .subscribe(response => {
-      console.log(response);      
+      console.log(response); 
+      alert("Thank You\n Your report has been submitted.");
+      this.ReloadPage();     
     },
       (error) => console.log('Problem accuired during reported.'));
     } 
