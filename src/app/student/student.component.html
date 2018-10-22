@@ -40,62 +40,58 @@
                 <h1></h1>
                     <!-- bold texting the header of the table -->
                     <strong style=" width:auto; align-content: center;">SHOW ALL MY BOOKS</strong>
-                        <!-- creating a table to display information received from student -->
-                        <table  id = "bookdisplay" class="table" style=" width:auto; align-content: center;">
-                            <!-- adding table head -->
-                            <thead>
-                                <!-- table row -->
-                                 <tr>
-                                     <!-- table header to see what information would be returned -->
-                                    <th>                             
-                                         Book Number
-                                    </th>
-                                    <th>
-                                         Book Name
-                                    </th>
-                                    <th>
-                                        Book Edition
-                                    </th>
-                                     <th>
-                                        Book Author
-                                    </th>   
-                                    <th>
-                                        Subject Code
-                                    </th>
-                                    <th>
-                                        Book Price
-                                    </th>
-                                    <th>
-                                        ISBN Number 10
-                                    </th>
-                                    <th>
-                                        ISBN Number 13
-                                    </th>                                                       
-                                    <th>
-                                        Book Type
-                                    </th>
-                                    <th>
-                                        Date Placed
-                                    </th>                                     
-                                </tr>
-                            </thead>
-                            <!-- creating a if of information of all books found -->
-                            <tbody *ngIf = "studentBooks?.length != 0" >
-                                    <!-- running a for to display all books found -->
-                                    <tr *ngFor = "let book of studentBooks">
-                                        <td>{{book.Book_Number}}</td>
-                                        <td>{{book.Book_Name}}</td>
-                                        <td>{{book.Book_Edition}}</td>
-                                        <td>{{book.Author_Name}}</td>
-                                        <td>{{book.Subject_Code}}</td>
-                                        <td>{{book.Book_Price}}</td>
-                                        <td>{{book.Book_ISBN_10_Number}}</td>
-                                        <td>{{book.Book_ISBN_13_Number}}</td>
-                                        <td>{{book.Book_Type}}</td>                     
-                                        <td>{{book.Date_Placed}}</td>                                                         
-                                        </tr>
-                            </tbody>
-                            </table>
+                        <!-- creating a table to display information received from student -->                      
+        <div class="table-wrapper-scroll-y">
+            <table  id = "bookdisplay"  class="table table-striped table-bordered table-sm" style=" text-align: left; width:auto;  font-size: 13px">
+                <thead>
+                    <tr>
+                        <th>                             
+                            Book Number
+                       </th>
+                       <th>
+                            Book Name
+                       </th>
+                       <th>
+                           Book Edition
+                       </th>
+                        <th>
+                           Book Author
+                       </th>   
+                       <th>
+                           Subject Code
+                       </th>
+                       <th>
+                           Book Price
+                       </th>
+                       <th>
+                           ISBN Number 10
+                       </th>
+                       <th>
+                           ISBN Number 13
+                       </th>                                                       
+                       <th>
+                           Book Type
+                       </th>
+                       <th>
+                           Date Placed
+                       </th>                                            
+                    </tr>
+                </thead>
+                <!-- displaying the books that was found in the service -->
+                <tbody *ngIf = "studentBooks?.length != 0" >
+                    <!-- running a for to display all books found -->
+                    <tr *ngFor = "let book of studentBooks">
+                        <td>{{book.Book_Number}}</td>
+                        <td>{{book.Book_Name}}</td>
+                        <td>{{book.Book_Edition}}</td>
+                        <td>{{book.Author_Name}}</td>
+                        <td>{{book.Subject_Code}}</td>
+                        <td>{{book.Book_Price}}</td>
+                        <td>{{book.Book_ISBN_10_Number}}</td>
+                        <td>{{book.Book_ISBN_13_Number}}</td>
+                        <td>{{book.Book_Type}}</td>                     
+                        <td>{{book.Date_Placed}}</td>                                                         
+                        </tr>
+            </tbody>
+            </table>
             </div>
-        </div>         
-      
