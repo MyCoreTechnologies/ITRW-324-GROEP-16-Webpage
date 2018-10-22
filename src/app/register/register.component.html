@@ -5,7 +5,9 @@
       <form (ngSubmit) = "postStudent(f)" #f="ngForm">      
 <h3 style="color:white; opacity: 5">Enter Your Details Below</h3>
 <div>
-  <!-- student number and check method for validation -->
+  <!--student Number 
+    --Receives text input from user
+    --student number and check method for validation -->
 <label style="color:white;opacity:1.8 ;">Student Number</label>
 <input   [(ngModel)]="addStudent" 
          name = "student_number" 
@@ -21,7 +23,9 @@
               style="color:white" 
               *ngIf = "!studentnum.valid && studentnum.touched">Please enter a valid Student Number!</span>
 </div>
-<!-- first Name and check method for validation -->
+<!--First Name
+  --Receives text input from user
+  --first Name and check method for validation -->
 <div>
 <label style="color:white;">First Name</label>
 <input  
@@ -37,7 +41,9 @@
               style="color:white" 
               *ngIf = "!firstname.valid && firstname.touched">Please enter First name!</span>
 </div>
-<!-- Last Name and check method for validation -->
+<!--Last Name
+  --Receives text input from user
+  --Last Name and check method for validation -->
 <div>
 <label style="color:white; opacity:1.8 ;">Last Name</label>
 <input 
@@ -53,7 +59,9 @@
               style="color:white" 
               *ngIf = "!lastname.valid && lastname.touched">Please enter Last name!</span>
 </div>
-<!-- contact number and check method for validation -->
+<!--Contact Number
+  --Receives text input from user
+  --Contact number and check method for validation -->
 <div>
 <label style="color:white; opacity:1.8 ;">Contact Number</label>
 <input  
@@ -72,7 +80,9 @@
 </div>
 
 <div>
-  <!-- email and check method for validation -->
+  <!--Email adddress
+    --Receives text input from user
+    --Email and check method for validation -->
 <label style="color:white; opacity:1.8 ;">Email Address</label>
 <input  [(ngModel)]="addStudent.email" 
         name = "email_address" 
@@ -87,8 +97,10 @@
               style="color:white" 
               *ngIf = "!emailtest.valid && emailtest.touched">Please enter valid email!</span>
 </div>
-<!-- password and check method for validation -->
 
+<!--Password
+  --Receives password input from user
+  --Password and check method for validation -->
 <div style="display:flex; flex-direction: row; align-items: center" ng-controller="confirmCtrl">
     <div style="float:left;margin-right:20px;">
 <label style="color:white; opacity:1.8 ;">Password</label>
@@ -107,17 +119,15 @@
        
 </div>
 </div>
-<!-- confim password and check method for validation -->
-  
+
+<!--Province
+  --Select province from label -->
 </div>
-
-
 <div class="row">
   <div class="col-xs-12">
     <label style="color:white; opacity:1.8 ;">Province</label>
  </div>
  </div>
-<!-- selection to choose for faculty -->
 <select [(ngModel)]="addStudent.province" name = "province_name" required>
     <option label="Eastern Cape">Eastern Cape</option>  
     <option label="Free state">Free state</option>
@@ -137,7 +147,8 @@
       </label>
    </div>
    </div>
-<!-- selection to choose for hostel -->
+<!--Hostel 
+  --Selection to choose for hostel -->
   <select [(ngModel)]="addStudent.hostel" name = "hostel_name" required> 
       <option label="Caput">Caput</option>
       <option label="De Wilgers">De Wilgers</option>
@@ -169,6 +180,7 @@
      </div>
      </div>
 
+<!--Register Button-->
 <div class = "row">
   <div class = "col-xs-12">
     <button  

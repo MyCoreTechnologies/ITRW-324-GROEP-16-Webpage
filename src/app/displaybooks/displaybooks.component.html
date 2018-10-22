@@ -4,7 +4,7 @@
   <h3 style="left: 500%; font:bold;text-align: center; align-self: auto; color: white ;">Search for your book</h3>
     <div class="row">
       <div class="col-xs-12">
-          <!-- form created to send the data as an object to the server and displaying the data received -->
+          <!--Form created to send the data as an object to the server and displaying the data received -->
         <form (ngSubmit) = "postDisplayBooksSearch(f)" 
               #f="ngForm" 
               style= "text-align: center; align-self: auto;">
@@ -12,7 +12,9 @@
       <label for="name" style="text-align: center; align-self: auto; color:white ;">Subject Code</label>
         <div class="row">
             <div class="col-xs-12">
-                <!-- Receives SubjectCode and then check method for validation -->
+                <!--Subject Code
+                  --Receives text input from user 
+                  --Check method for validation -->
               <input type="text"
                     id="name" 
                     [(ngModel)]="loginData" 
