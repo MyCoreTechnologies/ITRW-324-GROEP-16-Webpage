@@ -27,6 +27,7 @@ export class RegisterComponent implements OnInit {
         sessionStorage.setItem('data', this.data);
           // load header and returned to login 
         // this.header();
+        alert("Thank You\nYou have been registered\nPlease Login")
         this.loadLogin();
       }else{
         sessionStorage.clear();
@@ -35,6 +36,7 @@ export class RegisterComponent implements OnInit {
         sessionStorage.setItem('data', this.data);
         // load header and returned to login 
         // this.header();
+        alert("Thank You\nYou have been registered\nPlease Login")
         this.loadLogin();
       }
     },
